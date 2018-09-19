@@ -1,0 +1,114 @@
+package com.iadvize.conversation.sdk.demo.activities
+
+import android.graphics.Color
+import android.os.Bundle
+import android.support.design.widget.TabLayout
+import android.support.v4.content.ContextCompat
+import android.support.v7.app.AppCompatActivity
+import com.iadvize.conversation.sdk.IAdvizeConversationManager
+import com.iadvize.conversation.sdk.IAdvizeManager
+import com.iadvize.conversation.sdk.demo.R
+import com.iadvize.conversation.sdk.demo.adapters.MainPagerAdapter
+import com.iadvize.conversation.sdk.enums.GDPROption
+import com.iadvize.conversation.sdk.enums.JWTOption
+import com.iadvize.conversation.sdk.listener.ActivateListener
+import com.iadvize.conversation.sdk.model.ConversationViewConfiguration
+import com.iadvize.conversation.sdk.model.User
+import kotlinx.android.synthetic.main.activity_main.*
+import java.net.URL
+
+
+/**
+ * Created by Yann Coupé on 20/08/2018.
+ * Copyright © 2018 iAdvize. All rights reserved.
+ */
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        setSupportActionBar(main_toolbar)
+
+        // Switch to false to test without GDPR.
+        val shouldActivateGDPR = true
+
+        if (shouldActivateGDPR) {
+            iAdvizeActivateWithGDPR()
+        } else {
+            iAdvizeActivate()
+        }
+
+        // Configure SDK options for your integration
+        val config = ConversationViewConfiguration(ContextCompat.getColor(this, R.color.colorPrimary),
+                "Say Hello 👋",
+                "Any question? Say Hello to Cooktoys and we will answer you as soon as possible! 😉",
+                "As part of the GDPR, we have to ask you to consent to our legal information.",
+                "fonts/ProximaNova-Regular.otf",
+                ContextCompat.getColor(this, R.color.colorPrimary),
+                Color.WHITE)
+
+        // Apply this configuration
+        IAdvizeConversationManager.setupConversationView(config)
+
+        // Position of the chat button
+        IAdvizeConversationManager.setChatButtonPosition(16, 16)
+
+        main_tablayout.addTab(main_tablayout.newTab().setText("Catalog"))
+        main_tablayout.addTab(main_tablayout.newTab().setText("Cart"))
+        main_tablayout.tabGravity = TabLayout.GRAVITY_FILL
+
+        val adapter = MainPagerAdapter(supportFragmentManager, main_tablayout.tabCount)
+        main_viewpager.adapter = adapter
+        main_viewpager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(main_tablayout))
+        main_tablayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabReselected(tab: TabLayout.Tab?) {}
+
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                tab?.let {
+                    main_viewpager.currentItem = it.position
+                }
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) {}
+        })
+
+        // Register user information which will be displayed to your operators or ibbü experts.
+        IAdvizeManager.registerUser(User("Antoine"))
+    }
+
+    private fun iAdvizeActivate() {
+        // Replace "ConnectedUserIdentifier" by your user unique identifier (it should not be
+        // a personal information of your user) so they can retrieve their conversation history
+        // accross installations and devices.
+        //
+        // Your `iAdvizeSecret` is available on your app on the iAdvize Administration website.
+        IAdvizeManager.activate(JWTOption.Secret("iAdvizeSecret"),
+                "ConnectedUserIdentifier", GDPROption.Disabled(), object : ActivateListener {
+            override fun onActivateFailure(t: Throwable) {
+                // Activation fails. You need to retry later to be able to properly activate the iAdvize Conversation SDK.
+            }
+            override fun onActivateSuccess() {
+                // Activation succeeds. You are now able to provide a chat experience to your users now
+                // or later by showing the chat button.
+                IAdvizeConversationManager.showChatButton()
+            }
+        })
+    }
+
+    private fun iAdvizeActivateWithGDPR() {
+        // To activate GDPR, you have to provide a legal information URL.
+        val legalInfoUrl = URL("http://yourlegalinformationurl.com/legal")
+        IAdvizeManager.activate(JWTOption.Secret("iAdvizeSecret"),
+                "ConnectedUserIdentifier", GDPROption.Enabled(legalInfoUrl), object : ActivateListener {
+            override fun onActivateFailure(t: Throwable) {
+                // Activation fails. You need to retry later to be able to properly activate the iAdvize Conversation SDK.
+            }
+            override fun onActivateSuccess() {
+                // Activation succeeds. You are now able to provide a chat experience to your users now
+                // or later by showing the chat button.
+                IAdvizeConversationManager.showChatButton()
+            }
+        })
+    }
+}
