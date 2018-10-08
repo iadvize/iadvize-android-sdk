@@ -47,7 +47,7 @@ allprojects {
         google()
         jcenter()
         maven { url "https://jitpack.io" }
-   		maven { url "https://raw.github.com/iadvize/iadvize-android-sdk/master" }
+        maven { url "https://raw.github.com/iadvize/iadvize-android-sdk/master" }
     }
 }
 ```
