@@ -1,11 +1,5 @@
-# 1.0.1
+# 1.0.3
 
-### Release date 2018/09/24
-
-- Fix: Decode the received JWT properly to get the right information.
-
-# 1.0.0
-
-### Release date 2018/09/24
+### Release date 2018/10/08
 
 iAdvize Conversation SDK first version.

@@ -1,5 +1,3 @@
-[![Download](https://api.bintray.com/packages/iadvize/maven/android-iadvize-sdk/images/download.svg) ](https://bintray.com/iadvize/maven/android-iadvize-sdk/_latestVersion)
-
 # iAdvize - Android Conversation SDK
 
 Take your app to the next step and provide a unique conversational experience to your users!
@@ -49,13 +47,14 @@ allprojects {
         google()
         jcenter()
         maven { url "https://jitpack.io" }
+   		maven { url "https://raw.github.com/iadvize/iadvize-android-sdk/master" }
     }
 }
 ```
 
 **Step 2**. Link your project with the iAdvize Conversation SDK dependency, add this line to your app's `build.gradle`:
 ```gradle
-implementation 'com.iadvize.conversation.sdk:iadvize-conversation-sdk:{version}'
+implementation 'com.iadvize:iadvize-sdk:1.0.3'
 ```
 
 Now you should be able to import `com.iadvize.conversation.sdk.*` in ny file you want to use it.
