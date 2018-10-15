@@ -110,7 +110,7 @@ By default when you activate the SDK, the GDPR will be disabled. You can activat
 ```kotlin
 IAdvizeManager.activate(JWTOption.Token("yourjwttoken"), "connecteduseruniqueidentifierornull", gdprOption = GDPROption.Enabled(URL("https://www.iadvize.com/en/legal-notice/")))
 ```
-The GDPR process is now activated for your users and a default message will be provided to collect the user consent. Please check the [**iAdvize Conversation SDK Customisation Cheat Sheet**](https://github.com/iadvize/mobile-android-sdk-conversation-library/blob/develop/doc/SDK-Cheatsheet-customisation-Android.pdf) if you want to customise this message.
+The GDPR process is now activated for your users and a default message will be provided to collect the user consent. Please check the [Customise](#customise) section below if you want to customise this message.
 
 <a name="push"></a>
 ## Registering push token
@@ -124,7 +124,7 @@ You can register it at any time after you activate the SDK (Step 4).
 <a name="button"></a>
 ## Chat button
 
-In order to invite your users to enter in a conversational experience, you have to display the default Chat button (see the [**iAdvize Conversation SDK Customisation Cheat Sheet**](https://github.com/iadvize/mobile-android-sdk-conversation-library/blob/develop/doc/SDK-Cheatsheet-customisation-Android.pdf) if you want to display your own). You can also, at any time, hide it. To do this you can simply use:
+In order to invite your users to enter in a conversational experience, you have to display the default Chat button (see the [Customise](#customise) section below if you want to display your own). You can also, at any time, hide it. To do this you can simply use:
 ```kotlin
 IAdvizeConversationManager.showChatButton()
 IAdvizeConversationManager.hideChatButton()
