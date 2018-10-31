@@ -1,4 +1,6 @@
-# iAdvize - Android Conversation SDK
+<img src="https://user-images.githubusercontent.com/17723986/47799626-f3982700-dd2a-11e8-983c-77d1a3ed7f53.png" width="280" height="96" alt="iAdvize">
+
+# Android Conversation SDK
 
 Take your app to the next step and provide a unique conversational experience to your users!
 
@@ -6,6 +8,7 @@ Embed the iAdvize Conversation SDK in your app and connect your visitors with yo
 
 You will find an example of integration in the sample of this repository.
 
+iAdvize Android Conversation SDK supports versions from API 16.
 ## [Integration](#integrate)
 * [App creation](#creation)
 * [SDK dependency](#dependency)
