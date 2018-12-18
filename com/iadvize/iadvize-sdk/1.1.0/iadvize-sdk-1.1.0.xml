@@ -4,6 +4,7 @@
   <groupId>com.iadvize</groupId>
   <artifactId>iadvize-sdk</artifactId>
   <version>1.1.0</version>
+  <packaging>aar</packaging>
   <inceptionYear>2018</inceptionYear>
   <licenses>
     <license>
