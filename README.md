@@ -9,6 +9,7 @@ Embed the iAdvize Conversation SDK in your app and connect your visitors with yo
 You will find an example of integration in the sample of this repository.
 
 iAdvize Android Conversation SDK supports versions from API 16.
+
 ## [Integration](#integrate)
 * [App creation](#creation)
 * [SDK dependency](#dependency)
@@ -20,6 +21,7 @@ iAdvize Android Conversation SDK supports versions from API 16.
 * [Chat button](#button)
 * [Push notification](#notification)
 * [Registering a transaction](#transaction)
+* [Targeting rule](#targeting)
 
 ## [Customisation](#customise)
 - [Chat button](#customisebutton)
@@ -40,6 +42,8 @@ Ask your iAdvize Admin to create a “Mobile App” on the administration websit
 
 To create the Mobile App, you will need to provide to your Administrator some information regarding the push notifications: just give your GCM API key to your administrator.
 
+You can register your application to the `SDKStatusListener` in `IAdvizeManager` to be informed when the SDK is enabled or disabled in the iAdvize administration website.
+
 <a name="dependency"></a>
 ## SDK dependency
 
@@ -57,7 +61,7 @@ allprojects {
 
 **Step 2**. Link your project with the iAdvize Conversation SDK dependency, add this line to your app's `build.gradle`:
 ```gradle
-implementation 'com.iadvize:iadvize-sdk:1.0.3'
+implementation 'com.iadvize:iadvize-sdk:1.1.0'
 ```
 
 Now you should be able to import `com.iadvize.conversation.sdk.*` in ny file you want to use it.
@@ -84,14 +88,16 @@ IAdvizeManager.registerApplicationId(this, "your-own-application-identifier-uuid
 You have two ways to activate the iAdvize Conversation SDK depending on the security model you choose.
  - For the in-app security model:
 ```kotlin
-IAdvizeManager.activate(JWTOption.Secret("yourjwtsecret"), "connecteduseruniqueidentifierornull", GDPROption.Disabled())
+IAdvizeManager.activate(JWTOption.Secret("yourjwtsecret"), "connecteduseruniqueidentifierornull", GDPROption.Disabled(), UUID.fromString("targetingruleid"))
 ```
  - For the server-side security model:
 ```kotlin
-IAdvizeManager.activate(JWTOption.Token("yourjwttoken"), "connecteduseruniqueidentifierornull", GDPROption.Disabled())
+IAdvizeManager.activate(JWTOption.Token("yourjwttoken"), "connecteduseruniqueidentifierornull", GDPROption.Disabled(), UUID.fromString("targetingruleid"))
 ```
 
 The `externalId` a unique identifier you can provide to identify your connected user across sessions and devices. It should not contain any private information (should not be an email, a phone number, a name...) of the user and should be opaque and unforgeable (e.g. a dynamic UUID). If your user isn’t logged-in you can pass a void value for this parameter (`null` in Kotlin).
+
+The `ruleId` allow to target visitors proactively or reactively, based on their browsing behaviour, their profile or their business criteria (e.g. basket amount, scoring, etc). Ask your iAdvize Admin to give you this identifier.
 
 Once the iAdvize Conversation SDK is successfully activated, you should see a message like this in the IDE console:
 ```kotlin
@@ -155,6 +161,15 @@ When you want to register a transaction within your application, you can call th
 ```kotlin
 IAdvizeTransactionManager.register(Transaction("transactionId", Date(), 10.00, Currency.EUR))
 ```
+
+<a name="targeting"></a>
+## Targeting rule
+
+When you want to update a targeting rule, you can call the following method by passing the new `ruleId`:
+```kotlin
+IAdvizeManager.setTargetingRule(UUID.fromString("myNewRuleId"))
+```
+
 To customise the SDK, check the next section.
 
 <a name="customise"></a>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "157950551512",
+    "firebase_url": "https://iadvize-public-demo.firebaseio.com",
+    "project_id": "iadvize-public-demo",
+    "storage_bucket": "iadvize-public-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:157950551512:android:cfad42cd7245dd37",
+        "android_client_info": {
+          "package_name": "com.iadvize.conversation.sdk.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "157950551512-7eek9ietsc2fvn8b9b40vf3e994vqcrr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iadvize.conversation.sdk.demo",
+            "certificate_hash": "a09ad2459ade2c2de54a1c8230a4427b6ef90c40"
+          }
+        },
+        {
+          "client_id": "157950551512-9lc5s39ff5e3allds50vleq9ieheqk39.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1muZiIx_6EB5WMnnqCy80Tweftg1ldws"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "157950551512-9lc5s39ff5e3allds50vleq9ieheqk39.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
