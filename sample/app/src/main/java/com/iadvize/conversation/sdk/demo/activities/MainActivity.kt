@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity(), SDKStatusListener {
             override fun onActivateFailure(t: Throwable) {
                 // Activation fails. You need to retry later to be able to properly activate the iAdvize Conversation SDK.
             }
-            override fun onActivateSuccess() {
+            override fun onActivateSuccess(isEnabled: Boolean) {
                 // Activation succeeds. You are now able to provide a chat experience to your users now
                 // or later by showing the chat button.
                 IAdvizeConversationManager.showChatButton()
@@ -110,10 +110,12 @@ class MainActivity : AppCompatActivity(), SDKStatusListener {
             override fun onActivateFailure(t: Throwable) {
                 // Activation fails. You need to retry later to be able to properly activate the iAdvize Conversation SDK.
             }
-            override fun onActivateSuccess() {
+            override fun onActivateSuccess(isEnabled: Boolean) {
                 // Activation succeeds. You are now able to provide a chat experience to your users now
                 // or later by showing the chat button.
-                IAdvizeConversationManager.showChatButton()
+                if(isEnabled) {
+                    IAdvizeConversationManager.showChatButton()
+                }
             }
         })
     }
