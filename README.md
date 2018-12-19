@@ -108,9 +108,11 @@ A listener is available in order to know if the SDK has been successfully activa
 ```kotlin
 IAdvizeManager.activate(JWTOption.Secret("yourjwtsecret"), "connecteduseruniqueidentifierornull", GDPROption.Disabled(), object : ActivateListener {
             override fun onActivateFailure(t: Throwable) {}
-            override fun onActivateSuccess() {}
+            override fun onActivateSuccess(isEnabled: Boolean) {}
         })
 ```
+
+N.B. You have to check if the activation succeeds before you try to show a Chat Button (the default or a custom one). You also have to check the isEnabled flag which indicates you if the SDK is currently enabled or disabled by the SDK Administrator.
 
 <a name="gdpr"></a>
 ## GDPR
