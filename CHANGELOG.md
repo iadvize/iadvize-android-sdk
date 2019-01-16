@@ -1,3 +1,10 @@
+# 1.1.2
+
+### Release date 2019/01/16
+
+Hide the keyboard when a visitor quit the Conversation View.
+Fix on the management of dates in the conversation. 
+
 # 1.1.1
 
 ### Release date 2018/12/19
