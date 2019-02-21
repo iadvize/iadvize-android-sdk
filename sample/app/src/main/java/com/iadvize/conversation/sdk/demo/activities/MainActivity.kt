@@ -11,11 +11,14 @@ import com.iadvize.conversation.sdk.IAdvizeManager
 import com.iadvize.conversation.sdk.demo.R
 import com.iadvize.conversation.sdk.demo.adapters.MainPagerAdapter
 import com.iadvize.conversation.sdk.enums.GDPROption
+import com.iadvize.conversation.sdk.enums.IncomingMessageAvatar
 import com.iadvize.conversation.sdk.enums.JWTOption
+import com.iadvize.conversation.sdk.enums.SDKLanguageOption
 import com.iadvize.conversation.sdk.listener.ActivateListener
 import com.iadvize.conversation.sdk.listener.SDKStatusListener
 import com.iadvize.conversation.sdk.model.ConversationViewConfiguration
 import com.iadvize.conversation.sdk.model.User
+import com.iadvize.conversation.sdk.type.Language
 import kotlinx.android.synthetic.main.activity_main.*
 import java.net.URL
 import java.util.*
@@ -45,6 +48,14 @@ class MainActivity : AppCompatActivity(), SDKStatusListener {
         // Management of the SDK status change
         IAdvizeManager.statusListener = this
 
+        // By default, the iAdvize Conversation SDK take the device language
+        IAdvizeManager.language = SDKLanguageOption.Custom(Language.FR)
+
+        // Update avatar for the incoming messages
+        val avatar = ContextCompat.getDrawable(this, R.mipmap.ic_launcher)?.let {
+            IncomingMessageAvatar.Image(it)
+        }
+
         // Configure SDK options for your integration
         val config = ConversationViewConfiguration(ContextCompat.getColor(this, R.color.colorPrimary),
                 "Say Hello 👋",
@@ -52,7 +63,8 @@ class MainActivity : AppCompatActivity(), SDKStatusListener {
                 "As part of the GDPR, we have to ask you to consent to our legal information.",
                 "fonts/ProximaNova-Regular.otf",
                 ContextCompat.getColor(this, R.color.colorPrimary),
-                Color.WHITE)
+                Color.WHITE,
+                avatar)
 
         // Apply this configuration
         IAdvizeConversationManager.setupConversationView(config)

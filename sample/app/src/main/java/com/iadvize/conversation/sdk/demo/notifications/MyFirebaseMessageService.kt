@@ -50,7 +50,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
      */
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         if (IAdvizeManager.isIAdvizePushNotification(remoteMessage.data)) {
-            IAdvizeManager.handlePushNotification(this, remoteMessage.data, R.mipmap.ic_launcher)
+            IAdvizeManager.handlePushNotification(this, remoteMessage.data, R.mipmap.notification_logo)
         } else {
             sendNotification()
         }

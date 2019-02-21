@@ -14,6 +14,7 @@ iAdvize Android Conversation SDK supports versions from API 16.
 * [App creation](#creation)
 * [SDK dependency](#dependency)
 * [Logging](#logging)
+* [Language](#language)
 * [Registering your application ID](#register)
 * [Activating the SDK](#activate)
 * [GDPR](#gdpr)
@@ -31,6 +32,7 @@ iAdvize Android Conversation SDK supports versions from API 16.
 - [Font](#customisefont)
 - [Automatic message](#customisemessage)
 - [GDPR message](#customisegdpr)
+- [Brand avatar](#avatar)
 
 <a name="integrate"></a>
 # Integration
@@ -61,7 +63,7 @@ allprojects {
 
 **Step 2**. Link your project with the iAdvize Conversation SDK dependency, add this line to your app's `build.gradle`:
 ```gradle
-implementation 'com.iadvize:iadvize-sdk:1.1.2'
+implementation 'com.iadvize:iadvize-sdk:1.2.0'
 ```
 
 Now you should be able to import `com.iadvize.conversation.sdk.*` in ny file you want to use it.
@@ -72,6 +74,14 @@ Now you should be able to import `com.iadvize.conversation.sdk.*` in ny file you
 By default, the SDK will only log Warnings and Errors in the Android Studio console. You can make it more verbose and choose between multiple levels of log for a better integration experience:
 ```kotlin
 IAdvizeManager.logLevel = Logger.Level.VERBOSE
+```
+
+<a name="language"></a>
+## Language
+
+By default, the SDK will use the device language for targeting a conversation. With this variable you can specify the language you want to use for targetting:
+```kotlin
+IAdvizeManager.language = SDKLanguageOption.Custom(Language.FR)
 ```
 
 <a name="register"></a>
@@ -268,5 +278,19 @@ Once the GDPR is activated, you can easily customise the GDPR message you want t
 // Update the GDPR message
 configuration.gdprMessage = "Your own GDPR message."
 ```
+
+<a name="avatar"></a>
+## Brand avatar
+
+You can update the brand avatar displayed for the incoming messages. You can specify an URL or a Drawable. Gifs are not supported. You can set an avatar through the Conversation configuration:
+
+```kotlin
+// Update the incoming message avatar with a Drawable
+configuration.incomingMessageAvatar = IncomingMessageAvatar.Image(ContextCompat.getDrawable(this, R.drawable.avatar))
+
+// Update the incoming message avatar with an URL
+configuration.incomingMessageAvatar = IncomingMessageAvatar.Url(URL("your-url"))
+```
+
 
 Well done! You’re now ready to take your app to the next step and provide a unique conversational experience to your users! 🚀
