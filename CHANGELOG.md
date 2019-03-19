@@ -1,3 +1,9 @@
+# 1.2.1
+
+### Release date 2019/03/19
+
+- Using the automatic message when accepting the GDPR.
+
 # 1.2.0
 
 ### Release date 2019/02/21

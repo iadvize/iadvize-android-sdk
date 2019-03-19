@@ -260,7 +260,7 @@ The font file must be in the assets of your application. Here the file is in `as
 <a name="customisemessage"></a>
 ## Automatic message
 
-A first automatic message can be setup to be displayed as an operator message in the Conversation View. By default, no message will be displayed. You can set an automatic message through the Conversation configuration:
+A first automatic message can be setup to be displayed as an operator message in the Conversation View. By default, no message will be displayed. This message will also be used and displayed when the user accepts the GDPR. You can set an automatic message through the Conversation configuration:
 
 ```kotlin
 // Update the automatic message
@@ -291,6 +291,5 @@ configuration.incomingMessageAvatar = IncomingMessageAvatar.Image(ContextCompat.
 // Update the incoming message avatar with an URL
 configuration.incomingMessageAvatar = IncomingMessageAvatar.Url(URL("your-url"))
 ```
-
 
 Well done! You’re now ready to take your app to the next step and provide a unique conversational experience to your users! 🚀
