@@ -1,3 +1,9 @@
+# 1.2.2
+
+### Release date 2019/03/21
+
+- Fix when updating the conversation when the visitor receives a message via a push notification.
+
 # 1.2.1
 
 ### Release date 2019/03/19

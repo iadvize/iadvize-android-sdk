@@ -63,7 +63,7 @@ allprojects {
 
 **Step 2**. Link your project with the iAdvize Conversation SDK dependency, add this line to your app's `build.gradle`:
 ```gradle
-implementation 'com.iadvize:iadvize-sdk:1.2.1'
+implementation 'com.iadvize:iadvize-sdk:1.2.2'
 ```
 
 Now you should be able to import `com.iadvize.conversation.sdk.*` in ny file you want to use it.
