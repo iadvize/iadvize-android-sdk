@@ -11,7 +11,7 @@ import com.iadvize.conversation.sdk.demo.models.Product
  * Created by Yann Coupé on 21/08/2018.
  * Copyright © 2018 iAdvize. All rights reserved.
  */
-class CartViewHolder(view: View): RecyclerView.ViewHolder(view) {
+class CartViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     private val cartPicture = view.findViewById<ImageView>(R.id.cart_item_picture)
     private val cartName = view.findViewById<TextView>(R.id.cart_item_name)
@@ -24,7 +24,6 @@ class CartViewHolder(view: View): RecyclerView.ViewHolder(view) {
         cartPrice.text = "$${product.price * quantity}"
 
         cartQuantity.text = quantity.toString()
-        cartQuantity.visibility = if(quantity > 1) View.VISIBLE else View.GONE
+        cartQuantity.visibility = if (quantity > 1) View.VISIBLE else View.GONE
     }
-
 }

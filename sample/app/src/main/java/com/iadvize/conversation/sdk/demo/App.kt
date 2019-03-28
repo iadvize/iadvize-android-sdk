@@ -13,7 +13,7 @@ import com.iadvize.conversation.sdk.logger.Logger
  * Created by Yann Coupé on 20/08/2018.
  * Copyright © 2018 iAdvize. All rights reserved.
  */
-class App: Application() {
+class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
@@ -22,7 +22,7 @@ class App: Application() {
         val notificationManager = applicationContext.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            notificationManager.createNotificationChannel(NotificationChannel("sample-channel-id","Sample", NotificationManager.IMPORTANCE_HIGH))
+            notificationManager.createNotificationChannel(NotificationChannel("sample-channel-id", "Sample", NotificationManager.IMPORTANCE_HIGH))
         }
 
         // Choose the log level of the SDK from `VERBOSE` to `SUCCESS`.

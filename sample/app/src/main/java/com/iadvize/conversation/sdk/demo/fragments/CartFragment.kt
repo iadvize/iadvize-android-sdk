@@ -14,13 +14,13 @@ import com.iadvize.conversation.sdk.demo.models.Cart
 import com.iadvize.conversation.sdk.transaction.IAdvizeTransactionManager
 import com.iadvize.conversation.sdk.type.Currency
 import kotlinx.android.synthetic.main.fragment_cart.*
-import java.util.*
+import java.util.* // ktlint-disable no-wildcard-imports
 
 /**
  * Created by Yann Coupé on 21/08/2018.
  * Copyright © 2018 iAdvize. All rights reserved.
  */
-class CartFragment: Fragment() {
+class CartFragment : Fragment() {
 
     private val adapter = CartAdapter(Cart.cart.entries)
 
@@ -61,7 +61,7 @@ class CartFragment: Fragment() {
         super.onResume()
         adapter.refresh()
 
-        if(Cart.cart.isEmpty()) {
+        if (Cart.cart.isEmpty()) {
             cart_purchase.visibility = View.GONE
             cart_clear.visibility = View.GONE
         } else {

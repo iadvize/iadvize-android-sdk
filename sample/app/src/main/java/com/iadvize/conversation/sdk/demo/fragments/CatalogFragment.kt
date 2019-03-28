@@ -20,7 +20,7 @@ import kotlinx.android.synthetic.main.fragment_catalog.*
  * Created by Yann Coupé on 20/08/2018.
  * Copyright © 2018 iAdvize. All rights reserved.
  */
-class CatalogFragment: Fragment(), OnItemClickListener {
+class CatalogFragment : Fragment(), OnItemClickListener {
 
     private val adapter = ProductAdapter(Catalog.products, this)
 

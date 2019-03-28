@@ -4,7 +4,6 @@ import android.graphics.Rect
 import android.support.v7.widget.RecyclerView
 import android.view.View
 
-
 /**
  * Created by Yann Coupé on 21/08/2018.
  * Copyright © 2018 iAdvize. All rights reserved.
@@ -22,5 +21,4 @@ class ItemOffsetDecoration(private val spanCount: Int, private val spacing: Int)
         outRect.top = if (position < spanCount) spacing else 0
         outRect.bottom = spacing
     }
-
 }

@@ -9,7 +9,7 @@ object Cart {
     val cart = hashMapOf<Product, Int>()
 
     fun addProduct(product: Product) {
-        if(cart.containsKey(product)) {
+        if (cart.containsKey(product)) {
             cart[product]?.let {
                 cart.put(product, it + 1)
             }

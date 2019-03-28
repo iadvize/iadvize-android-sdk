@@ -12,7 +12,7 @@ import com.iadvize.conversation.sdk.demo.models.Product
  * Created by Yann Coupé on 20/08/2018.
  * Copyright © 2018 iAdvize. All rights reserved.
  */
-class ProductViewHolder(view: View): RecyclerView.ViewHolder(view) {
+class ProductViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     private val productPicture = view.findViewById<ImageView>(R.id.product_item_picture)
     private val productName = view.findViewById<TextView>(R.id.product_item_name)

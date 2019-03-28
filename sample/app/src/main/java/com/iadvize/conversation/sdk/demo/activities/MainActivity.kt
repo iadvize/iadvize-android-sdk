@@ -21,8 +21,7 @@ import com.iadvize.conversation.sdk.model.User
 import com.iadvize.conversation.sdk.type.Language
 import kotlinx.android.synthetic.main.activity_main.*
 import java.net.URL
-import java.util.*
-
+import java.util.* // ktlint-disable no-wildcard-imports
 
 /**
  * Created by Yann Coupé on 20/08/2018.
@@ -125,7 +124,7 @@ class MainActivity : AppCompatActivity(), SDKStatusListener {
             override fun onActivateSuccess(isEnabled: Boolean) {
                 // Activation succeeds. You are now able to provide a chat experience to your users now
                 // or later by showing the chat button.
-                if(isEnabled) {
+                if (isEnabled) {
                     IAdvizeConversationManager.showChatButton()
                 }
             }

@@ -8,4 +8,4 @@ import kotlinx.android.parcel.Parcelize
  * Copyright © 2018 iAdvize. All rights reserved.
  */
 @Parcelize
-data class Product(var name: String, var description: String, var pictureResId: Int, var price: Int): Parcelable
+data class Product(var name: String, var description: String, var pictureResId: Int, var price: Int) : Parcelable

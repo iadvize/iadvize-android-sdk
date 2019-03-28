@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_product.*
  * Created by Yann Coupé on 21/08/2018.
  * Copyright © 2018 iAdvize. All rights reserved.
  */
-class ProductActivity: AppCompatActivity() {
+class ProductActivity : AppCompatActivity() {
 
     companion object {
         const val EXTRA_PRODUCT = "EXTRA_PRODUCT"
@@ -37,7 +37,7 @@ class ProductActivity: AppCompatActivity() {
         }
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean = when(item.itemId) {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean = when (item.itemId) {
         android.R.id.home -> {
             finish()
             true

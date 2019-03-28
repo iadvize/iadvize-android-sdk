@@ -18,7 +18,6 @@ import com.iadvize.conversation.sdk.IAdvizeManager
 import com.iadvize.conversation.sdk.demo.R
 import com.iadvize.conversation.sdk.demo.activities.MainActivity
 
-
 /**
  * Created by Yann Coupé on 30/03/2018.
  * Copyright © 2017 iAdvize. All rights reserved.

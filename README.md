@@ -1,3 +1,5 @@
+[![ktlint](https://img.shields.io/badge/code%20style-%E2%9D%A4-FF4081.svg)](https://ktlint.github.io/)
+
 <img src="https://user-images.githubusercontent.com/17723986/47799626-f3982700-dd2a-11e8-983c-77d1a3ed7f53.png" width="280" height="96" alt="iAdvize">
 
 # Android Conversation SDK

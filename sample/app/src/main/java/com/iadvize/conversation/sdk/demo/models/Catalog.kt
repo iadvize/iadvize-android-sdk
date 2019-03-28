@@ -8,9 +8,9 @@ import com.iadvize.conversation.sdk.demo.R
  * Copyright © 2018 iAdvize. All rights reserved.
  */
 object Catalog {
-    
+
     val products = arrayListOf<Product>()
-    
+
     fun construct(context: Context) {
         val pictures = context.resources.obtainTypedArray(R.array.catalog_pictures)
         val titles = context.resources.obtainTypedArray(R.array.catalog_names)
