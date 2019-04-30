@@ -15,6 +15,7 @@ import com.iadvize.conversation.sdk.enums.IncomingMessageAvatar
 import com.iadvize.conversation.sdk.enums.JWTOption
 import com.iadvize.conversation.sdk.enums.SDKLanguageOption
 import com.iadvize.conversation.sdk.listener.ActivateListener
+import com.iadvize.conversation.sdk.listener.IAdvizeConversationManagerListener
 import com.iadvize.conversation.sdk.listener.SDKStatusListener
 import com.iadvize.conversation.sdk.model.ConversationViewConfiguration
 import com.iadvize.conversation.sdk.model.User
@@ -27,7 +28,7 @@ import java.util.* // ktlint-disable no-wildcard-imports
  * Created by Yann Coupé on 20/08/2018.
  * Copyright © 2018 iAdvize. All rights reserved.
  */
-class MainActivity : AppCompatActivity(), SDKStatusListener {
+class MainActivity : AppCompatActivity(), SDKStatusListener, IAdvizeConversationManagerListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +47,9 @@ class MainActivity : AppCompatActivity(), SDKStatusListener {
 
         // Management of the SDK status change
         IAdvizeManager.statusListener = this
+
+        // Subscribe to new messages and unread messages counter events
+        IAdvizeConversationManager.listener = this
 
         // By default, the iAdvize Conversation SDK take the device language
         IAdvizeManager.language = SDKLanguageOption.Custom(Language.FR)
@@ -138,5 +142,13 @@ class MainActivity : AppCompatActivity(), SDKStatusListener {
 
     override fun onSdkEnabled() {
         Log.d("SDK Demo", "SDK has been enabled")
+    }
+
+    override fun didReceiveNewMessage(content: String) {
+        Log.d("SDK Demo", "SDK receive a new message")
+    }
+
+    override fun didUpdateUnreadMessagesCount(unreadMessagesCount: Int) {
+        Log.d("SDK Demo", "SDK update unread messages count")
     }
 }

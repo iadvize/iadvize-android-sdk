@@ -1,3 +1,9 @@
+# 1.2.3
+
+### Release date 2019/04/30
+
+- Expose the IAdvizeConversationManagerListener to be able to subscribe to new messages and unread messages counter events.
+
 # 1.2.2
 
 ### Release date 2019/03/21
