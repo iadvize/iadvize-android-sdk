@@ -1,3 +1,11 @@
+# 1.3.0
+
+### Release date 2019/05/14
+
+- Added the possibility to send and receive attachments (files or images) in conversation.
+- Fix unread messages counter in the IAdvizeConversationManagerListener.
+- Update the documentation to precise that the SDK must be activated before registering a User (`IAdvizeManager.registerUser(User("Antoine"))`).
+
 # 1.2.3
 
 ### Release date 2019/04/30

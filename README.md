@@ -1,3 +1,5 @@
+[![ktlint](https://img.shields.io/badge/code%20style-%E2%9D%A4-FF4081.svg)](https://ktlint.github.io/)
+
 <img src="https://user-images.githubusercontent.com/17723986/47799626-f3982700-dd2a-11e8-983c-77d1a3ed7f53.png" width="280" height="96" alt="iAdvize">
 
 # Android Conversation SDK
@@ -19,6 +21,7 @@ iAdvize Android Conversation SDK supports versions from API 16.
 * [Activating the SDK](#activate)
 * [GDPR](#gdpr)
 * [Registering push token](#push)
+* [Registering user](#user)
 * [Chat button](#button)
 * [Push notification](#notification)
 * [Registering a transaction](#transaction)
@@ -63,7 +66,7 @@ allprojects {
 
 **Step 2**. Link your project with the iAdvize Conversation SDK dependency, add this line to your app's `build.gradle`:
 ```gradle
-implementation 'com.iadvize:iadvize-sdk:1.2.3'
+implementation 'com.iadvize:iadvize-sdk:1.3.0'
 ```
 
 Now you should be able to import `com.iadvize.conversation.sdk.*` in ny file you want to use it.
@@ -141,6 +144,15 @@ In order to allow your users to receive operators or experts answers in real tim
 IAdvizeManager.registerPushToken("pushtoken")
 ```
 You can register it at any time after you activate the SDK (Step 4).
+
+<a name="user"></a>
+## Registering user
+
+You can register User information which will be displayed in the profile section of the ChatBox on the operator Desk. To do so just call the `registerUser()` method on the `IAdvizeManager` object:
+```kotlin
+IAdvizeManager.registerUser(User("Antoine"))
+```
+Note: You need to activate the SDK (see step 4) before registering the User.
 
 <a name="button"></a>
 ## Chat button

@@ -93,9 +93,6 @@ class MainActivity : AppCompatActivity(), SDKStatusListener, IAdvizeConversation
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {}
         })
-
-        // Register user information which will be displayed to your operators or ibbü experts.
-        IAdvizeManager.registerUser(User("Antoine"))
     }
 
     private fun iAdvizeActivate() {
@@ -112,7 +109,11 @@ class MainActivity : AppCompatActivity(), SDKStatusListener, IAdvizeConversation
             override fun onActivateSuccess(isEnabled: Boolean) {
                 // Activation succeeds. You are now able to provide a chat experience to your users now
                 // or later by showing the chat button.
-                IAdvizeConversationManager.showChatButton()
+                if (isEnabled) {
+                    IAdvizeConversationManager.showChatButton()
+                    // Register user information which will be displayed to your operators or ibbü experts.
+                    IAdvizeManager.registerUser(User("Antoine"))
+                }
             }
         })
     }
@@ -130,6 +131,8 @@ class MainActivity : AppCompatActivity(), SDKStatusListener, IAdvizeConversation
                 // or later by showing the chat button.
                 if (isEnabled) {
                     IAdvizeConversationManager.showChatButton()
+                    // Register user information which will be displayed to your operators or ibbü experts.
+                    IAdvizeManager.registerUser(User("Antoine"))
                 }
             }
         })
