@@ -66,7 +66,7 @@ allprojects {
 
 **Step 2**. Link your project with the iAdvize Conversation SDK dependency, add this line to your app's `build.gradle`:
 ```gradle
-implementation 'com.iadvize:iadvize-sdk:1.3.0'
+implementation 'com.iadvize:iadvize-sdk:1.3.1'
 ```
 
 Now you should be able to import `com.iadvize.conversation.sdk.*` in ny file you want to use it.
@@ -206,6 +206,12 @@ By default, the SDK provides you a Chat button which you can integrate as-is. Yo
 
 ```kotlin
 IAdvizeConversationManager.presentConversationViewActivity(context)
+```
+
+You can get the number of unread messages via the method: 
+
+```kotlin
+IAdvizeConversationManager.unreadMessages()
 ```
 
 <a name="customiseconversation"></a>

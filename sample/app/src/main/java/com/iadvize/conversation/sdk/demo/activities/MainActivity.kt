@@ -154,4 +154,8 @@ class MainActivity : AppCompatActivity(), SDKStatusListener, IAdvizeConversation
     override fun didUpdateUnreadMessagesCount(unreadMessagesCount: Int) {
         Log.d("SDK Demo", "SDK update unread messages count")
     }
+
+    override fun didOpenConversation() {
+        Log.d("SDK Demo", "SDK conversation was opened")
+    }
 }
