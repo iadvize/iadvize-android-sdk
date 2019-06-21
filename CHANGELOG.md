@@ -1,3 +1,9 @@
+# 1.3.2
+
+### Release date 2019/06/21
+
+- Fix the access level of properties of some variables of the IAdvizeManager and IAdvizeConversationManager classes.
+
 # 1.3.1
 
 ### Release date 2019/06/04
