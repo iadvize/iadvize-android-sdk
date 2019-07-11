@@ -1,4 +1,8 @@
-# 1.3.2
+# 1.3.3
+
+### Release date 2019/07/11
+
+- Added a GDPR listener to handle in a custom way the "More Information" action of the user.
 
 ### Release date 2019/06/21
 

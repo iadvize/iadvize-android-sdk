@@ -10,11 +10,9 @@ import com.iadvize.conversation.sdk.IAdvizeConversationManager
 import com.iadvize.conversation.sdk.IAdvizeManager
 import com.iadvize.conversation.sdk.demo.R
 import com.iadvize.conversation.sdk.demo.adapters.MainPagerAdapter
-import com.iadvize.conversation.sdk.enums.GDPROption
-import com.iadvize.conversation.sdk.enums.IncomingMessageAvatar
-import com.iadvize.conversation.sdk.enums.JWTOption
-import com.iadvize.conversation.sdk.enums.SDKLanguageOption
+import com.iadvize.conversation.sdk.enums.*
 import com.iadvize.conversation.sdk.listener.ActivateListener
+import com.iadvize.conversation.sdk.listener.GDPRListener
 import com.iadvize.conversation.sdk.listener.IAdvizeConversationManagerListener
 import com.iadvize.conversation.sdk.listener.SDKStatusListener
 import com.iadvize.conversation.sdk.model.ConversationViewConfiguration
@@ -28,7 +26,7 @@ import java.util.* // ktlint-disable no-wildcard-imports
  * Created by Yann Coupé on 20/08/2018.
  * Copyright © 2018 iAdvize. All rights reserved.
  */
-class MainActivity : AppCompatActivity(), SDKStatusListener, IAdvizeConversationManagerListener {
+class MainActivity : AppCompatActivity(), SDKStatusListener, IAdvizeConversationManagerListener, GDPRListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,7 +38,7 @@ class MainActivity : AppCompatActivity(), SDKStatusListener, IAdvizeConversation
         val shouldActivateGDPR = true
 
         if (shouldActivateGDPR) {
-            iAdvizeActivateWithGDPR()
+            iAdvizeActivateWithGDPRUrl() // iAdvizeActivateWithGDPRListener()
         } else {
             iAdvizeActivate()
         }
@@ -118,11 +116,31 @@ class MainActivity : AppCompatActivity(), SDKStatusListener, IAdvizeConversation
         })
     }
 
-    private fun iAdvizeActivateWithGDPR() {
+    private fun iAdvizeActivateWithGDPRUrl() {
         // To activate GDPR, you have to provide a legal information URL.
         val legalInfoUrl = URL("http://yourlegalinformationurl.com/legal")
         IAdvizeManager.activate(JWTOption.Secret("iAdvizeSecret"),
-                "ConnectedUserIdentifier", GDPROption.Enabled(legalInfoUrl), UUID.fromString("RuleId"), object : ActivateListener {
+                "ConnectedUserIdentifier", GDPROption.Enabled(GDPREnabledOption.LegalUrl(legalInfoUrl)), UUID.fromString("RuleId"), object : ActivateListener {
+            override fun onActivateFailure(t: Throwable) {
+                // Activation fails. You need to retry later to be able to properly activate the iAdvize Conversation SDK.
+            }
+            override fun onActivateSuccess(isEnabled: Boolean) {
+                // Activation succeeds. You are now able to provide a chat experience to your users now
+                // or later by showing the chat button.
+                if (isEnabled) {
+                    IAdvizeConversationManager.showChatButton()
+                    // Register user information which will be displayed to your operators or ibbü experts.
+                    IAdvizeManager.registerUser(User("Antoine"))
+                }
+            }
+        })
+    }
+
+    private fun iAdvizeActivateWithGDPRListener() {
+        // To activate GDPR, you have to provide a legal information URL.
+        val legalInfoUrl = URL("http://yourlegalinformationurl.com/legal")
+        IAdvizeManager.activate(JWTOption.Secret("iAdvizeSecret"),
+                "ConnectedUserIdentifier", GDPROption.Enabled(GDPREnabledOption.Listener(this)), UUID.fromString("RuleId"), object : ActivateListener {
             override fun onActivateFailure(t: Throwable) {
                 // Activation fails. You need to retry later to be able to properly activate the iAdvize Conversation SDK.
             }
@@ -157,5 +175,9 @@ class MainActivity : AppCompatActivity(), SDKStatusListener, IAdvizeConversation
 
     override fun didOpenConversation() {
         Log.d("SDK Demo", "SDK conversation was opened")
+    }
+
+    override fun didTapMoreInformation() {
+        Log.d("SDK Demo", "User tap on More Information")
     }
 }

@@ -66,7 +66,7 @@ allprojects {
 
 **Step 2**. Link your project with the iAdvize Conversation SDK dependency, add this line to your app's `build.gradle`:
 ```gradle
-implementation 'com.iadvize:iadvize-sdk:1.3.2'
+implementation 'com.iadvize:iadvize-sdk:1.3.3'
 ```
 
 Now you should be able to import `com.iadvize.conversation.sdk.*` in ny file you want to use it.
@@ -119,7 +119,7 @@ iAdvize Conversation: ✅ iAdvize conversation activated, the version is x.x.x.
 
 A listener is available in order to know if the SDK has been successfully activated (and to retry later if the activation fails):
 ```kotlin
-IAdvizeManager.activate(JWTOption.Secret("yourjwtsecret"), "connecteduseruniqueidentifierornull", GDPROption.Disabled(), object : ActivateListener {
+IAdvizeManager.activate(JWTOption.Secret("yourjwtsecret"), "connecteduseruniqueidentifierornull", GDPROption.Disabled(), UUID.fromString("targetingruleid"), object : ActivateListener {
             override fun onActivateFailure(t: Throwable) {}
             override fun onActivateSuccess(isEnabled: Boolean) {}
         })
@@ -130,9 +130,13 @@ N.B. You have to check if the activation succeeds before you try to show a Chat 
 <a name="gdpr"></a>
 ## GDPR
 
-By default when you activate the SDK, the GDPR will be disabled. You can activate the GDPR feature by passing a new parameter to the activate method and provide a mandatory Legal Information URL link with it:
+By default when you activate the SDK, the GDPR will be disabled. You can activate the GDPR feature by passing a new parameter to the activate method and provide a mandatory Legal Information URL link or a delegate to manage your own action on the tap on `More information` button with it:
 ```kotlin
-IAdvizeManager.activate(JWTOption.Token("yourjwttoken"), "connecteduseruniqueidentifierornull", gdprOption = GDPROption.Enabled(URL("https://www.iadvize.com/en/legal-notice/")))
+IAdvizeManager.activate(JWTOption.Token("yourjwttoken"), "connecteduseruniqueidentifierornull", gdprOption = GDPROption.Enabled(GDPREnabledOption.LegalUrl(URL("https://www.iadvize.com/en/legal-notice/"))), UUID.fromString("targetingruleid"))
+```
+
+```kotlin
+IAdvizeManager.activate(JWTOption.Token("yourjwttoken"), "connecteduseruniqueidentifierornull", gdprOption = GDPROption.Enabled(GDPREnabledOption.Listener(this)), UUID.fromString("targetingruleid"))
 ```
 The GDPR process is now activated for your users and a default message will be provided to collect the user consent. Please check the [Customise](#customise) section below if you want to customise this message.
 
