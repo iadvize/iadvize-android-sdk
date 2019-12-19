@@ -1,3 +1,9 @@
+# 1.3.4
+
+### Release date 2019/12/19
+
+- Fix integration conflict on FileProvider
+
 # 1.3.3
 
 ### Release date 2019/07/11
