@@ -1,3 +1,9 @@
+# 1.3.5
+
+### Release date 2020/01/27
+
+- Fix a bug when the user try to open a file just after uploaded it.
+
 # 1.3.4
 
 ### Release date 2019/12/19
