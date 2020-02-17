@@ -2,8 +2,8 @@
 
 ### Release date 2020/02/17
 
-- Fix a bug when on IAdvizeNotificationManager.
-- Fix a bug on logs.
+- Fix a bug on notifications.
+- Fix a bug on logger.
 
 # 1.3.5
 
