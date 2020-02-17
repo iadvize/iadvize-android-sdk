@@ -1,3 +1,10 @@
+# 1.3.6
+
+### Release date 2020/02/17
+
+- Fix a bug when on IAdvizeNotificationManager.
+- Fix a bug on logs.
+
 # 1.3.5
 
 ### Release date 2020/01/27
