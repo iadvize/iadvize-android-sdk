@@ -182,6 +182,19 @@ IAdvizeManager.handlePushNotification(this, remoteMessage.getData(), R.mipmap.no
 ```
 *where `remoteMessage` is the object representing the push notification and `this` the application context.
 
+If you need, you can enable or disable the push notifications (there are enabled by default)
+```kotlin
+IAdvizeManager.enablePushNotifications(object : EnablePushNotificationsListener {
+    override fun onEnableSuccess() {}
+    override fun onEnableFailure(t: Throwable) {}
+})
+
+IAdvizeManager.disablePushNotifications(object : DisablePushNotificationsListener {
+    override fun onDisableSuccess() {}
+    override fun onDisableFailure(t: Throwable) {}
+})
+```
+
 <a name="transaction"></a>
 ## Registering a transaction
 
