@@ -16,7 +16,7 @@ iAdvize Android Conversation SDK supports versions from API 16.
 * [App creation](#creation)
 * [SDK dependency](#dependency)
 * [Logging](#logging)
-* [Language](#language)
+* [Targeting Language](#targeting-language)
 * [Registering your application ID](#register)
 * [Activating the SDK](#activate)
 * [GDPR](#gdpr)
@@ -79,13 +79,15 @@ By default, the SDK will only log Warnings and Errors in the Android Studio cons
 IAdvizeManager.logLevel = Logger.Level.VERBOSE
 ```
 
-<a name="language"></a>
-## Language
+<a name="targeting-language"></a>
+## Targeting Language
 
-By default, the SDK will use the device language for targeting a conversation. With this variable you can specify the language you want to use for targetting:
+By default, the SDK will use the device language for **targeting a conversation**. With this variable you can specify the language you want to use for targetting:
 ```kotlin
 IAdvizeManager.language = SDKLanguageOption.Custom(Language.FR)
 ```
+
+> :warning: The `IAdvizeManager.language` property is NOT intended to change the language displayed in the SDK.
 
 <a name="register"></a>
 ## Registering your application ID
