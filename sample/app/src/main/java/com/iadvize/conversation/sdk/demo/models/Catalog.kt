@@ -19,7 +19,8 @@ object Catalog {
 
         val size = pictures.length()
         for (i in 0 until size) {
-            products.add(Product(titles.getString(i), descriptions.getString(i), pictures.getResourceId(i, -1), prices.getInteger(i, 0)))
+            products.add(Product(titles.getString(i) ?: "", descriptions.getString(i)
+                    ?: "", pictures.getResourceId(i, -1), prices.getInteger(i, 0)))
         }
 
         pictures.recycle()

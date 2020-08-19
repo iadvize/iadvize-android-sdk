@@ -2,10 +2,10 @@ package com.iadvize.conversation.sdk.demo.activities
 
 import android.graphics.Color
 import android.os.Bundle
-import android.support.design.widget.TabLayout
-import android.support.v4.content.ContextCompat
-import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import com.google.android.material.tabs.TabLayout
 import com.iadvize.conversation.sdk.IAdvizeConversationManager
 import com.iadvize.conversation.sdk.IAdvizeManager
 import com.iadvize.conversation.sdk.demo.R

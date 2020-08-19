@@ -1,59 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:foreground="?android:attr/selectableItemBackground"
     app:cardCornerRadius="2dp"
-    app:cardElevation="4dp"
-    android:foreground="?android:attr/selectableItemBackground">
+    app:cardElevation="4dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageView
+            android:id="@+id/cart_item_picture"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:id="@+id/cart_item_picture"/>
+            android:layout_marginStart="@dimen/common_margin"
+            android:layout_marginLeft="@dimen/common_margin" />
 
         <TextView
+            android:id="@+id/cart_item_price"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
-            android:layout_margin="8dp"
-            android:textColor="#FF642F"
-            android:textSize="16sp"
-            android:gravity="center_vertical|right"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:id="@+id/cart_item_price"/>
+            android:layout_margin="8dp"
+            android:gravity="center_vertical|end"
+            android:textColor="#FF642F"
+            android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/cart_item_name"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_margin="8dp"
-            android:textColor="#26282D"
-            android:textSize="16sp"
-            android:gravity="center_vertical"
-            android:layout_toLeftOf="@+id/cart_item_price"
-            android:layout_toRightOf="@+id/cart_item_picture"
             android:layout_centerVertical="true"
-            android:id="@+id/cart_item_name"/>
+            android:layout_margin="8dp"
+            android:layout_toStartOf="@+id/cart_item_price"
+            android:layout_toLeftOf="@+id/cart_item_price"
+            android:layout_toEndOf="@+id/cart_item_picture"
+            android:layout_toRightOf="@+id/cart_item_picture"
+            android:gravity="center_vertical"
+            android:textColor="#26282D"
+            android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/cart_item_quantity"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
             android:layout_margin="8dp"
-            android:textColor="@android:color/white"
-            android:textSize="12sp"
             android:background="@drawable/cart_item_quantity"
             android:gravity="center"
-            android:id="@+id/cart_item_quantity"/>
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
 
     </RelativeLayout>
 
-</android.support.v7.widget.CardView>
+</androidx.cardview.widget.CardView>

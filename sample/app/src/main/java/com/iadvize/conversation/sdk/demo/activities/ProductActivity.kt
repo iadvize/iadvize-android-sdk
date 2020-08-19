@@ -1,9 +1,9 @@
 package com.iadvize.conversation.sdk.demo.activities
 
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
 import com.iadvize.conversation.sdk.demo.R
 import com.iadvize.conversation.sdk.demo.models.Cart
 import com.iadvize.conversation.sdk.demo.models.Product
@@ -24,6 +24,7 @@ class ProductActivity : AppCompatActivity() {
         setContentView(R.layout.activity_product)
 
         val product = intent.getParcelableExtra<Product>(EXTRA_PRODUCT)
+                ?: throw NullPointerException("The product must not be null")
         product_toolbar.title = product.name
         setSupportActionBar(product_toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

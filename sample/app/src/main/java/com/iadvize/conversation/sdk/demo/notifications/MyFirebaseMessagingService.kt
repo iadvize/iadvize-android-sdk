@@ -11,7 +11,7 @@ import android.content.Context
 import android.content.Intent
 import android.media.RingtoneManager
 import android.os.Build
-import android.support.v4.app.NotificationCompat
+import androidx.core.app.NotificationCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import com.iadvize.conversation.sdk.IAdvizeManager
@@ -24,7 +24,7 @@ import com.iadvize.conversation.sdk.demo.activities.MainActivity
  */
 class MyFirebaseMessagingService : FirebaseMessagingService() {
 
-    override fun onNewToken(token: String?) {
+    override fun onNewToken(token: String) {
         sendRegistrationToServer(token)
     }
 

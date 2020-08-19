@@ -1,8 +1,8 @@
 package com.iadvize.conversation.sdk.demo.adapters
 
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.iadvize.conversation.sdk.demo.R
 import com.iadvize.conversation.sdk.demo.models.Product
 import com.iadvize.conversation.sdk.demo.viewholders.ProductViewHolder

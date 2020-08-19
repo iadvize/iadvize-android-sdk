@@ -1,9 +1,9 @@
 package com.iadvize.conversation.sdk.demo.viewholders
 
-import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 import com.iadvize.conversation.sdk.demo.R
 import com.iadvize.conversation.sdk.demo.adapters.OnItemClickListener
 import com.iadvize.conversation.sdk.demo.models.Product
