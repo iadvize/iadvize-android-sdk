@@ -233,6 +233,46 @@ You can get the number of unread messages via the method:
 IAdvizeConversationManager.unreadMessages()
 ```
 
+You can also update the Chat Button position:
+
+```kotlin
+/**
+ * Update the chat button (the default one) position. Use this method if you use the iAdvize default
+ * chat button and you use showChatButton()/hideChatButton() methods to display/hide it.
+ *
+ * The default chat button is aligned to the bottom-left of the screen with a default
+ * margin to (left: 10, bottom: 10). Increasing the bottom margin value will move the chat
+ * button up and increasing the left margin value will move the chat button left.
+ *
+ *          Container view (default = main window)
+ *          +----------------------------------+
+ *          |                                  |
+ *          |                                  |
+ *          |                                  |
+ *          |                                  |
+ *          |                                  |
+ *          |                                  |
+ *          |                                  |
+ *          |                                  |
+ *          |                                  |
+ *          |                                  |
+ *          |                                  |
+ *          |                                  |
+ *          |                                  |
+ *          |                                  |
+ *          |             chatButtonView       |
+ * leftMargin = 10   +----+                    |
+ *          <------> |    |                    |
+ *          |        |    |                    |
+ *          |        +--^-+                    |
+ *          |            |                     |
+ *          |            | bottomMargin = 10   |
+ *          +------------v---------------------+
+ */
+
+IAdvizeConversationManager.setChatButtonPosition(leftMarginInPx, bottomMarginInPx)
+```
+
 <a name="customiseconversation"></a>
 ## Conversation view
 
