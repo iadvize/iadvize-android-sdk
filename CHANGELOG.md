@@ -1,3 +1,11 @@
+# 1.5.1
+
+### Release date 2020/09/24
+
+- Fix an issue to send photo on several devices above Android 10.
+- Fix crash when a visitor quit the Conversation View quickly after refuse GDPR.
+- Fix proguard issue with jjwt
+
 # 1.5.0
 
 ### Release date 2020/06/15
