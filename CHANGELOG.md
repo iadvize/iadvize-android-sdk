@@ -1,3 +1,12 @@
+# 1.6.0
+
+### Release date 2020/10/21
+
+- Update to Android SDK 30.
+- Migrate to androidx.
+- Update dependency versions.
+- Fix an issue to send photo on Android 11 devices.
+
 # 1.5.1
 
 ### Release date 2020/09/24
