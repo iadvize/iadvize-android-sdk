@@ -1,10 +1,10 @@
 package com.iadvize.conversation.sdk.demo
 
-import android.app.Application
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
 import android.os.Build
+import androidx.multidex.MultiDexApplication
 import com.iadvize.conversation.sdk.IAdvizeManager
 import com.iadvize.conversation.sdk.demo.models.Catalog
 import com.iadvize.conversation.sdk.logger.Logger
@@ -13,7 +13,7 @@ import com.iadvize.conversation.sdk.logger.Logger
  * Created by Yann Coupé on 20/08/2018.
  * Copyright © 2018 iAdvize. All rights reserved.
  */
-class App : Application() {
+class App : MultiDexApplication() {
 
     override fun onCreate() {
         super.onCreate()
