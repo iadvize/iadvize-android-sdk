@@ -110,6 +110,35 @@ IAdvizeManager.registerApplicationId(this, "your-own-application-identifier-uuid
 <a name="activate"></a>
 ## Activating the SDK
 
+⚠️⚠️⚠️ N.B. You have to check if the activation succeeds before you try to show a Chat Button (the default or a custom one). You also have to check the `isEnabled` flag which indicates you if the SDK is currently enabled or disabled by the SDK Administrator.
+
+A listener is available in order to know if the SDK has been successfully activated (and to retry later if the activation fails):
+```kotlin
+IAdvizeManager.activate(JWTOption.Secret("yourjwtsecret"), "connecteduseruniqueidentifierornull", GDPROption.Disabled(), UUID.fromString("targetingruleid"), object : ActivateListener {
+            override fun onActivateFailure(t: Throwable) {}
+            override fun onActivateSuccess(isEnabled: Boolean) {}
+        })
+```
+
+You also have to set your controller as a `SDKStatusListener`:
+
+```
+class MainActivity : SDKStatusListener, (...)
+```
+
+
+and implement both functions:
+
+```
+override fun onSdkDisabled() {
+    // Hide or disable your custom chat button
+}
+
+override fun onSdkEnabled() {
+    // Show or enable your custom chat button
+}
+```
+
 You have two ways to activate the iAdvize Conversation SDK depending on the security model you choose.
  - For the in-app security model:
 ```kotlin
@@ -128,16 +157,6 @@ Once the iAdvize Conversation SDK is successfully activated, you should see a me
 ```kotlin
 iAdvize Conversation: ✅ iAdvize conversation activated, the version is x.x.x.
 ```
-
-A listener is available in order to know if the SDK has been successfully activated (and to retry later if the activation fails):
-```kotlin
-IAdvizeManager.activate(JWTOption.Secret("yourjwtsecret"), "connecteduseruniqueidentifierornull", GDPROption.Disabled(), UUID.fromString("targetingruleid"), object : ActivateListener {
-            override fun onActivateFailure(t: Throwable) {}
-            override fun onActivateSuccess(isEnabled: Boolean) {}
-        })
-```
-
-N.B. You have to check if the activation succeeds before you try to show a Chat Button (the default or a custom one). You also have to check the isEnabled flag which indicates you if the SDK is currently enabled or disabled by the SDK Administrator.
 
 <a name="gdpr"></a>
 ## GDPR

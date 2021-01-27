@@ -1,10 +1,15 @@
+# 1.7.0
+
+### Release date 2021/01/27
+
+- Modify the behaviour of the application deactivation which is now only defined by the administration flag: activated or deactivated. We don't take into account if the visitor has already chatted.
+
 # 1.6.0
 
-### Release date 2020/10/21
+### Release date 2020/10/20
 
-- Update to Android SDK 30.
-- Migrate to androidx.
-- Update dependency versions.
+- Update to Android SDK 30
+- Update dependency versions
 - Fix an issue to send photo on Android 11 devices.
 
 # 1.5.1
@@ -13,7 +18,7 @@
 
 - Fix an issue to send photo on several devices above Android 10.
 - Fix crash when a visitor quit the Conversation View quickly after refuse GDPR.
-- Fix proguard issue with jjwt
+- Try to fix proguard issue with jjwt
 
 # 1.5.0
 
@@ -23,9 +28,9 @@
 
 # 1.4.0
 
-### Release date 2020/04/29
+### Release date 2020/04/28
 
-- Add Lithuanian localization
+- iAdvize SDK is now translated into Lithuanian.
 
 # 1.3.6
 
