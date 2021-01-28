@@ -68,7 +68,7 @@ allprojects {
 ```gradle
 //requires with AndroidX
 dependencies {
-    implementation 'com.iadvize:iadvize-sdk:1.6.0'
+    implementation 'com.iadvize:iadvize-sdk:1.7.0'
 }
 
 //to use before AndroidX
