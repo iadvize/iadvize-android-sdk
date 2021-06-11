@@ -79,9 +79,15 @@ allprojects {
 ```gradle
 // Module-level build.gradle
 
+configurations {
+  all*.exclude group: 'xpp3', module: 'xpp3'
+  debug
+  release
+}
+
 dependencies {
   // If you use AndroidX you can use latest SDK
-  implementation 'com.iadvize:iadvize-sdk:2.0.0'
+  implementation 'com.iadvize:iadvize-sdk:2.0.0-beta1'
 
   // Otherwise you can use the last non-AndroidX version
   implementation 'com.iadvize:iadvize-sdk:1.5.1'
