@@ -125,7 +125,7 @@ class MainActivity : AppCompatActivity(), GDPRListener, ConversationListener, Ta
     }
 
     private fun activateSDK() {
-        val shouldActivateGDPR = false // Switch to false to test without GDPR.
+        val shouldActivateGDPR = true // Switch to false to test without GDPR.
 
         if (shouldActivateGDPR) {
             iAdvizeActivateWithGDPRUrl() // or iAdvizeActivateWithGDPRListener()
@@ -179,12 +179,12 @@ class MainActivity : AppCompatActivity(), GDPRListener, ConversationListener, Ta
     }
 
     override fun handleClickedUrl(uri: Uri): Boolean {
-        Log.d("iAdvize SDK Demo", "SDK receive url click event: $uri")
+        Log.d("iAdvize SDK Demo", "SDK received an url click event: $uri")
         return false
     }
 
     override fun onNewMessageReceived(content: String) {
-        Log.d("iAdvize SDK Demo", "SDK receive a new message: $content")
+        Log.d("iAdvize SDK Demo", "SDK received a new message: $content")
     }
 
     override fun onOngoingConversationStatusChanged(hasOngoingConversation: Boolean) {
