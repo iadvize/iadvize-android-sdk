@@ -47,9 +47,6 @@ class MainActivity : AppCompatActivity(), GDPRListener, ConversationListener, Ta
             Log.e("iAdvize SDK Demo", "The SDK activation failed with:", t)
         }
 
-        /**
-         * Once the SDK is activated, you will be able to activate your targeting rule.
-         */
         override fun onSuccess() {
             Log.d("iAdvize SDK Demo", "The SDK has been activated.")
             IAdvizeSDK.targetingController.activateTargetingRule(UUID.fromString(targetingRuleId))
