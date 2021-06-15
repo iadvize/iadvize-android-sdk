@@ -7,14 +7,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
-import com.iadvize.conversation.sdk.model.Transaction
+import com.iadvize.conversation.sdk.IAdvizeSDK
 import com.iadvize.conversation.sdk.demo.R
 import com.iadvize.conversation.sdk.demo.adapters.CartAdapter
 import com.iadvize.conversation.sdk.demo.models.Cart
-import com.iadvize.conversation.sdk.transaction.IAdvizeTransactionManager
+import com.iadvize.conversation.sdk.model.transaction.Transaction
 import com.iadvize.conversation.sdk.type.Currency
 import kotlinx.android.synthetic.main.fragment_cart.*
-import java.util.* // ktlint-disable no-wildcard-imports
+import java.util.*
 
 /**
  * Created by Yann Coupé on 21/08/2018.
@@ -24,7 +24,11 @@ class CartFragment : Fragment() {
 
     private val adapter = CartAdapter(Cart.cart.entries)
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.fragment_cart, container, false)
     }
 
@@ -32,13 +36,21 @@ class CartFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         cart_recyclerview.setHasFixedSize(true)
-        cart_recyclerview.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        cart_recyclerview.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         cart_recyclerview.adapter = adapter
 
         cart_purchase.setOnClickListener {
             Snackbar.make(view, "Transaction successful!", Snackbar.LENGTH_LONG).show()
 
-            IAdvizeTransactionManager.register(Transaction("id-transaction", Date(), Cart.getAmount().toDouble(), Currency.EUR))
+            IAdvizeSDK.transactionController.register(
+                Transaction(
+                    "id-transaction",
+                    Date(),
+                    Cart.getAmount().toDouble(),
+                    Currency.EUR
+                )
+            )
 
             clear()
         }

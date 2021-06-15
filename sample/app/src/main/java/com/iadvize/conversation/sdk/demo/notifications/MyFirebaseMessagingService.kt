@@ -11,10 +11,11 @@ import android.content.Context
 import android.content.Intent
 import android.media.RingtoneManager
 import android.os.Build
+import android.util.Log
 import androidx.core.app.NotificationCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import com.iadvize.conversation.sdk.IAdvizeManager
+import com.iadvize.conversation.sdk.IAdvizeSDK
 import com.iadvize.conversation.sdk.demo.R
 import com.iadvize.conversation.sdk.demo.activities.MainActivity
 
@@ -38,7 +39,9 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
      */
     private fun sendRegistrationToServer(token: String?) {
         token?.let {
-            IAdvizeManager.registerPushToken(it)
+            Log.d("iAdvize SDK Demo", "Registering push token $it.")
+            // Register to push notifications
+            IAdvizeSDK.notificationController.registerPushToken(it)
         }
     }
 
@@ -48,36 +51,45 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
      * @param remoteMessage Object representing the message received from Firebase Cloud Messaging.
      */
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
-        if (IAdvizeManager.isIAdvizePushNotification(remoteMessage.data)) {
-            IAdvizeManager.handlePushNotification(this, remoteMessage.data, R.mipmap.notification_logo)
+        if (IAdvizeSDK.notificationController.isIAdvizePushNotification(remoteMessage.data)) {
+            sendNotification("New message from iAdvize.")
         } else {
-            sendNotification()
+            sendNotification("This is a notification.")
         }
     }
 
     /**
      * Create and show a simple notification.
      */
-    private fun sendNotification() {
+    private fun sendNotification(content: String) {
         val intent = Intent(this, MainActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-        val pendingIntent = PendingIntent.getActivity(this, 0, intent,
-                PendingIntent.FLAG_ONE_SHOT)
+        val pendingIntent = PendingIntent.getActivity(
+            this, 0, intent,
+            PendingIntent.FLAG_ONE_SHOT
+        )
 
         val channelId = "Cook Toys"
         val defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
         val notificationBuilder = NotificationCompat.Builder(this, channelId)
-                .setSmallIcon(R.mipmap.ic_launcher)
-                .setColor(0xff00ff00.toInt())
-                .setContentTitle("Cook Toys")
-                .setContentText("This is a notification.")
-                .setAutoCancel(true)
-                .setSound(defaultSoundUri)
-                .setContentIntent(pendingIntent)
+            .setSmallIcon(R.mipmap.ic_launcher)
+            .setColor(0xff00ff00.toInt())
+            .setContentTitle("Cook Toys")
+            .setContentText(content)
+            .setAutoCancel(true)
+            .setSound(defaultSoundUri)
+            .setContentIntent(pendingIntent)
 
-        val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        val notificationManager =
+            getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            notificationManager.createNotificationChannel(NotificationChannel(channelId, channelId, NotificationManager.IMPORTANCE_DEFAULT))
+            notificationManager.createNotificationChannel(
+                NotificationChannel(
+                    channelId,
+                    channelId,
+                    NotificationManager.IMPORTANCE_DEFAULT
+                )
+            )
         }
         notificationManager.notify(0, notificationBuilder.build())
     }
