@@ -33,3 +33,6 @@ captures/
 
 # Mac OS
 .DS_Store
+
+# iAdvize artifacts
+IAdvizeSDK.zip
