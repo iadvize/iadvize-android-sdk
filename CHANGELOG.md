@@ -1,9 +1,18 @@
+# 2.1.0-beta1
+
+### Release date 2021/07/07
+
+- Add pro-actives bots
+- Hide sensitives information from chatbox
+- Bug fixes & performance improvements
+
 # 2.0.0-beta1
 
 ### Release date 2021/06/11
 
 - Add new conversation workflow to manage real time conversation & targeting
 - Revamp SDK Architecture
+
 
 # 1.7.0
 

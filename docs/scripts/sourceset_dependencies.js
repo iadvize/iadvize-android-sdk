@@ -1,0 +1,1 @@
+sourceset_dependencies='{":sdk:dokkaHtml/androidTestRelease":[],":sdk:dokkaHtml/debug":[],":sdk:dokkaHtml/ha":[],":sdk:dokkaHtml/haDebug":[],":sdk:dokkaHtml/haRelease":[],":sdk:dokkaHtml/main":[],":sdk:dokkaHtml/release":[],":sdk:dokkaHtml/tm":[],":sdk:dokkaHtml/tmDebug":[],":sdk:dokkaHtml/tmRelease":[]}'

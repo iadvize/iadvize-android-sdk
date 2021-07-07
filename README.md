@@ -12,7 +12,7 @@ Embed the iAdvize Conversation SDK in your app and connect your visitors with yo
 
 | Version | Minimum Android Version | Kotlin Version |
 | ------- | ----------------------- | -------------- |
-| 2.0     | API 19                  | 1.5.10         |
+| 2.1.0-beta1   | API 19                  | 1.5.10         |
 
 ## Table of contents
 * [Setup](#setup)
@@ -198,13 +198,7 @@ IAdvizeSDK.targetingController.activateTargetingRule(targetingRuleUUID)
 
 The targeting rule availability check will be triggered when you update the active targeting rule (see [Activate a targeting rule](#rule))
 
-You can check the active rule availability by accessing:
-
-```kotlin
-IAdvizeSDK.targetingController.isActiveTargetingRuleAvailable
-```
-
-Or if you want to be informed of rule availability updates, you can add a listener:
+If you want to be informed of rule availability updates, you can add a listener:
 
 ```kotlin
 IAdvizeSDK.targetingController.listeners.add(object : TargetingListener {
@@ -234,7 +228,7 @@ The lifecycle of the conversation is managed by the `IAdvizeSDK.conversationCont
 To know and to observe the evolution of the conversation state, you will have access to a variable:
 
 ```kotlin
-IAdvizeSDK.conversationController.hasOngoingConversation
+IAdvizeSDK.conversationController.hasOngoingConversation()
 ```
 
 You can also add a listener to be informed in real time about conversation events:
