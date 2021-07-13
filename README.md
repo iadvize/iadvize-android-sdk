@@ -42,6 +42,7 @@ Embed the iAdvize Conversation SDK in your app and connect your visitors with yo
 		* [GDPR message](#gdprmessage)
 		* [Brand avatar](#avatar)	
 * [Transaction](#transaction)
+* [API reference](#api-reference)
 
 <a name="setup"></a>
 ## Setup
@@ -456,6 +457,9 @@ IAdvizeSDK.transactionController.register(
   )
 )
 ```
+<a name="api-reference"></a>
+## API Reference
+See API Reference [here](https://iadvize.github.io/iadvize-android-sdk/).
 
 ## And you’re done! 💪
 
