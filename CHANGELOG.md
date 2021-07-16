@@ -1,4 +1,9 @@
-# 2.1.0-beta1
+# 2.1.0-beta2
+
+### Release date 2021/07/16
+
+- Add targeting rule availability polling
+- Bug fixes & performance improvements
 
 ### Release date 2021/07/07
 

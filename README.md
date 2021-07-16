@@ -12,7 +12,7 @@ Embed the iAdvize Conversation SDK in your app and connect your visitors with yo
 
 | Version | Minimum Android Version | Kotlin Version |
 | ------- | ----------------------- | -------------- |
-| 2.1.0-beta1   | API 19                  | 1.5.10         |
+| 2.1.0-beta2   | API 19                  | 1.5.10         |
 
 ## Table of contents
 * [Setup](#setup)
@@ -42,7 +42,6 @@ Embed the iAdvize Conversation SDK in your app and connect your visitors with yo
 		* [GDPR message](#gdprmessage)
 		* [Brand avatar](#avatar)	
 * [Transaction](#transaction)
-* [API reference](#api-reference)
 
 <a name="setup"></a>
 ## Setup
@@ -457,9 +456,6 @@ IAdvizeSDK.transactionController.register(
   )
 )
 ```
-<a name="api-reference"></a>
-## API Reference
-See API Reference [here](https://iadvize.github.io/iadvize-android-sdk/).
 
 ## And you’re done! 💪
 
