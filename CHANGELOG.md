@@ -5,6 +5,8 @@
 - Add targeting rule availability polling
 - Bug fixes & performance improvements
 
+# 2.1.0-beta1
+
 ### Release date 2021/07/07
 
 - Add pro-actives bots
