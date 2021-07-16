@@ -14,6 +14,10 @@ Embed the iAdvize Conversation SDK in your app and connect your visitors with yo
 | ------- | ----------------------- | -------------- |
 | 2.1.0-beta4   | API 19                  | 1.5.20         |
 
+## API reference
+
+The iAdvize Android SDK API Reference is available [here](https://iadvize.github.io/iadvize-android-sdk/).
+
 ## Table of contents
 * [Setup](#setup)
 	* [App creation](#creation)
