@@ -36,3 +36,5 @@ captures/
 
 # iAdvize artifacts
 IAdvizeSDK.zip
+
+tmp/
