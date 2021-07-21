@@ -12,7 +12,7 @@ Embed the iAdvize Conversation SDK in your app and connect your visitors with yo
 
 | Version | Minimum Android Version | Kotlin Version |
 | ------- | ----------------------- | -------------- |
-| 2.1.0-beta2   | API 19                  | 1.5.10         |
+| 2.1.0-beta3   | API 19                  | 1.5.20         |
 
 ## API reference
 

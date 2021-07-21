@@ -1,3 +1,9 @@
+# 2.1.0-beta3
+
+### Release date 2021/07/21
+
+- Bug fixes & performance improvements
+
 # 2.1.0-beta2
 
 ### Release date 2021/07/16
