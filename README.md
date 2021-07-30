@@ -12,11 +12,7 @@ Embed the iAdvize Conversation SDK in your app and connect your visitors with yo
 
 | Version | Minimum Android Version | Kotlin Version |
 | ------- | ----------------------- | -------------- |
-| 2.1.0-beta3   | API 19                  | 1.5.20         |
-
-## API reference
-
-The iAdvize Android SDK API Reference is available [here](https://iadvize.github.io/iadvize-android-sdk/).
+| 2.1.0-beta4   | API 19                  | 1.5.20         |
 
 ## Table of contents
 * [Setup](#setup)
@@ -91,7 +87,7 @@ configurations {
 
 dependencies {
   // If you use AndroidX you can use latest SDK
-  implementation 'com.iadvize:iadvize-sdk:2.1.0-beta3'
+  implementation 'com.iadvize:iadvize-sdk:2.0.0-beta1'
 
   // Otherwise you can use the last non-AndroidX version
   implementation 'com.iadvize:iadvize-sdk:1.5.1'

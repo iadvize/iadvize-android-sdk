@@ -1,3 +1,10 @@
+# 2.1.0-beta4
+
+### Release date 2021/07/30
+
+- Fix file attachment
+- Various bug fixes & performance improvements
+
 # 2.1.0-beta3
 
 ### Release date 2021/07/21
