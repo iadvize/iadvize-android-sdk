@@ -12,7 +12,7 @@ Embed the iAdvize Conversation SDK in your app and connect your visitors with yo
 
 | Version | Minimum Android Version | Kotlin Version |
 | ------- | ----------------------- | -------------- |
-| 2.1.0-beta4   | API 19                  | 1.5.20         |
+| 2.1.0-beta5   | API 19                  | 1.5.20         |
 
 ## API reference
 
@@ -44,7 +44,7 @@ The iAdvize Android SDK API Reference is available [here](https://iadvize.github
 		* [Font](#font)
 		* [Automatic message](#automaticmessage)
 		* [GDPR message](#gdprmessage)
-		* [Brand avatar](#avatar)	
+		* [Brand avatar](#avatar)
 * [Transaction](#transaction)
 
 <a name="setup"></a>
@@ -56,8 +56,8 @@ The iAdvize Android SDK API Reference is available [here](https://iadvize.github
 1. Ask your iAdvize Admin to create a **Mobile App** on the administration website. *If you want to enable the iAdvize SDK push notifications for your user you have to provide your GCM API key when you create your app on the administration website.*
 
 2. Ask your iAdvize Admin to create a new **Web & Mobile App** targeting campaign on the administration website and to give you the following information:
-    - **projectId**: id of your project
-    - **targetingRuleId(s)**: one or multiple rules which you will be able to activate by code during the user navigation (see #Targeting section)
+	- **projectId**: id of your project
+	- **targetingRuleId(s)**: one or multiple rules which you will be able to activate by code during the user navigation (see #Targeting section)
 
 <a name="dependencies"></a>
 ### SDK dependencies
@@ -145,7 +145,7 @@ Once the iAdvize Conversation SDK is successfully activated, you should see a su
 <a name="gdpr"></a>
 ### GDPR
 
-By default, when you activate the SDK, the GDPR will be disabled. 
+By default, when you activate the SDK, the GDPR will be disabled.
 
 To enable it, you can pass a GDPR option while activating the SDK. This GDPROption dictates how the SDK behaves when the user taps on the “More information” button:
 
@@ -222,7 +222,7 @@ IAdvizeSDK.targetingController.registerUserNavigation()
 ```
 
 <a name="conversation"></a>
-## Conversation
+## Conversation
 
 The lifecycle of the conversation is managed by the `IAdvizeSDK.conversationController`
 
@@ -464,4 +464,3 @@ IAdvizeSDK.transactionController.register(
 ## And you’re done! 💪
 
 Well done! You’re now ready to take your app to the next step and provide a unique conversational experience to your users! 🚀
-

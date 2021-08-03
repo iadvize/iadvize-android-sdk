@@ -1,3 +1,10 @@
+# 2.1.0-beta5
+
+### Release date 2021/08/03
+
+- Pre-saved links displaying
+- Various bug fixes & performance improvements
+
 # 2.1.0-beta4
 
 ### Release date 2021/07/30
