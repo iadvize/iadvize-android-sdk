@@ -3,9 +3,9 @@
 @import url('jetbrains-mono.css');
 
 :root {
-    --breadcrumb-font-color: #637282;
-    --hover-link-color: #5B5DEF;
-    --average-color: #637282;
+    --breadcrumb-font-color: #2a2e3a;
+    --hover-link-color: #0099FF;
+    --average-color: #2a2e3a;
     --footer-height: 64px;
     --footer-padding-top: 48px;
     --horizontal-spacing-for-content: 42px;
