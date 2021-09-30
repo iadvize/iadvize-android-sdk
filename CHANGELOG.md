@@ -1,3 +1,9 @@
+# 2.2.2
+
+### Release date 2021/09/30
+
+- Bug fixes & performance improvements
+
 # 2.2.1
 
 ### Release date 2021/09/10
