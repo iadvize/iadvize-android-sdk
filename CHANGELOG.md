@@ -1,3 +1,10 @@
+# 2.2.3
+
+### Release date 2021/10/08
+
+- Add access to SDK activation status
+- Bug fixes & performance improvements
+
 # 2.2.2
 
 ### Release date 2021/09/30
