@@ -55,7 +55,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging'
     implementation 'com.google.firebase:firebase-analytics'
 
-    implementation('com.iadvize:iadvize-sdk:2.2.3') { exclude group: 'xpp3' }
+    implementation('com.iadvize:iadvize-sdk:2.2.4') { exclude group: 'xpp3' }
 }
 
 apply plugin: 'com.google.gms.google-services'

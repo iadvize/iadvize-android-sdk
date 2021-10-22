@@ -12,7 +12,7 @@ Embed the iAdvize Conversation SDK in your app and connect your visitors with yo
 
 | Version | Minimum Android Version | Kotlin Version |
 | ------- | ----------------------- | -------------- |
-| 2.2.3   | API 19                  | 1.5.21         |
+| 2.2.4   | API 19                  | 1.5.21         |
 
 ## API reference
 
@@ -91,7 +91,7 @@ configurations {
 
 dependencies {
   // If you use AndroidX you can use latest SDK
-  implementation 'com.iadvize:iadvize-sdk:2.2.3'
+  implementation 'com.iadvize:iadvize-sdk:2.2.4'
 
   // Otherwise you can use the last non-AndroidX version
   implementation 'com.iadvize:iadvize-sdk:1.5.1'
@@ -141,6 +141,15 @@ Once the iAdvize Conversation SDK is successfully activated, you should see a su
 ```
 ✅ iAdvize conversation activated, the version is x.x.x.
 ```
+
+#### Activation status
+
+At any time you can check the SDK activation status using:
+
+```kotlin
+IAdvizeSDK.activationStatus
+```
+
 
 <a name="gdpr"></a>
 ### GDPR
@@ -322,6 +331,21 @@ where `remoteMessage` is the object representing the push notification.
 ## Chatbox
 
 In order to invite your users to enter in a conversational experience, you will need to use the `IAdvizeSDK.chatboxController`.
+
+#### Chatbox listener
+If you want to be informed when the chatbox is opened or closed by the visitor you can hook to the following listener:
+
+```kotlin
+IAdvizeSDK.chatboxController.listeners.add(object : ChatboxListener {
+  override fun onChatboxOpened() {
+    // Chatbox was opened
+  }
+
+  override fun onChatboxClosed() {
+    // Chatbox was closed
+  }
+})
+```
 
 <a name="button"></a>
 ### Chat button

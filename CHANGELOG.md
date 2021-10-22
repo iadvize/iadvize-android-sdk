@@ -1,3 +1,10 @@
+# 2.2.4
+
+### Release date 2021/10/22
+
+- Add chatbox open/close listener
+- Bug fixes & performance improvements
+
 # 2.2.3
 
 ### Release date 2021/10/08
