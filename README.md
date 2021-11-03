@@ -136,6 +136,13 @@ IAdvizeSDK.activate(
 )
 ```
 
+You can choose between multiple authentication options:
+
+- anonymous: when you have an unidentified user browsing your app
+- simple(userId: String): when you have a logged in user in your app, you can pass a unique identifier so he will retrieve his conversation history accross multiple devices and platforms
+
+N.B. for the `AuthenticateOption.Simple` authentication mode, you have to pass a unique and non-discoverable identifier for each different logged in user. Do not forget to [logout](#cleanup) when the user is no longer connected in your app.
+
 Once the iAdvize Conversation SDK is successfully activated, you should see a success message in the IDE console:
 
 ```
@@ -184,7 +191,7 @@ By default, the SDK will **only log Warnings and Errors** in the Android Studio 
 <a name="targeting"></a>
 ## Targeting
 
-The targeting process is managed by the `IAdvizeSDK.targetingController`
+The targeting setup is managed by the `IAdvizeSDK.targetingController`
 
 <a name="language"></a>
 ### Targeting Language
@@ -221,6 +228,14 @@ IAdvizeSDK.targetingController.listeners.add(object : TargetingListener {
 })
 ```
 
+This schema describes the process when you activate a targeting rule on the iAdvize SDK:
+
+![iAdvize_SDK](iAdvize_SDK_Targeting.png)
+
+You can find here a full example implementation of a custom chat button behaviour regarding the ongoing conversation and the active targeting rule status:
+
+https://gist.github.com/Judas/d0a34a50f1b6b8d542d77af5db9d9787
+
 <a name="navigation"></a>
 ### Follow user navigation
 
@@ -229,6 +244,16 @@ To allow iAdvize statitics to be processed you need to inform the SDK when the u
 ```kotlin
 IAdvizeSDK.targetingController.registerUserNavigation()
 ```
+
+
+### Deactivation
+
+At any time you can deactivate the iAdvize SDK depending on your needs:
+
+- **scoped deactivation**: deactivate one or more specific targeting rules you use in your integration to disable the iAdvize SDK on specific parts of your app
+- **full deactivation**: deactivate all targeting rules you use in your integration to disable the iAdvize SDK from your app
+
+You can use the iAdvize Administration website to deactivate rule(s).
 
 <a name="conversation"></a>
 ## Conversation
@@ -326,6 +351,12 @@ Once you receive a push notification, you can easily verify that this notificati
 IAdvizeSDK.notificationController.isIAdvizePushNotification(remoteMessage.getData())
 ```
 where `remoteMessage` is the object representing the push notification.
+
+#### Push notification general setup
+
+If you want to know how to setup your push notifications in your app you can follow this great tutorial:
+
+https://lobothijau.medium.com/create-android-push-notification-easily-with-kotlin-and-firebase-cloud-messaging-part-1-9062f2a57555
 
 <a name="chatbox"></a>
 ## Chatbox
