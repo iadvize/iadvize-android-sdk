@@ -44,7 +44,7 @@ configurations {
 }
 
 dependencies {
-    implementation("com.iadvize:iadvize-sdk:2.2.4")
+    implementation("com.iadvize:iadvize-sdk:2.3.0")
 
     implementation("androidx.constraintlayout:constraintlayout:2.1.2")
     implementation("androidx.recyclerview:recyclerview:1.2.1")

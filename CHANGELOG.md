@@ -1,3 +1,12 @@
+# 2.3.0
+
+### Release date 2021/11/25
+
+- Add a visual indicator on default chat button when there are unread visitor messages
+- Add an API to save visitor conversation custom data
+- Add typing indicator on visitor and agent side
+- Bug fixes & performance improvements
+
 # 2.2.4
 
 ### Release date 2021/10/22

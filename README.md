@@ -12,7 +12,7 @@ Embed the iAdvize Conversation SDK in your app and connect your visitors with yo
 
 | Version | Minimum Android Version | Kotlin Version |
 | ------- | ----------------------- | -------------- |
-| 2.2.4   | API 19                  | 1.5.21         |
+| 2.3.0   | API 19                  | 1.5.21         |
 
 ## API reference
 
@@ -31,6 +31,7 @@ The iAdvize Android SDK API Reference is available [here](https://iadvize.github
 	* [Activate a targeting rule](#rule)
 	* [Targeting rule availability](#availability)
 	* [Follow user navigation](#navigation)
+	* [Deactivate targeting rules](#deactivation)
 * [Conversation](#conversation)
 	* [Ongoing conversation](#ongoing)
 * [Push notifications](#notification)
@@ -46,6 +47,7 @@ The iAdvize Android SDK API Reference is available [here](https://iadvize.github
 		* [GDPR message](#gdprmessage)
 		* [Brand avatar](#avatar)
 * [Transaction](#transaction)
+* [Custom data](#custom-data)
 
 <a name="setup"></a>
 ## Setup
@@ -91,7 +93,7 @@ configurations {
 
 dependencies {
   // If you use AndroidX you can use latest SDK
-  implementation 'com.iadvize:iadvize-sdk:2.2.4'
+  implementation 'com.iadvize:iadvize-sdk:2.3.0'
 
   // Otherwise you can use the last non-AndroidX version
   implementation 'com.iadvize:iadvize-sdk:1.5.1'
@@ -135,6 +137,13 @@ IAdvizeSDK.activate(
   }
 )
 ```
+
+You can choose between multiple authentication options:
+
+- anonymous: when you have an unidentified user browsing your app
+- simple(userId: String): when you have a logged in user in your app, you can pass a unique identifier so he will retrieve his conversation history across multiple devices and platforms
+
+> N.B. for the `AuthenticateOption.Simple` authentication mode, you have to pass a unique and non-discoverable identifier for each different logged in user. Do not forget to [logout](#cleanup) when the user is no longer connected in your app.
 
 Once the iAdvize Conversation SDK is successfully activated, you should see a success message in the IDE console:
 
@@ -184,7 +193,7 @@ By default, the SDK will **only log Warnings and Errors** in the Android Studio 
 <a name="targeting"></a>
 ## Targeting
 
-The targeting process is managed by the `IAdvizeSDK.targetingController`
+The targeting setup is managed by the `IAdvizeSDK.targetingController`
 
 <a name="language"></a>
 ### Targeting Language
@@ -221,6 +230,12 @@ IAdvizeSDK.targetingController.listeners.add(object : TargetingListener {
 })
 ```
 
+This schema describes the process when you activate a targeting rule on the iAdvize SDK:
+
+![iAdvize_SDK](targeting.png)
+
+Here is a [full example implementation](https://iadvize.github.io/iadvize-android-sdk/) of a custom chat button behaviour regarding the ongoing conversation and the active targeting rule status.
+
 <a name="navigation"></a>
 ### Follow user navigation
 
@@ -229,6 +244,16 @@ To allow iAdvize statitics to be processed you need to inform the SDK when the u
 ```kotlin
 IAdvizeSDK.targetingController.registerUserNavigation()
 ```
+
+<a name="deactivation"></a>
+### Deactivate targeting rules
+
+At any time you can deactivate the iAdvize SDK depending on your needs:
+
+- **scoped deactivation**: deactivate one or more specific targeting rules you use in your integration to disable the iAdvize SDK on specific parts of your app
+- **full deactivation**: deactivate all targeting rules you use in your integration to disable the iAdvize SDK from your app
+
+You can use the iAdvize Administration website to deactivate rule(s).
 
 <a name="conversation"></a>
 ## Conversation
@@ -320,12 +345,23 @@ IAdvizeSDK.notificationController.disablePushNotifications(object : IAdvizeSDKCa
 <a name="push-receive"></a>
 ### Reception
 
-Once you receive a push notification, you can easily verify that this notification concerns the SDK:
+Once you receive a push notification, you sould decide if you need to display it or not, first by verifying if the notification comes from the iAdvize SDK, and also by checking if the chatbox is closed:
 
 ```kotlin
-IAdvizeSDK.notificationController.isIAdvizePushNotification(remoteMessage.getData())
+override fun onMessageReceived(remoteMessage: RemoteMessage) {
+  if (IAdvizeSDK.notificationController.isIAdvizePushNotification(remoteMessage.data)
+      && !IAdvizeSDK.chatboxController.isChatboxPresented()
+  ) {
+    // Display notification
+  }
+}
 ```
 where `remoteMessage` is the object representing the push notification.
+
+> To setup push notifications in your app you can follow Firebase Cloud Messaging documentation:
+> 
+> - [Configure your app for FCM](https://firebase.google.com/docs/cloud-messaging/android/client)
+> - [Handle message reception](https://firebase.google.com/docs/cloud-messaging/android/receive)
 
 <a name="chatbox"></a>
 ## Chatbox
@@ -484,6 +520,29 @@ IAdvizeSDK.transactionController.register(
   )
 )
 ```
+
+<a name="custom-data"></a>
+## Visitor custom data
+
+You can save data related to the visitor conversation with the help of the `IAdvizeSDK.visitorController`.
+
+```kotlin
+IAdvizeSDK.visitorController.registerCustomData(listOf(
+  CustomData.fromString("key3", "Value"),
+  CustomData.fromInt("key1", 1)
+),
+object : IAdvizeSDKCallback {
+  override fun onSuccess() {
+    // Success
+  }
+
+  override fun onFailure(t: Throwable) {
+    // Failure
+  }
+})
+```
+> :warning: As those data are related to the conversation they cannot be sent if there is no ongoing conversation. Custom data registered before the start of a conversation are stored and the SDK try to send them when the conversation starts.
+
 
 ## And you’re done! 💪
 
