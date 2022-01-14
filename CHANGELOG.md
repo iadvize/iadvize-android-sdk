@@ -1,3 +1,17 @@
+# 2.3.3
+
+### Release date 2022/01/14
+
+- Fix concurrency issues with conversation message list access
+- Fix crash when opening attachement in conversation
+
+# 2.3.2
+
+### Release date 2021/12/10
+
+- Allow to maintain the current targeting rule active while registering a user navigation
+- Bug fixes & performance improvements
+
 # 2.3.0
 
 ### Release date 2021/11/25

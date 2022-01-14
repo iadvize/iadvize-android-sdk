@@ -36,7 +36,7 @@ $dokka.location:com.iadvize.conversation.sdk.controller.targeting/TargetingContr
 $dokka.location:com.iadvize.conversation.sdk.controller.targeting/TargetingController/hasAvailableActiveTargetingRule/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.controller.targeting/-targeting-controller/has-available-active-targeting-rule.html
 $dokka.location:com.iadvize.conversation.sdk.controller.targeting/TargetingController/language/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.controller.targeting/-targeting-controller/language.html
 $dokka.location:com.iadvize.conversation.sdk.controller.targeting/TargetingController/listeners/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.controller.targeting/-targeting-controller/listeners.html
-$dokka.location:com.iadvize.conversation.sdk.controller.targeting/TargetingController/registerUserNavigation/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.controller.targeting/-targeting-controller/register-user-navigation.html
+$dokka.location:com.iadvize.conversation.sdk.controller.targeting/TargetingController/registerUserNavigation/#com.iadvize.conversation.sdk.model.targeting.NavigationOption/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.controller.targeting/-targeting-controller/register-user-navigation.html
 $dokka.location:com.iadvize.conversation.sdk.controller.targeting/TargetingListener///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.controller.targeting/-targeting-listener/index.html
 $dokka.location:com.iadvize.conversation.sdk.controller.targeting/TargetingListener/onActiveTargetingRuleAvailabilityUpdated/#kotlin.Boolean/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.controller.targeting/-targeting-listener/on-active-targeting-rule-availability-updated.html
 $dokka.location:com.iadvize.conversation.sdk.controller.transaction////PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.controller.transaction/index.html
@@ -47,7 +47,6 @@ $dokka.location:com.iadvize.conversation.sdk.controller.visitor/VisitorControlle
 $dokka.location:com.iadvize.conversation.sdk.controller.visitor/VisitorController/registerCustomData/#kotlin.collections.List[com.iadvize.conversation.sdk.model.visitor.CustomData]#com.iadvize.conversation.sdk.model.SDKCallback?/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.controller.visitor/-visitor-controller/register-custom-data.html
 $dokka.location:com.iadvize.conversation.sdk.model.auth////PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.auth/index.html
 $dokka.location:com.iadvize.conversation.sdk.model.auth/AuthenticationOption.Anonymous///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.auth/-authentication-option/-anonymous/index.html
-$dokka.location:com.iadvize.conversation.sdk.model.auth/AuthenticationOption.Anonymous/Anonymous/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.auth/-authentication-option/-anonymous/-anonymous.html
 $dokka.location:com.iadvize.conversation.sdk.model.auth/AuthenticationOption.Companion///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.auth/-authentication-option/-companion/index.html
 $dokka.location:com.iadvize.conversation.sdk.model.auth/AuthenticationOption.Companion/fromJson/#kotlin.String#kotlin.Int/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.auth/-authentication-option/-companion/from-json.html
 $dokka.location:com.iadvize.conversation.sdk.model.auth/AuthenticationOption.Simple///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.auth/-authentication-option/-simple/index.html
@@ -77,6 +76,15 @@ $dokka.location:com.iadvize.conversation.sdk.model.conversation/IncomingMessageA
 $dokka.location:com.iadvize.conversation.sdk.model.conversation/IncomingMessageAvatar.Url/Url/#java.net.URL/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.conversation/-incoming-message-avatar/-url/-url.html
 $dokka.location:com.iadvize.conversation.sdk.model.conversation/IncomingMessageAvatar.Url/value/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.conversation/-incoming-message-avatar/-url/value.html
 $dokka.location:com.iadvize.conversation.sdk.model.conversation/IncomingMessageAvatar///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.conversation/-incoming-message-avatar/index.html
+$dokka.location:com.iadvize.conversation.sdk.model.environment////PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.environment/index.html
+$dokka.location:com.iadvize.conversation.sdk.model.environment/Environment.ProdHA///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.environment/-environment/-prod-h-a/index.html
+$dokka.location:com.iadvize.conversation.sdk.model.environment/Environment.TrackMessaging///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.environment/-environment/-track-messaging/index.html
+$dokka.location:com.iadvize.conversation.sdk.model.environment/Environment///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.environment/-environment/index.html
+$dokka.location:com.iadvize.conversation.sdk.model.environment/Environment/graphQLEndpoint/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.environment/-environment/graph-q-l-endpoint.html
+$dokka.location:com.iadvize.conversation.sdk.model.environment/Environment/name/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.environment/-environment/name.html
+$dokka.location:com.iadvize.conversation.sdk.model.environment/Environment/xmppHost/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.environment/-environment/xmpp-host.html
+$dokka.location:com.iadvize.conversation.sdk.model.environment/Environment/xmppMucHost/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.environment/-environment/xmpp-muc-host.html
+$dokka.location:com.iadvize.conversation.sdk.model.environment/Environment/xmppPort/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.environment/-environment/xmpp-port.html
 $dokka.location:com.iadvize.conversation.sdk.model.gdpr////PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.gdpr/index.html
 $dokka.location:com.iadvize.conversation.sdk.model.gdpr/GDPREnabledOption.LegalUrl///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.gdpr/-g-d-p-r-enabled-option/-legal-url/index.html
 $dokka.location:com.iadvize.conversation.sdk.model.gdpr/GDPREnabledOption.LegalUrl/LegalUrl/#java.net.URI/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.gdpr/-g-d-p-r-enabled-option/-legal-url/-legal-url.html
@@ -88,7 +96,6 @@ $dokka.location:com.iadvize.conversation.sdk.model.gdpr/GDPREnabledOption///Poin
 $dokka.location:com.iadvize.conversation.sdk.model.gdpr/GDPRListener///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.gdpr/-g-d-p-r-listener/index.html
 $dokka.location:com.iadvize.conversation.sdk.model.gdpr/GDPRListener/didTapMoreInformation/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.gdpr/-g-d-p-r-listener/did-tap-more-information.html
 $dokka.location:com.iadvize.conversation.sdk.model.gdpr/GDPROption.Disabled///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.gdpr/-g-d-p-r-option/-disabled/index.html
-$dokka.location:com.iadvize.conversation.sdk.model.gdpr/GDPROption.Disabled/Disabled/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.gdpr/-g-d-p-r-option/-disabled/-disabled.html
 $dokka.location:com.iadvize.conversation.sdk.model.gdpr/GDPROption.Enabled///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.gdpr/-g-d-p-r-option/-enabled/index.html
 $dokka.location:com.iadvize.conversation.sdk.model.gdpr/GDPROption.Enabled/Enabled/#com.iadvize.conversation.sdk.model.gdpr.GDPREnabledOption/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.gdpr/-g-d-p-r-option/-enabled/-enabled.html
 $dokka.location:com.iadvize.conversation.sdk.model.gdpr/GDPROption.Enabled/option/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.gdpr/-g-d-p-r-option/-enabled/option.html
@@ -98,8 +105,13 @@ $dokka.location:com.iadvize.conversation.sdk.model.language/LanguageOption.Custo
 $dokka.location:com.iadvize.conversation.sdk.model.language/LanguageOption.Custom/Custom/#Language/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.language/-language-option/-custom/-custom.html
 $dokka.location:com.iadvize.conversation.sdk.model.language/LanguageOption.Custom/value/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.language/-language-option/-custom/value.html
 $dokka.location:com.iadvize.conversation.sdk.model.language/LanguageOption.Default///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.language/-language-option/-default/index.html
-$dokka.location:com.iadvize.conversation.sdk.model.language/LanguageOption.Default/Default/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.language/-language-option/-default/-default.html
 $dokka.location:com.iadvize.conversation.sdk.model.language/LanguageOption///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.language/-language-option/index.html
+$dokka.location:com.iadvize.conversation.sdk.model.targeting////PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.targeting/index.html
+$dokka.location:com.iadvize.conversation.sdk.model.targeting/NavigationOption.ActivateNewRule///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.targeting/-navigation-option/-activate-new-rule/index.html
+$dokka.location:com.iadvize.conversation.sdk.model.targeting/NavigationOption.ActivateNewRule/ActivateNewRule/#java.util.UUID/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.targeting/-navigation-option/-activate-new-rule/-activate-new-rule.html
+$dokka.location:com.iadvize.conversation.sdk.model.targeting/NavigationOption.ClearActiveRule///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.targeting/-navigation-option/-clear-active-rule/index.html
+$dokka.location:com.iadvize.conversation.sdk.model.targeting/NavigationOption.KeepActiveRule///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.targeting/-navigation-option/-keep-active-rule/index.html
+$dokka.location:com.iadvize.conversation.sdk.model.targeting/NavigationOption///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.targeting/-navigation-option/index.html
 $dokka.location:com.iadvize.conversation.sdk.model.transaction////PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.transaction/index.html
 $dokka.location:com.iadvize.conversation.sdk.model.transaction/Transaction///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.transaction/-transaction/index.html
 $dokka.location:com.iadvize.conversation.sdk.model.transaction/Transaction/Transaction/#kotlin.String#java.util.Date#kotlin.Double#java.util.Currency/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model.transaction/-transaction/-transaction.html
@@ -142,6 +154,8 @@ $dokka.location:com.iadvize.conversation.sdk.model/SdkActivationErrorReason///Po
 $dokka.location:com.iadvize.conversation.sdk.model/SdkActivationErrorReason/description/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model/-sdk-activation-error-reason/description.html
 $dokka.location:com.iadvize.conversation.sdk.model/SdkNotActivatedException///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model/-sdk-not-activated-exception/index.html
 $dokka.location:com.iadvize.conversation.sdk.model/SdkNotActivatedException/SdkNotActivatedException/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.model/-sdk-not-activated-exception/-sdk-not-activated-exception.html
+$dokka.location:com.iadvize.conversation.sdk.utils.extensions////PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.utils.extensions/index.html
+$dokka.location:com.iadvize.conversation.sdk.utils.extensions//setProd/IAdvizeSDK#kotlin.Boolean/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.utils.extensions/set-prod.html
 $dokka.location:com.iadvize.conversation.sdk.utils.logger////PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.utils.logger/index.html
 $dokka.location:com.iadvize.conversation.sdk.utils.logger/Logger.Level.ERROR///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.utils.logger/-logger/-level/-e-r-r-o-r/index.html
 $dokka.location:com.iadvize.conversation.sdk.utils.logger/Logger.Level.ERROR/code/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.utils.logger/-logger/-level/-e-r-r-o-r/code.html
@@ -204,9 +218,12 @@ com.iadvize.conversation.sdk.model
 com.iadvize.conversation.sdk.model.auth
 com.iadvize.conversation.sdk.model.configuration
 com.iadvize.conversation.sdk.model.conversation
+com.iadvize.conversation.sdk.model.environment
 com.iadvize.conversation.sdk.model.gdpr
 com.iadvize.conversation.sdk.model.language
+com.iadvize.conversation.sdk.model.targeting
 com.iadvize.conversation.sdk.model.transaction
 com.iadvize.conversation.sdk.model.visitor
+com.iadvize.conversation.sdk.utils.extensions
 com.iadvize.conversation.sdk.utils.logger
 
