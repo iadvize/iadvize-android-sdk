@@ -46,7 +46,6 @@ if [ -f "IAdvizeSDK.zip" ]; then
 
         echo -e "\033[1;42m => Updating CHANGELOG and README. \033[0m"
         mv tmp/CHANGELOG.md CHANGELOG.md
-        mv tmp/targeting.png targeting.png
         mv tmp/README.md README.md
 
         echo -e "\033[1;42m => Updating documentation \033[0m"
