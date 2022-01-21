@@ -8,9 +8,15 @@ import androidx.recyclerview.widget.RecyclerView
  * Created by Yann Coupé on 21/08/2018.
  * Copyright © 2018 iAdvize. All rights reserved.
  */
-class ItemOffsetDecoration(private val spanCount: Int, private val spacing: Int) : RecyclerView.ItemDecoration() {
+class ItemOffsetDecoration(private val spanCount: Int, private val spacing: Int) :
+    RecyclerView.ItemDecoration() {
 
-    override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
+    override fun getItemOffsets(
+        outRect: Rect,
+        view: View,
+        parent: RecyclerView,
+        state: RecyclerView.State
+    ) {
 
         val position = parent.getChildAdapterPosition(view)
         val column = position % spanCount

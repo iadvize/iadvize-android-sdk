@@ -6,22 +6,23 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.databinding.DataBindingUtil
 import com.google.android.material.tabs.TabLayout
 import com.iadvize.conversation.sdk.IAdvizeSDK
 import com.iadvize.conversation.sdk.controller.conversation.ConversationListener
 import com.iadvize.conversation.sdk.controller.targeting.TargetingListener
 import com.iadvize.conversation.sdk.demo.R
 import com.iadvize.conversation.sdk.demo.adapters.MainPagerAdapter
-import com.iadvize.conversation.sdk.model.IAdvizeSDKCallback
+import com.iadvize.conversation.sdk.demo.databinding.MainActivityBinding
+import com.iadvize.conversation.sdk.model.SDKCallback
 import com.iadvize.conversation.sdk.model.auth.AuthenticationOption
 import com.iadvize.conversation.sdk.model.configuration.ChatboxConfiguration
 import com.iadvize.conversation.sdk.model.conversation.IncomingMessageAvatar
 import com.iadvize.conversation.sdk.model.gdpr.GDPREnabledOption
 import com.iadvize.conversation.sdk.model.gdpr.GDPRListener
 import com.iadvize.conversation.sdk.model.gdpr.GDPROption
-import com.iadvize.conversation.sdk.model.language.SDKLanguageOption
+import com.iadvize.conversation.sdk.model.language.LanguageOption
 import com.iadvize.conversation.sdk.type.Language
-import kotlinx.android.synthetic.main.activity_main.*
 import java.net.URI
 import java.util.*
 
@@ -30,6 +31,7 @@ import java.util.*
  * Copyright © 2018 iAdvize. All rights reserved.
  */
 class MainActivity : AppCompatActivity(), GDPRListener, ConversationListener, TargetingListener {
+    private lateinit var binding: MainActivityBinding
 
     /**
      * Your `projectId` and `targetingRuleId` are available on your app on the iAdvize
@@ -42,7 +44,7 @@ class MainActivity : AppCompatActivity(), GDPRListener, ConversationListener, Ta
      * This callback is related to the SDK Activation. Once the SDK is activated, you will be able
      * to activate your targeting rule.
      */
-    private val sdkActivationCallback = object : IAdvizeSDKCallback {
+    private val sdkActivationCallback = object : SDKCallback {
         override fun onFailure(t: Throwable) {
             Log.e("iAdvize SDK Demo", "The SDK activation failed with:", t)
         }
@@ -55,27 +57,26 @@ class MainActivity : AppCompatActivity(), GDPRListener, ConversationListener, Ta
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        setSupportActionBar(main_toolbar)
+        binding = DataBindingUtil.setContentView(this, R.layout.main_activity)
 
-        main_tablayout.addTab(main_tablayout.newTab().setText("Catalog"))
-        main_tablayout.addTab(main_tablayout.newTab().setText("Cart"))
-        main_tablayout.tabGravity = TabLayout.GRAVITY_FILL
+        setSupportActionBar(binding.mainToolbar)
 
-        val adapter = MainPagerAdapter(supportFragmentManager, main_tablayout.tabCount)
-        main_viewpager.adapter = adapter
-        main_viewpager.addOnPageChangeListener(
-            TabLayout.TabLayoutOnPageChangeListener(
-                main_tablayout
-            )
+        binding.mainTablayout.addTab(binding.mainTablayout.newTab().setText("Catalog"))
+        binding.mainTablayout.addTab(binding.mainTablayout.newTab().setText("Cart"))
+        binding.mainTablayout.tabGravity = TabLayout.GRAVITY_FILL
+
+        val adapter = MainPagerAdapter(supportFragmentManager, binding.mainTablayout.tabCount)
+        binding.mainViewpager.adapter = adapter
+        binding.mainViewpager.addOnPageChangeListener(
+            TabLayout.TabLayoutOnPageChangeListener(binding.mainTablayout)
         )
-        main_tablayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+        binding.mainTablayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabReselected(tab: TabLayout.Tab?) {}
 
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 tab?.let {
-                    main_viewpager.currentItem = it.position
+                    binding.mainViewpager.currentItem = it.position
                 }
             }
 
@@ -97,7 +98,7 @@ class MainActivity : AppCompatActivity(), GDPRListener, ConversationListener, Ta
         IAdvizeSDK.conversationController.listeners.add(this)
 
         // By default, the iAdvize Conversation SDK take the device language
-        IAdvizeSDK.targetingController.language = SDKLanguageOption.Custom(Language.FR)
+        IAdvizeSDK.targetingController.language = LanguageOption.Custom(Language.FR)
 
         // Update avatar for the incoming messages
         val avatar = ContextCompat.getDrawable(this, R.mipmap.ic_launcher)?.let {
@@ -143,7 +144,7 @@ class MainActivity : AppCompatActivity(), GDPRListener, ConversationListener, Ta
         IAdvizeSDK.activate(
             projectId = projectId,
             authenticationOption = AuthenticationOption.Simple("ConnectedUserIdentifier"),
-            gdprOption = GDPROption.Disabled(),
+            gdprOption = GDPROption.Disabled,
             callback = sdkActivationCallback
         )
     }
@@ -156,7 +157,7 @@ class MainActivity : AppCompatActivity(), GDPRListener, ConversationListener, Ta
         val legalInfoUri = URI.create("http://yourlegalinformationurl.com/legal")
         IAdvizeSDK.activate(
             projectId = projectId,
-            authenticationOption = AuthenticationOption.Anonymous(),
+            authenticationOption = AuthenticationOption.Anonymous,
             gdprOption = GDPROption.Enabled(GDPREnabledOption.LegalUrl(legalInfoUri)),
             callback = sdkActivationCallback
         )

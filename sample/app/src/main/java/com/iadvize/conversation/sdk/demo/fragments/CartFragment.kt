@@ -4,16 +4,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import com.iadvize.conversation.sdk.IAdvizeSDK
 import com.iadvize.conversation.sdk.demo.R
 import com.iadvize.conversation.sdk.demo.adapters.CartAdapter
+import com.iadvize.conversation.sdk.demo.databinding.CartFragmentBinding
 import com.iadvize.conversation.sdk.demo.models.Cart
 import com.iadvize.conversation.sdk.model.transaction.Transaction
 import com.iadvize.conversation.sdk.type.Currency
-import kotlinx.android.synthetic.main.fragment_cart.*
 import java.util.*
 
 /**
@@ -21,26 +22,27 @@ import java.util.*
  * Copyright © 2018 iAdvize. All rights reserved.
  */
 class CartFragment : Fragment() {
-
+    private lateinit var binding: CartFragmentBinding
     private val adapter = CartAdapter(Cart.cart.entries)
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_cart, container, false)
+    ): View {
+        binding = DataBindingUtil.inflate(inflater, R.layout.cart_fragment, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        cart_recyclerview.setHasFixedSize(true)
-        cart_recyclerview.layoutManager =
+        binding.cartRecyclerview.setHasFixedSize(true)
+        binding.cartRecyclerview.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        cart_recyclerview.adapter = adapter
+        binding.cartRecyclerview.adapter = adapter
 
-        cart_purchase.setOnClickListener {
+        binding.cartPurchase.setOnClickListener {
             Snackbar.make(view, "Transaction successful!", Snackbar.LENGTH_LONG).show()
 
             IAdvizeSDK.transactionController.register(
@@ -55,7 +57,7 @@ class CartFragment : Fragment() {
             clear()
         }
 
-        cart_clear.setOnClickListener {
+        binding.cartClear.setOnClickListener {
             clear()
         }
     }
@@ -65,8 +67,8 @@ class CartFragment : Fragment() {
 
         adapter.refresh()
 
-        cart_purchase.visibility = View.GONE
-        cart_clear.visibility = View.GONE
+        binding.cartPurchase.visibility = View.GONE
+        binding.cartClear.visibility = View.GONE
     }
 
     override fun onResume() {
@@ -74,11 +76,11 @@ class CartFragment : Fragment() {
         adapter.refresh()
 
         if (Cart.cart.isEmpty()) {
-            cart_purchase.visibility = View.GONE
-            cart_clear.visibility = View.GONE
+            binding.cartPurchase.visibility = View.GONE
+            binding.cartClear.visibility = View.GONE
         } else {
-            cart_purchase.visibility = View.VISIBLE
-            cart_clear.visibility = View.VISIBLE
+            binding.cartPurchase.visibility = View.VISIBLE
+            binding.cartClear.visibility = View.VISIBLE
         }
     }
 }

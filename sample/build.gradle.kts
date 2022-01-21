@@ -1,25 +1,27 @@
 buildscript {
     repositories {
         google()
+        maven(url = uri("https://plugins.gradle.org/m2/"))
+        maven(url = uri("https://jitpack.io"))
         mavenCentral()
-        maven { url = uri("https://jitpack.io") }
-        maven { url = uri("https://plugins.gradle.org/m2/") }
+        gradlePluginPortal()
     }
 
     dependencies {
-        classpath("com.google.gms:google-services:4.3.8")
-        classpath("com.android.tools.build:gradle:4.1.3")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21")
+        classpath(BuildDependencies.gms)
+        classpath(BuildDependencies.gradle)
+        classpath(BuildDependencies.kotlin)
     }
 }
 
 allprojects {
     repositories {
         google()
+        maven(url = uri("https://raw.github.com/iadvize/iadvize-android-sdk/master"))
+        maven(url = uri("https://plugins.gradle.org/m2/"))
+        maven(url = uri("https://jitpack.io"))
         mavenCentral()
-        maven { url = uri("https://jitpack.io") }
-        maven { url = uri("https://plugins.gradle.org/m2/") }
-        maven { url = uri("https://raw.github.com/iadvize/iadvize-android-sdk/master") }
+        gradlePluginPortal()
     }
 }
 

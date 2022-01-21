@@ -1,65 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:foreground="?android:attr/selectableItemBackground"
-    app:cardCornerRadius="2dp"
-    app:cardElevation="4dp">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <RelativeLayout
+    <data />
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="4dp">
 
-        <ImageView
-            android:id="@+id/cart_item_picture"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/common_margin"
-            android:layout_marginLeft="@dimen/common_margin" />
-
-        <TextView
-            android:id="@+id/cart_item_price"
-            android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_margin="8dp"
-            android:gravity="center_vertical|end"
-            android:textColor="#FF642F"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/cart_item_name"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_centerVertical="true"
-            android:layout_margin="8dp"
-            android:layout_toStartOf="@+id/cart_item_price"
-            android:layout_toLeftOf="@+id/cart_item_price"
-            android:layout_toEndOf="@+id/cart_item_picture"
-            android:layout_toRightOf="@+id/cart_item_picture"
-            android:gravity="center_vertical"
-            android:textColor="#26282D"
-            android:textSize="16sp" />
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/cart_item_quantity"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_margin="8dp"
-            android:background="@drawable/cart_item_quantity"
-            android:gravity="center"
-            android:textColor="@android:color/white"
-            android:textSize="12sp" />
+            <ImageView
+                android:id="@+id/cart_item_picture"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/common_margin"
+                android:layout_marginLeft="@dimen/common_margin" />
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/cart_item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:gravity="center_vertical|end"
+                android:textColor="#FF642F"
+                android:textSize="16sp" />
 
-</androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/cart_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:layout_toStartOf="@+id/cart_item_price"
+                android:layout_toLeftOf="@+id/cart_item_price"
+                android:layout_toEndOf="@+id/cart_item_picture"
+                android:layout_toRightOf="@+id/cart_item_picture"
+                android:gravity="center_vertical"
+                android:textColor="#26282D"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/cart_item_quantity"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:background="@drawable/cart_item_quantity"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

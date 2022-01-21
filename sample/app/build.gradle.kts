@@ -1,39 +1,46 @@
 plugins {
-    id("com.android.application")
-    id("kotlin-android")
-    id("kotlin-android-extensions")
-    id("com.google.gms.google-services")
+    id(Plugins.androidApp)
+    id(Plugins.kotlin)
+    id(Plugins.kotlinParcelize)
+    id(Plugins.gms)
 }
 
 android {
-    buildToolsVersion = "30.0.3"
+    buildToolsVersion = AndroidConfig.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion(19)
-        targetSdkVersion(30)
-        compileSdk = 30
+        applicationId = "com.iadvize.conversation.sdk.demo"
+        versionName = "1.0"
+        versionCode = 1
 
-        applicationId("com.iadvize.conversation.sdk.demo")
-        versionName("1.0")
-        versionCode(1)
+        minSdk = AndroidConfig.minSdkVersion
+        targetSdk = AndroidConfig.targetSdkVersion
+        compileSdk = AndroidConfig.compileSdkVersion
 
         multiDexEnabled = true
     }
 
     buildTypes {
-        getByName("release") {
-            minifyEnabled(true)
-            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
+        release {
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = AndroidConfig.javaVersion
+        targetCompatibility = AndroidConfig.javaVersion
+    }
+
+    kotlinOptions {
+        jvmTarget = AndroidConfig.javaVersion.toString()
     }
 
     buildFeatures {
         viewBinding = true
+        dataBinding = true
     }
 }
 
@@ -46,14 +53,14 @@ configurations {
 dependencies {
     implementation("com.iadvize:iadvize-sdk:2.3.3")
 
-    implementation("androidx.constraintlayout:constraintlayout:2.1.2")
-    implementation("androidx.recyclerview:recyclerview:1.2.1")
-    implementation("androidx.cardview:cardview:1.0.0")
-    implementation("androidx.appcompat:appcompat:1.4.0")
-    implementation("androidx.multidex:multidex:2.0.1")
-    implementation("com.google.android.material:material:1.4.0")
-
-    implementation(platform("com.google.firebase:firebase-bom:28.1.0"))
-    implementation("com.google.firebase:firebase-messaging")
-    implementation("com.google.firebase:firebase-analytics")
+    implementation(AppDependencies.androidxAppCompat)
+    implementation(AppDependencies.androidxCardView)
+    implementation(AppDependencies.androidxConstraintLayout)
+    implementation(AppDependencies.androidxMultiDex)
+    implementation(AppDependencies.androidxRecyclerView)
+    implementation(platform(AppDependencies.firebaseBom))
+    implementation(AppDependencies.firebaseAnalytics)
+    implementation(AppDependencies.firebaseMessaging)
+    implementation(AppDependencies.kotlinStdlib)
+    implementation(AppDependencies.material)
 }

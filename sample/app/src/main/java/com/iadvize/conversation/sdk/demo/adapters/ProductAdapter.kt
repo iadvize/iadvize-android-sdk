@@ -11,7 +11,8 @@ import com.iadvize.conversation.sdk.demo.viewholders.ProductViewHolder
  * Created by Yann Coupé on 20/08/2018.
  * Copyright © 2018 iAdvize. All rights reserved.
  */
-class ProductAdapter(val products: ArrayList<Product>, val listener: OnItemClickListener? = null) : RecyclerView.Adapter<ProductViewHolder>() {
+class ProductAdapter(val products: ArrayList<Product>, val listener: OnItemClickListener? = null) :
+    RecyclerView.Adapter<ProductViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.product_item, parent, false)
