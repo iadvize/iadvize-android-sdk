@@ -98,7 +98,7 @@ class MainActivity : AppCompatActivity(), GDPRListener, ConversationListener, Ta
         IAdvizeSDK.conversationController.listeners.add(this)
 
         // By default, the iAdvize Conversation SDK take the device language
-        IAdvizeSDK.targetingController.language = LanguageOption.Custom(Language.FR)
+        IAdvizeSDK.targetingController.language = LanguageOption.Custom(Language.fr)
 
         // Update avatar for the incoming messages
         val avatar = ContextCompat.getDrawable(this, R.mipmap.ic_launcher)?.let {
