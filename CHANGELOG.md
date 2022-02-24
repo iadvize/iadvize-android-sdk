@@ -1,3 +1,25 @@
+# 2.4.2
+
+### Release date 2022/02/23
+
+- Bug fixes & performance improvements
+
+# 2.4.1
+
+### Release date 2022/02/14
+
+- Update build to support Android 32 / AGP 7.1 / Kotlin 1.6 / Java 11
+- Bug fixes & performance improvements
+
+# 2.4.0
+
+### Release date 2022/02/11
+
+- Update build to support Android 31 / AGP 7+ / Kotlin 1.6 / Java 11
+- Fix previews in link messages
+- Add satisfaction flow
+- Fix activation success callback not being called when SDK is already activated
+
 # 2.3.3
 
 ### Release date 2022/01/14

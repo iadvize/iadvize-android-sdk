@@ -2,27 +2,31 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>IAdvizeSDK</title>
-<link href="../../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script><script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../../scripts/main.js" async="async"></script>  </head>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><link href="../../../styles/prism.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script><script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script><script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>  </head>
   <body>
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../../index.html">iAdvize Android SDK</a></div>
+      <div></div>
+      <div class="pull-right d-flex"><button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
     <div id="container">
-      <div id="leftColumn"><a href="../../../index.html">
-          <div id="logo"></div>
-        </a>
-        <div id="paneSearch"></div>
+      <div id="leftColumn">
         <div id="sideMenu"></div>
       </div>
       <div id="main">
-        <div id="leftToggler"><span class="icon-toggler"></span></div>
-<script type="text/javascript" src="../../../scripts/main.js"></script>        <div class="main-content" id="content" pageIds="iAdvize Android SDK::com.iadvize.conversation.sdk/IAdvizeSDK///PointingToDeclaration//165651098">
-          <div class="navigation-wrapper" id="navigation-wrapper">
-            <div class="breadcrumbs"><a href="../../../index.html">iAdvize Android SDK</a>/<a href="../index.html">com.iadvize.conversation.sdk</a>/<a href="index.html">IAdvizeSDK</a></div>
-            <div class="pull-right d-flex">
-              <div id="searchBar"></div>
-            </div>
-          </div>
+        <div class="main-content" id="content" pageIds="iAdvize Android SDK::com.iadvize.conversation.sdk/IAdvizeSDK///PointingToDeclaration//165651098">
+          <div class="breadcrumbs"><a href="../../../index.html">iAdvize Android SDK</a>/<a href="../index.html">com.iadvize.conversation.sdk</a>/<a href="index.html">IAdvizeSDK</a></div>
           <div class="cover ">
-            <h1 class="cover"><span>I</span><wbr></wbr><span>Advize</span><wbr></wbr><span>S</span><wbr></wbr><span>D</span><wbr></wbr><span>K</span></h1>
-            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace">object <a href="index.html">IAdvizeSDK</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Manage all the iAdvize Conversation SDK setup and initialization.</p></div></div>
+            <h1 class="cover"><span>IAdvize</span><wbr></wbr><span><span>SDK</span></span></h1>
+            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">IAdvizeSDK</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Manage all the iAdvize Conversation SDK setup and initialization.</p></div></div>
           </div>
           <div class="tabbedcontent">
             <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
@@ -31,17 +35,15 @@
               <div class="table" data-togglable="Types"><a data-name="65183482%2FClasslikes%2F165651098" anchor-label="ActivationStatus" id="65183482%2FClasslikes%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
                 <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
                   <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="-activation-status/index.html">ActivationStatus</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="65183482%2FClasslikes%2F165651098"></span>
+                    <div class=""><span class="inline-flex">
+                        <div><a href="-activation-status/index.html"><span>Activation</span><wbr></wbr><span><span>Status</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="65183482%2FClasslikes%2F165651098"></span>
                           <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                         </span></span></div>
                     <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace">enum <a href="-activation-status/index.html">ActivationStatus</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a>&lt;<a href="-activation-status/index.html">IAdvizeSDK.ActivationStatus</a>&gt; <span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="65183482%2FClasslikes%2F165651098" anchor-label="ActivationStatus" id="65183482%2FClasslikes%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><div class="brief "><a data-name="65183482%2FClasslikes%2F165651098" anchor-label="ActivationStatus" id="65183482%2FClasslikes%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>Activation state of the SDK.</div></div>
-</div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-activation-status/index.html">ActivationStatus</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-activation-status/index.html">IAdvizeSDK.ActivationStatus</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Activation state of the SDK.</p></div></div></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -50,51 +52,45 @@
               <div class="table" data-togglable="Functions"><a data-name="-1834113384%2FFunctions%2F165651098" anchor-label="activate" id="-1834113384%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
                 <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
                   <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="activate.html">activate</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1834113384%2FFunctions%2F165651098"></span>
+                    <div class=""><span class="inline-flex">
+                        <div><a href="activate.html"><span><span>activate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1834113384%2FFunctions%2F165651098"></span>
                           <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                         </span></span></div>
                     <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block">@<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html">JvmStatic</a>()</div><div class="block">@<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html">JvmOverloads</a>()</div><div class="block">@<a href="https://developer.android.com/reference/kotlin/androidx/annotation/MainThread.html">MainThread</a>()</div></div>fun <a href="activate.html">activate</a>(projectId: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>, authenticationOption: <a href="../../com.iadvize.conversation.sdk.model.auth/-authentication-option/index.html">AuthenticationOption</a>, gdprOption: <a href="../../com.iadvize.conversation.sdk.model.gdpr/-g-d-p-r-option/index.html">GDPROption</a> = GDPROption.Disabled, callback: <a href="../../com.iadvize.conversation.sdk.model/-s-d-k-callback/index.html">SDKCallback</a>? = null)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-1834113384%2FFunctions%2F165651098" anchor-label="activate" id="-1834113384%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><div class="brief "><a data-name="-1834113384%2FFunctions%2F165651098" anchor-label="activate" id="-1834113384%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>Activate the iAdvize Conversation SDK.</div></div>
-</div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation">JvmStatic</span></a></div><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a></div><div class="block"><span class="token annotation">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/MainThread.html"><span class="token annotation">MainThread</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="activate.html"><span class="token function">activate</span></a><span class="token punctuation">(</span>projectId<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span>authenticationOption<span class="token operator">: </span><a href="../../com.iadvize.conversation.sdk.model.auth/-authentication-option/index.html">AuthenticationOption</a><span class="token punctuation">, </span>gdprOption<span class="token operator">: </span><a href="../../com.iadvize.conversation.sdk.model.gdpr/-g-d-p-r-option/index.html">GDPROption</a><span class="token operator"> = </span>GDPROption.Disabled<span class="token punctuation">, </span>callback<span class="token operator">: </span><a href="../../com.iadvize.conversation.sdk.model/-s-d-k-callback/index.html">SDKCallback</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Activate the iAdvize Conversation SDK.</p></div></div></div>
+                      </div>
                     </div>
                   </div>
                 </div>
 <a data-name="-957517846%2FFunctions%2F165651098" anchor-label="initiate" id="-957517846%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
                 <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
                   <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="initiate.html">initiate</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-957517846%2FFunctions%2F165651098"></span>
+                    <div class=""><span class="inline-flex">
+                        <div><a href="initiate.html"><span><span>initiate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-957517846%2FFunctions%2F165651098"></span>
                           <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                         </span></span></div>
                     <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block">@<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html">JvmStatic</a>()</div><div class="block">@<a href="https://developer.android.com/reference/kotlin/androidx/annotation/MainThread.html">MainThread</a>()</div></div>fun <a href="initiate.html">initiate</a>(<span>@<a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html">NonNull</a>() </span>application: <a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a>)<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-957517846%2FFunctions%2F165651098" anchor-label="initiate" id="-957517846%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><div class="brief "><a data-name="-957517846%2FFunctions%2F165651098" anchor-label="initiate" id="-957517846%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>Initiate the IAdvize conversation SDK for your app.</div></div>
-</div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation">JvmStatic</span></a></div><div class="block"><span class="token annotation">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/MainThread.html"><span class="token annotation">MainThread</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="initiate.html"><span class="token function">initiate</span></a><span class="token punctuation">(</span><span><span class="token annotation">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation">NonNull</span></a> </span>application<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Application.html">Application</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Initiate the IAdvize conversation SDK for your app. This will register a callback on activities lifecycle to help through SDK usage in the app. Once initiated you can activate the SDK. Please visit https://github.com/iadvize/iadvize-android-sdk for further information.</p></div></div></div>
+                      </div>
                     </div>
                   </div>
                 </div>
 <a data-name="-99500253%2FFunctions%2F165651098" anchor-label="logout" id="-99500253%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
                 <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
                   <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="logout.html">logout</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-99500253%2FFunctions%2F165651098"></span>
+                    <div class=""><span class="inline-flex">
+                        <div><a href="logout.html"><span><span>logout</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-99500253%2FFunctions%2F165651098"></span>
                           <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                         </span></span></div>
                     <div>
-                      <div class="title"><div class="divergent-group" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release"><div class="with-platform-tags"><span class="pull-right"></span></div>
-
-  <div>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block">@<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html">JvmStatic</a>()</div><div class="block">@<a href="https://developer.android.com/reference/kotlin/androidx/annotation/MainThread.html">MainThread</a>()</div></div>fun <a href="logout.html">logout</a>()<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
-  </div>
-<a data-name="-99500253%2FFunctions%2F165651098" anchor-label="logout" id="-99500253%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><div class="brief "><a data-name="-99500253%2FFunctions%2F165651098" anchor-label="logout" id="-99500253%2FFunctions%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>Logout the user from the SDK.</div></div>
-</div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation">JvmStatic</span></a></div><div class="block"><span class="token annotation">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/MainThread.html"><span class="token annotation">MainThread</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="logout.html"><span class="token function">logout</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Logout the user from the SDK. This hides the chat button & disables push notifications. You will need to call activate again if the user needs to start a new conversation.</p></div></div></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -103,12 +99,14 @@
               <div class="table" data-togglable="Properties"><a data-name="-818249275%2FProperties%2F165651098" anchor-label="activationStatus" id="-818249275%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
                 <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
                   <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="activation-status.html">activationStatus</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-818249275%2FProperties%2F165651098"></span>
+                    <div class=""><span class="inline-flex">
+                        <div><a href="activation-status.html">activationStatus</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-818249275%2FProperties%2F165651098"></span>
                           <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                         </span></span></div>
                     <div>
                       <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><a data-name="-818249275%2FProperties%2F165651098" anchor-label="activationStatus" id="-818249275%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><div class="symbol monospace">var <a href="activation-status.html">activationStatus</a>: <a href="-activation-status/index.html">IAdvizeSDK.ActivationStatus</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-818249275%2FProperties%2F165651098" anchor-label="activationStatus" id="-818249275%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>Activation state of the SDK.</div></div></div>
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><a data-name="-818249275%2FProperties%2F165651098" anchor-label="activationStatus" id="-818249275%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="activation-status.html">activationStatus</a><span class="token operator">: </span><a href="-activation-status/index.html">IAdvizeSDK.ActivationStatus</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-818249275%2FProperties%2F165651098" anchor-label="activationStatus" id="-818249275%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><p class="paragraph">Activation state of the SDK.</p></div></div></div>
                       </div>
                     </div>
                   </div>
@@ -116,12 +114,14 @@
 <a data-name="-59832450%2FProperties%2F165651098" anchor-label="chatboxController" id="-59832450%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
                 <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
                   <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="chatbox-controller.html">chatboxController</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-59832450%2FProperties%2F165651098"></span>
+                    <div class=""><span class="inline-flex">
+                        <div><a href="chatbox-controller.html">chatboxController</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-59832450%2FProperties%2F165651098"></span>
                           <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                         </span></span></div>
                     <div>
                       <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><a data-name="-59832450%2FProperties%2F165651098" anchor-label="chatboxController" id="-59832450%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><div class="symbol monospace">val <a href="chatbox-controller.html">chatboxController</a>: <a href="../../com.iadvize.conversation.sdk.controller.chatbox/-chatbox-controller/index.html">ChatboxController</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-59832450%2FProperties%2F165651098" anchor-label="chatboxController" id="-59832450%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>Controller in charge of Chatbox configuration &amp; update.</div></div></div>
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><a data-name="-59832450%2FProperties%2F165651098" anchor-label="chatboxController" id="-59832450%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="chatbox-controller.html">chatboxController</a><span class="token operator">: </span><a href="../../com.iadvize.conversation.sdk.controller.chatbox/-chatbox-controller/index.html">ChatboxController</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-59832450%2FProperties%2F165651098" anchor-label="chatboxController" id="-59832450%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><p class="paragraph">Controller in charge of Chatbox configuration & update.</p></div></div></div>
                       </div>
                     </div>
                   </div>
@@ -129,12 +129,14 @@
 <a data-name="1235496398%2FProperties%2F165651098" anchor-label="conversationController" id="1235496398%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
                 <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
                   <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="conversation-controller.html">conversationController</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1235496398%2FProperties%2F165651098"></span>
+                    <div class=""><span class="inline-flex">
+                        <div><a href="conversation-controller.html">conversationController</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1235496398%2FProperties%2F165651098"></span>
                           <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                         </span></span></div>
                     <div>
                       <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><a data-name="1235496398%2FProperties%2F165651098" anchor-label="conversationController" id="1235496398%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><div class="symbol monospace">val <a href="conversation-controller.html">conversationController</a>: <a href="../../com.iadvize.conversation.sdk.controller.conversation/-conversation-controller/index.html">ConversationController</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1235496398%2FProperties%2F165651098" anchor-label="conversationController" id="1235496398%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>Controller in charge of the conversation.</div></div></div>
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><a data-name="1235496398%2FProperties%2F165651098" anchor-label="conversationController" id="1235496398%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="conversation-controller.html">conversationController</a><span class="token operator">: </span><a href="../../com.iadvize.conversation.sdk.controller.conversation/-conversation-controller/index.html">ConversationController</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1235496398%2FProperties%2F165651098" anchor-label="conversationController" id="1235496398%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><p class="paragraph">Controller in charge of the conversation.</p></div></div></div>
                       </div>
                     </div>
                   </div>
@@ -142,12 +144,14 @@
 <a data-name="1839954637%2FProperties%2F165651098" anchor-label="logLevel" id="1839954637%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
                 <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
                   <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="log-level.html">logLevel</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1839954637%2FProperties%2F165651098"></span>
+                    <div class=""><span class="inline-flex">
+                        <div><a href="log-level.html">logLevel</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1839954637%2FProperties%2F165651098"></span>
                           <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                         </span></span></div>
                     <div>
                       <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><a data-name="1839954637%2FProperties%2F165651098" anchor-label="logLevel" id="1839954637%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><div class="symbol monospace"><div class="block"><div class="block">@<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html">JvmStatic</a>()</div></div>var <a href="log-level.html">logLevel</a>: <a href="../../com.iadvize.conversation.sdk.utils.logger/-logger/-level/index.html">Logger.Level</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1839954637%2FProperties%2F165651098" anchor-label="logLevel" id="1839954637%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>Level of the iAdvize Conversation SDK console logger.</div></div></div>
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><a data-name="1839954637%2FProperties%2F165651098" anchor-label="logLevel" id="1839954637%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation">JvmStatic</span></a></div></div><span class="token keyword"></span><span class="token keyword">var </span><a href="log-level.html">logLevel</a><span class="token operator">: </span><a href="../../com.iadvize.conversation.sdk.utils.logger/-logger/-level/index.html">Logger.Level</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1839954637%2FProperties%2F165651098" anchor-label="logLevel" id="1839954637%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><p class="paragraph">Level of the iAdvize Conversation SDK console logger.</p></div></div></div>
                       </div>
                     </div>
                   </div>
@@ -155,12 +159,14 @@
 <a data-name="-396957594%2FProperties%2F165651098" anchor-label="notificationController" id="-396957594%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
                 <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
                   <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="notification-controller.html">notificationController</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-396957594%2FProperties%2F165651098"></span>
+                    <div class=""><span class="inline-flex">
+                        <div><a href="notification-controller.html">notificationController</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-396957594%2FProperties%2F165651098"></span>
                           <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                         </span></span></div>
                     <div>
                       <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><a data-name="-396957594%2FProperties%2F165651098" anchor-label="notificationController" id="-396957594%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><div class="symbol monospace">val <a href="notification-controller.html">notificationController</a>: <a href="../../com.iadvize.conversation.sdk.controller.notification/-notification-controller/index.html">NotificationController</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-396957594%2FProperties%2F165651098" anchor-label="notificationController" id="-396957594%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>Controller in charge of push notification.</div></div></div>
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><a data-name="-396957594%2FProperties%2F165651098" anchor-label="notificationController" id="-396957594%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="notification-controller.html">notificationController</a><span class="token operator">: </span><a href="../../com.iadvize.conversation.sdk.controller.notification/-notification-controller/index.html">NotificationController</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-396957594%2FProperties%2F165651098" anchor-label="notificationController" id="-396957594%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><p class="paragraph">Controller in charge of push notification.</p></div></div></div>
                       </div>
                     </div>
                   </div>
@@ -168,12 +174,14 @@
 <a data-name="1232360832%2FProperties%2F165651098" anchor-label="targetingController" id="1232360832%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
                 <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
                   <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="targeting-controller.html">targetingController</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1232360832%2FProperties%2F165651098"></span>
+                    <div class=""><span class="inline-flex">
+                        <div><a href="targeting-controller.html">targetingController</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1232360832%2FProperties%2F165651098"></span>
                           <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                         </span></span></div>
                     <div>
                       <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><a data-name="1232360832%2FProperties%2F165651098" anchor-label="targetingController" id="1232360832%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><div class="symbol monospace">val <a href="targeting-controller.html">targetingController</a>: <a href="../../com.iadvize.conversation.sdk.controller.targeting/-targeting-controller/index.html">TargetingController</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1232360832%2FProperties%2F165651098" anchor-label="targetingController" id="1232360832%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>Controller in charge of targeting rules.</div></div></div>
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><a data-name="1232360832%2FProperties%2F165651098" anchor-label="targetingController" id="1232360832%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="targeting-controller.html">targetingController</a><span class="token operator">: </span><a href="../../com.iadvize.conversation.sdk.controller.targeting/-targeting-controller/index.html">TargetingController</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1232360832%2FProperties%2F165651098" anchor-label="targetingController" id="1232360832%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><p class="paragraph">Controller in charge of targeting rules.</p></div></div></div>
                       </div>
                     </div>
                   </div>
@@ -181,12 +189,14 @@
 <a data-name="1679476787%2FProperties%2F165651098" anchor-label="transactionController" id="1679476787%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
                 <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
                   <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="transaction-controller.html">transactionController</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1679476787%2FProperties%2F165651098"></span>
+                    <div class=""><span class="inline-flex">
+                        <div><a href="transaction-controller.html">transactionController</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1679476787%2FProperties%2F165651098"></span>
                           <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                         </span></span></div>
                     <div>
                       <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><a data-name="1679476787%2FProperties%2F165651098" anchor-label="transactionController" id="1679476787%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><div class="symbol monospace">val <a href="transaction-controller.html">transactionController</a>: <a href="../../com.iadvize.conversation.sdk.controller.transaction/-transaction-controller/index.html">TransactionController</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1679476787%2FProperties%2F165651098" anchor-label="transactionController" id="1679476787%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>Controller in charge of transactions.</div></div></div>
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><a data-name="1679476787%2FProperties%2F165651098" anchor-label="transactionController" id="1679476787%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="transaction-controller.html">transactionController</a><span class="token operator">: </span><a href="../../com.iadvize.conversation.sdk.controller.transaction/-transaction-controller/index.html">TransactionController</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1679476787%2FProperties%2F165651098" anchor-label="transactionController" id="1679476787%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><p class="paragraph">Controller in charge of transactions.</p></div></div></div>
                       </div>
                     </div>
                   </div>
@@ -194,12 +204,14 @@
 <a data-name="-1326046045%2FProperties%2F165651098" anchor-label="visitorController" id="-1326046045%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
                 <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
                   <div class="main-subrow keyValue ">
-                    <div class=""><span class="inline-flex"><a href="visitor-controller.html">visitorController</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1326046045%2FProperties%2F165651098"></span>
+                    <div class=""><span class="inline-flex">
+                        <div><a href="visitor-controller.html">visitorController</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1326046045%2FProperties%2F165651098"></span>
                           <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                         </span></span></div>
                     <div>
                       <div class="title">
-                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><a data-name="-1326046045%2FProperties%2F165651098" anchor-label="visitorController" id="-1326046045%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><div class="symbol monospace">val <a href="visitor-controller.html">visitorController</a>: <a href="../../com.iadvize.conversation.sdk.controller.visitor/-visitor-controller/index.html">VisitorController</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1326046045%2FProperties%2F165651098" anchor-label="visitorController" id="-1326046045%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>Controller in charge of visitor data.</div></div></div>
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":sdk:dokkaHtml/release"><a data-name="-1326046045%2FProperties%2F165651098" anchor-label="visitorController" id="-1326046045%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="visitor-controller.html">visitorController</a><span class="token operator">: </span><a href="../../com.iadvize.conversation.sdk.controller.visitor/-visitor-controller/index.html">VisitorController</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1326046045%2FProperties%2F165651098" anchor-label="visitorController" id="-1326046045%2FProperties%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a><p class="paragraph">Controller in charge of visitor data.</p></div></div></div>
                       </div>
                     </div>
                   </div>
@@ -208,7 +220,7 @@
             </div>
           </div>
         </div>
-        <div class="footer"><span class="go-to-top-icon"><a href="#content"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
       </div>
     </div>
   </body>

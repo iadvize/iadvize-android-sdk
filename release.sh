@@ -54,7 +54,7 @@ if [ -f "IAdvizeSDK.zip" ]; then
 
         echo -e "\033[1;42m => Committing/pushing version update \033[0m"
         git add --all
-        git commit -m "feat(version): Add files for version ${versionName}" --quiet
+        git commit -m "(build) publish version ${versionName}" --quiet
         git tag "${versionName}"
         git push origin master --tags
 

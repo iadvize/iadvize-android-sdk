@@ -8,9 +8,9 @@ Embed the iAdvize Messenger SDK into your app and connect your visitors with you
 
 ## Compatibility
 
-| Version | Min Android Version | Kotlin Version |
-| ------- | ------------------- | -------------- |
-| 2.3.3   | API 19              | 1.5.21         |
+|  SDK  | Android  | Kotlin |
+| ----- | -------- | ------ |
+| 2.4.2 | 19 -> 32 | 1.6.10 |
 
 ## Integration
 
