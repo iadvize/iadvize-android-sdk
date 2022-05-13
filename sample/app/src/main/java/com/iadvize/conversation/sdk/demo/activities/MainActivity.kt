@@ -4,24 +4,31 @@ import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import com.google.android.material.tabs.TabLayout
 import com.iadvize.conversation.sdk.IAdvizeSDK
-import com.iadvize.conversation.sdk.controller.conversation.ConversationListener
-import com.iadvize.conversation.sdk.controller.targeting.TargetingListener
 import com.iadvize.conversation.sdk.demo.R
 import com.iadvize.conversation.sdk.demo.adapters.MainPagerAdapter
 import com.iadvize.conversation.sdk.demo.databinding.MainActivityBinding
-import com.iadvize.conversation.sdk.model.SDKCallback
-import com.iadvize.conversation.sdk.model.auth.AuthenticationOption
-import com.iadvize.conversation.sdk.model.configuration.ChatboxConfiguration
-import com.iadvize.conversation.sdk.model.conversation.IncomingMessageAvatar
-import com.iadvize.conversation.sdk.model.gdpr.GDPREnabledOption
-import com.iadvize.conversation.sdk.model.gdpr.GDPRListener
-import com.iadvize.conversation.sdk.model.gdpr.GDPROption
-import com.iadvize.conversation.sdk.model.language.LanguageOption
+import com.iadvize.conversation.sdk.feature.authentication.AuthenticationOption
+import com.iadvize.conversation.sdk.feature.chatbox.ChatboxConfiguration
+import com.iadvize.conversation.sdk.feature.conversation.ConversationChannel
+import com.iadvize.conversation.sdk.feature.conversation.ConversationListener
+import com.iadvize.conversation.sdk.feature.conversation.IncomingMessageAvatar
+import com.iadvize.conversation.sdk.feature.conversation.OngoingConversation
+import com.iadvize.conversation.sdk.feature.defaultfloatingbutton.DefaultFloatingButtonConfiguration
+import com.iadvize.conversation.sdk.feature.defaultfloatingbutton.DefaultFloatingButtonMargins
+import com.iadvize.conversation.sdk.feature.defaultfloatingbutton.DefaultFloatingButtonOption
+import com.iadvize.conversation.sdk.feature.gdpr.GDPREnabledOption
+import com.iadvize.conversation.sdk.feature.gdpr.GDPRListener
+import com.iadvize.conversation.sdk.feature.gdpr.GDPROption
+import com.iadvize.conversation.sdk.feature.targeting.LanguageOption
+import com.iadvize.conversation.sdk.feature.targeting.NavigationOption
+import com.iadvize.conversation.sdk.feature.targeting.TargetingListener
+import com.iadvize.conversation.sdk.feature.targeting.TargetingRule
 import com.iadvize.conversation.sdk.type.Language
 import java.net.URI
 import java.util.*
@@ -34,24 +41,26 @@ class MainActivity : AppCompatActivity(), GDPRListener, ConversationListener, Ta
     private lateinit var binding: MainActivityBinding
 
     /**
-     * Your `projectId` and `targetingRuleId` are available on your app on the iAdvize
-     * administration website.
+     * Your `projectId` and `targetingRuleId` are available on the iAdvize administration website.
      */
     private val projectId = 0
-    private val targetingRuleId = "your-targeting-rule-id"
+    private val targetingRule = TargetingRule(
+        UUID.fromString("your-targeting-rule-id"),
+        ConversationChannel.CHAT // or ConversationChannel.VIDEO
+    )
 
     /**
      * This callback is related to the SDK Activation. Once the SDK is activated, you will be able
      * to activate your targeting rule.
      */
-    private val sdkActivationCallback = object : SDKCallback {
+    private val sdkActivationCallback = object : IAdvizeSDK.Callback {
         override fun onFailure(t: Throwable) {
             Log.e("iAdvize SDK Demo", "The SDK activation failed with:", t)
         }
 
         override fun onSuccess() {
             Log.d("iAdvize SDK Demo", "The SDK has been activated.")
-            IAdvizeSDK.targetingController.activateTargetingRule(UUID.fromString(targetingRuleId))
+            IAdvizeSDK.targetingController.activateTargetingRule(targetingRule)
         }
     }
 
@@ -105,24 +114,31 @@ class MainActivity : AppCompatActivity(), GDPRListener, ConversationListener, Ta
             IncomingMessageAvatar.Image(it)
         }
 
-        // Configure SDK options for your integration
-        val config = ChatboxConfiguration(
-            mainColor = ContextCompat.getColor(this, R.color.colorPrimary),
-            toolbarTitle = "Say Hello 👋",
-            automaticMessage = "Any question? Say Hello to Cooktoys and we will answer you as soon as possible! 😉",
-            gdprMessage = "As part of the GDPR, we have to ask you to consent to our legal information.",
-            fontPath = "fonts/ProximaNova-Regular.otf",
-            ContextCompat.getColor(this, R.color.colorPrimary),
-            Color.WHITE,
-            avatar
+        // Configure chatbox options
+        IAdvizeSDK.chatboxController.setupChatbox(
+            ChatboxConfiguration(
+                mainColor = ContextCompat.getColor(this, R.color.colorPrimary),
+                toolbarTitle = "Say Hello 👋",
+                toolbarBackgroundColor = ContextCompat.getColor(this, R.color.colorPrimary),
+                toolbarMainColor = Color.WHITE,
+                fontPath = "fonts/ProximaNova-Regular.otf",
+                automaticMessage = "Any question? Say Hello to Cooktoys and we will answer you as soon as possible! 😉",
+                gdprMessage = "As part of the GDPR, we have to ask you to consent to our legal information.",
+                incomingMessageAvatar = avatar
+            )
         )
 
-        // Apply this configuration
-        IAdvizeSDK.chatboxController.setupChatbox(config)
-
-        // Position of the chat button
-        IAdvizeSDK.chatboxController.setChatButtonPosition(16, 16)
-        IAdvizeSDK.chatboxController.useDefaultChatButton = true
+        // Configure default floating button
+        IAdvizeSDK.defaultFloatingButtonController.setupDefaultFloatingButton(
+            DefaultFloatingButtonOption.Enabled(
+                DefaultFloatingButtonConfiguration(
+                    anchor = Gravity.START or Gravity.BOTTOM,
+                    margins = DefaultFloatingButtonMargins(),
+                    backgroundTint = ContextCompat.getColor(this, R.color.colorPrimary),
+                    iconTint = Color.WHITE,
+                )
+            )
+        )
     }
 
     private fun activateSDK() {
@@ -188,8 +204,11 @@ class MainActivity : AppCompatActivity(), GDPRListener, ConversationListener, Ta
         Log.d("iAdvize SDK Demo", "SDK received a new message: $content")
     }
 
-    override fun onOngoingConversationStatusChanged(hasOngoingConversation: Boolean) {
-        Log.d("iAdvize SDK Demo", "SDK update hasOngoingConversation: $hasOngoingConversation")
+    override fun onOngoingConversationUpdated(ongoingConversation: OngoingConversation?) {
+        Log.d(
+            "iAdvize SDK Demo",
+            "SDK conversation update hasOngoingConversation: ${ongoingConversation != null}"
+        )
     }
 
     override fun onActiveTargetingRuleAvailabilityUpdated(isActiveTargetingRuleAvailable: Boolean) {

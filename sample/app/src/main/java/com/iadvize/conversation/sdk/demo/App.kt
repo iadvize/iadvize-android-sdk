@@ -8,7 +8,7 @@ import androidx.multidex.MultiDexApplication
 
 import com.iadvize.conversation.sdk.IAdvizeSDK
 import com.iadvize.conversation.sdk.demo.models.Catalog
-import com.iadvize.conversation.sdk.utils.logger.Logger
+import com.iadvize.conversation.sdk.feature.logger.Logger
 
 /**
  * Created by Yann Coupé on 20/08/2018.

@@ -13,7 +13,7 @@ import com.iadvize.conversation.sdk.demo.R
 import com.iadvize.conversation.sdk.demo.adapters.CartAdapter
 import com.iadvize.conversation.sdk.demo.databinding.CartFragmentBinding
 import com.iadvize.conversation.sdk.demo.models.Cart
-import com.iadvize.conversation.sdk.model.transaction.Transaction
+import com.iadvize.conversation.sdk.feature.transaction.Transaction
 import com.iadvize.conversation.sdk.type.Currency
 import java.util.*
 
