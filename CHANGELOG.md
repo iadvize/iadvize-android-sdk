@@ -1,3 +1,18 @@
+# 2.5.1
+
+### Release date 2022/05/20
+
+- Add video flow events
+- Bug fixes & performance improvements
+
+# 2.5.0
+
+### Release date 2022/05/12
+> *⚠️ This release brings breaking API changes.*
+
+- Add support for video conversations
+- Bug fixes & performance improvements
+
 # 2.4.3
 
 ### Release date 2022/02/24

@@ -10,7 +10,7 @@ Embed the iAdvize Messenger SDK into your app and connect your visitors with you
 
 |  SDK  | Android  | Kotlin |
 | ----- | -------- | ------ |
-| 2.4.3 | 19 -> 32 | 1.6.10 |
+| 2.5.1 | 21 -> 32 | 1.6.21 |
 
 ## Integration
 
