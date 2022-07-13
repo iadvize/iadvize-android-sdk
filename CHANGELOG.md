@@ -1,3 +1,12 @@
+# 2.6.0
+
+### Release date 2022/07/08
+
+- Add secured authentication management
+- Add support for georouting cards
+- Add visitor event tracking management
+- Bug fixes & performance improvements
+
 # 2.5.2
 
 ### Release date 2022/06/15

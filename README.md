@@ -4,18 +4,22 @@
 
 Take your app to the next level and provide a **unique conversational experience** to your users!
 
-Embed the iAdvize Messenger SDK into your app and connect your visitors with your professional agents or ibbü experts through a **fully customized chat experience**. Visitors can ask a question and will receive answers directly on their devices.
+Embed the iAdvize Messenger SDK into your app and connect your visitors with your professional
+agents or ibbü experts through a **fully customized chat experience**. Visitors can ask a question
+and will receive answers directly on their devices.
 
 ## Compatibility
 
 |  SDK  | Android  | Kotlin |
 | ----- | -------- | ------ |
-| 2.5.2 | 21 -> 32 | 1.6.21 |
+| 2.6.0 | 21 -> 32 | 1.7.0  |
 
 ## Integration
 
-To integrate the iAdvize Messenger SDK into your application you can follow this [step-by-step guide](https://developers.iadvize.com/documentation/mobile-sdk).
+To integrate the iAdvize Messenger SDK into your application you can follow
+this [step-by-step guide](https://developers.iadvize.com/documentation/mobile-sdk).
 
 ## API reference
 
-The iAdvize Android SDK API Reference is available [here](https://iadvize.github.io/iadvize-android-sdk/).
+The iAdvize Android SDK API Reference is
+available [here](https://iadvize.github.io/iadvize-android-sdk/).

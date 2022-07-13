@@ -2,6 +2,14 @@ $dokka.format:html-v1
 $dokka.linkExtension:html
 $dokka.location:com.iadvize.conversation.sdk.feature.authentication////PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.authentication/index.html
 $dokka.location:com.iadvize.conversation.sdk.feature.authentication/AuthenticationOption.Anonymous///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.authentication/-authentication-option/-anonymous/index.html
+$dokka.location:com.iadvize.conversation.sdk.feature.authentication/AuthenticationOption.JWECallback///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.authentication/-authentication-option/-j-w-e-callback/index.html
+$dokka.location:com.iadvize.conversation.sdk.feature.authentication/AuthenticationOption.JWECallback/onJWEFailure/#java.lang.Exception/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.authentication/-authentication-option/-j-w-e-callback/on-j-w-e-failure.html
+$dokka.location:com.iadvize.conversation.sdk.feature.authentication/AuthenticationOption.JWECallback/onJWERetrieved/#kotlin.String/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.authentication/-authentication-option/-j-w-e-callback/on-j-w-e-retrieved.html
+$dokka.location:com.iadvize.conversation.sdk.feature.authentication/AuthenticationOption.JWEProvider///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.authentication/-authentication-option/-j-w-e-provider/index.html
+$dokka.location:com.iadvize.conversation.sdk.feature.authentication/AuthenticationOption.JWEProvider/onJWERequested/#com.iadvize.conversation.sdk.feature.authentication.AuthenticationOption.JWECallback/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.authentication/-authentication-option/-j-w-e-provider/on-j-w-e-requested.html
+$dokka.location:com.iadvize.conversation.sdk.feature.authentication/AuthenticationOption.Secured///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.authentication/-authentication-option/-secured/index.html
+$dokka.location:com.iadvize.conversation.sdk.feature.authentication/AuthenticationOption.Secured/Secured/#com.iadvize.conversation.sdk.feature.authentication.AuthenticationOption.JWEProvider/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.authentication/-authentication-option/-secured/-secured.html
+$dokka.location:com.iadvize.conversation.sdk.feature.authentication/AuthenticationOption.Secured/jweProvider/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.authentication/-authentication-option/-secured/jwe-provider.html
 $dokka.location:com.iadvize.conversation.sdk.feature.authentication/AuthenticationOption.Simple///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.authentication/-authentication-option/-simple/index.html
 $dokka.location:com.iadvize.conversation.sdk.feature.authentication/AuthenticationOption.Simple/Simple/#kotlin.String/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.authentication/-authentication-option/-simple/-simple.html
 $dokka.location:com.iadvize.conversation.sdk.feature.authentication/AuthenticationOption.Simple/userId/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.authentication/-authentication-option/-simple/user-id.html
@@ -146,6 +154,11 @@ $dokka.location:com.iadvize.conversation.sdk.feature.visitor/CustomData.Companio
 $dokka.location:com.iadvize.conversation.sdk.feature.visitor/CustomData///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.visitor/-custom-data/index.html
 $dokka.location:com.iadvize.conversation.sdk.feature.visitor/VisitorController///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.visitor/-visitor-controller/index.html
 $dokka.location:com.iadvize.conversation.sdk.feature.visitor/VisitorController/registerCustomData/#kotlin.collections.List[com.iadvize.conversation.sdk.feature.visitor.CustomData]#com.iadvize.conversation.sdk.IAdvizeSDK.Callback?/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.visitor/-visitor-controller/register-custom-data.html
+$dokka.location:com.iadvize.conversation.sdk.test////PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.test/index.html
+$dokka.location:com.iadvize.conversation.sdk.test/MockActivity///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.test/-mock-activity/index.html
+$dokka.location:com.iadvize.conversation.sdk.test/MockActivity/MockActivity/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.test/-mock-activity/-mock-activity.html
+$dokka.location:com.iadvize.conversation.sdk.utility////PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.utility/index.html
+$dokka.location:com.iadvize.conversation.sdk.utility//getDocumentPath/#android.content.Context#android.net.Uri/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.utility/get-document-path.html
 $dokka.location:com.iadvize.conversation.sdk////PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk/index.html
 $dokka.location:com.iadvize.conversation.sdk/IAdvizeSDK.ActivationException///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk/-i-advize-s-d-k/-activation-exception/index.html
 $dokka.location:com.iadvize.conversation.sdk/IAdvizeSDK.ActivationException/ActivationException/#kotlin.String/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk/-i-advize-s-d-k/-activation-exception/-activation-exception.html
@@ -185,6 +198,26 @@ $dokka.location:com.iadvize.conversation.sdk/IAdvizeSDK/notificationController/#
 $dokka.location:com.iadvize.conversation.sdk/IAdvizeSDK/targetingController/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk/-i-advize-s-d-k/targeting-controller.html
 $dokka.location:com.iadvize.conversation.sdk/IAdvizeSDK/transactionController/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk/-i-advize-s-d-k/transaction-controller.html
 $dokka.location:com.iadvize.conversation.sdk/IAdvizeSDK/visitorController/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk/-i-advize-s-d-k/visitor-controller.html
+$dokka.location:com.iadvize.conversation.ui.extensions////PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.extensions/index.html
+$dokka.location:com.iadvize.conversation.ui.extensions//toPixelSize/kotlin.Int#android.content.Context/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.extensions/to-pixel-size.html
+$dokka.location:com.iadvize.conversation.ui.views.previewlink////PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.views.previewlink/index.html
+$dokka.location:com.iadvize.conversation.ui.views.previewlink/PreviewLinkRepository.Companion///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.views.previewlink/-preview-link-repository/-companion/index.html
+$dokka.location:com.iadvize.conversation.ui.views.previewlink/PreviewLinkRepository.PreviewLinkRepositoryListener///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.views.previewlink/-preview-link-repository/-preview-link-repository-listener/index.html
+$dokka.location:com.iadvize.conversation.ui.views.previewlink/PreviewLinkRepository.PreviewLinkRepositoryListener/onPreviewLinkRetrieved/#com.iadvize.conversation.ui.models.PreviewLinkResult/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.views.previewlink/-preview-link-repository/-preview-link-repository-listener/on-preview-link-retrieved.html
+$dokka.location:com.iadvize.conversation.ui.views.previewlink/PreviewLinkRepository///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.views.previewlink/-preview-link-repository/index.html
+$dokka.location:com.iadvize.conversation.ui.views.previewlink/PreviewLinkRepository/PreviewLinkRepository/#com.iadvize.conversation.ui.views.previewlink.PreviewLinkRepository.PreviewLinkRepositoryListener/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.views.previewlink/-preview-link-repository/-preview-link-repository.html
+$dokka.location:com.iadvize.conversation.ui.views.previewlink/PreviewLinkRepository/getPreviewLink/#kotlin.String#kotlin.String?/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.views.previewlink/-preview-link-repository/get-preview-link.html
+$dokka.location:com.iadvize.conversation.ui.views.previewlink/PreviewLinkRepository/release/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.views.previewlink/-preview-link-repository/release.html
+$dokka.location:com.iadvize.conversation.ui.views.previewlink/PreviewLinkStore///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.views.previewlink/-preview-link-store/index.html
+$dokka.location:com.iadvize.conversation.ui.views.previewlink/PreviewLinkStore/addPreviewLink/#kotlin.String#com.iadvize.conversation.ui.models.PreviewLinkResult/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.views.previewlink/-preview-link-store/add-preview-link.html
+$dokka.location:com.iadvize.conversation.ui.views.previewlink/PreviewLinkStore/clear/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.views.previewlink/-preview-link-store/clear.html
+$dokka.location:com.iadvize.conversation.ui.views.previewlink/PreviewLinkStore/getPreviewLink/#kotlin.String/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.views.previewlink/-preview-link-store/get-preview-link.html
+$dokka.location:com.iadvize.conversation.ui.views.previewlink/PreviewLinkView///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.views.previewlink/-preview-link-view/index.html
+$dokka.location:com.iadvize.conversation.ui.views.previewlink/PreviewLinkView/PreviewLinkView/#android.content.Context#android.util.AttributeSet?#kotlin.Int/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.views.previewlink/-preview-link-view/-preview-link-view.html
+$dokka.location:com.iadvize.conversation.ui.views.previewlink/PreviewLinkView/load/#kotlin.String#kotlin.String?/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.views.previewlink/-preview-link-view/load.html
+$dokka.location:com.iadvize.conversation.ui.views.previewlink/PreviewLinkView/loadMessageBubbleView/#com.iadvize.conversation.ui.utils.Alignment#com.iadvize.conversation.ui.utils.Position#com.iadvize.conversation.ui.utils.Position?/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.views.previewlink/-preview-link-view/load-message-bubble-view.html
+$dokka.location:com.iadvize.conversation.ui.views.previewlink/PreviewLinkView/onPreviewLinkRetrieved/#com.iadvize.conversation.ui.models.PreviewLinkResult/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.views.previewlink/-preview-link-view/on-preview-link-retrieved.html
+$dokka.location:com.iadvize.conversation.ui.views.previewlink/PreviewLinkView/setLoaderColor/#kotlin.Int/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.views.previewlink/-preview-link-view/set-loader-color.html
 com.iadvize.conversation.sdk
 com.iadvize.conversation.sdk.feature.authentication
 com.iadvize.conversation.sdk.feature.chatbox
@@ -196,4 +229,8 @@ com.iadvize.conversation.sdk.feature.notification
 com.iadvize.conversation.sdk.feature.targeting
 com.iadvize.conversation.sdk.feature.transaction
 com.iadvize.conversation.sdk.feature.visitor
+com.iadvize.conversation.sdk.test
+com.iadvize.conversation.sdk.utility
+com.iadvize.conversation.ui.extensions
+com.iadvize.conversation.ui.views.previewlink
 
