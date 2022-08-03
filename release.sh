@@ -44,8 +44,9 @@ if [ -f "IAdvizeSDK.zip" ]; then
         echo -e "\033[1;42m => Updating sample build.gradle.kts. \033[0m"
         sed -i '' "s/(\"com.iadvize:iadvize-sdk:\(.*\)\")/(\"com.iadvize:iadvize-sdk:${versionName}\")/" sample/app/build.gradle.kts
 
-        echo -e "\033[1;42m => Updating CHANGELOG and README. \033[0m"
+        echo -e "\033[1;42m => Updating CHANGELOG, UPGRADING & README. \033[0m"
         mv tmp/CHANGELOG.md CHANGELOG.md
+        mv tmp/UPGRADING.md UPGRADING.md
         mv tmp/README.md README.md
 
         echo -e "\033[1;42m => Updating documentation \033[0m"
