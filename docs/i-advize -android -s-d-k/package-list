@@ -159,6 +159,7 @@ $dokka.location:com.iadvize.conversation.sdk.test/MockActivity///PointingToDecla
 $dokka.location:com.iadvize.conversation.sdk.test/MockActivity/MockActivity/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.test/-mock-activity/-mock-activity.html
 $dokka.location:com.iadvize.conversation.sdk.utility////PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.utility/index.html
 $dokka.location:com.iadvize.conversation.sdk.utility//getDocumentPath/#android.content.Context#android.net.Uri/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.utility/get-document-path.html
+$dokka.location:com.iadvize.conversation.sdk.utility//getEncryptedSharedPreferences/#android.content.Context#kotlin.String/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.utility/get-encrypted-shared-preferences.html
 $dokka.location:com.iadvize.conversation.sdk////PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk/index.html
 $dokka.location:com.iadvize.conversation.sdk/IAdvizeSDK.ActivationException///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk/-i-advize-s-d-k/-activation-exception/index.html
 $dokka.location:com.iadvize.conversation.sdk/IAdvizeSDK.ActivationException/ActivationException/#kotlin.String/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk/-i-advize-s-d-k/-activation-exception/-activation-exception.html

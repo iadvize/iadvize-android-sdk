@@ -1,3 +1,7 @@
+## 2.6.0 > 2.7.0
+
+*Nothing to report*
+
 ## 2.5.1 > 2.6.0
 
 Release 2.6 added support for secured authentication. Instead of using `Anonymous` or `Simple`

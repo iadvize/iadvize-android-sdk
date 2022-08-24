@@ -51,7 +51,7 @@ configurations {
 }
 
 dependencies {
-    implementation("com.iadvize:iadvize-sdk:2.6.0")
+    implementation("com.iadvize:iadvize-sdk:2.7.0")
 
     implementation(Dependencies.App.androidxAppCompat)
     implementation(Dependencies.App.androidxCardView)

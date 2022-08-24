@@ -1,3 +1,17 @@
+# 2.7.0
+
+### Release date 2022/08/24
+
+**Features**
+
+- Basic Markdown support in messages
+- Update preferences library to Android EncryptedSharedPreferences
+
+**Bug fixes**
+
+- Fix default picture showing in empty image cards
+- Force UI thread on default floating button APIs
+
 # 2.6.0
 
 ### Release date 2022/07/08
