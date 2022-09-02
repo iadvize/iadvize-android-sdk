@@ -769,16 +769,15 @@ limitations under the License.
 
 [LICENSE](https://github.com/twilio/audioswitch/blob/master/LICENSE.txt)
 
-## iOS
 
-#### Keychain-swift
+**iOS**
 
-<https://github.com/evgenyneu/keychain-swift/blob/master/LICENSE>
+- **apollo-ios**
 
 ```
-The MIT License
+The MIT License (MIT)
 
-Copyright (c) 2015 Evgenii Neumerzhitckii
+Copyright (c) 2016-2022 Apollo Graph, Inc. (Formerly Meteor Development Group, Inc.)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -787,43 +786,54 @@ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 ```
 
-#### MessageKit
+[LICENSE](https://github.com/apollographql/apollo-ios/blob/main/LICENSE)
 
-<https://github.com/MessageKit/MessageKit/blob/master/LICENSE.md>
+- **JWTDecode.swift**
+
+```
+The MIT License (MIT)
+
+Copyright (c) 2022 Auth0, Inc. <support@auth0.com> (http://auth0.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+[LICENSE](https://github.com/auth0/JWTDecode.swift/blob/master/LICENSE)
+
+- **swift-graylog**
 
 ```
 MIT License
 
-Copyright (c) 2017-2018 MessageKit
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-```
-
-#### Apollo-iOS
-
-<https://github.com/apollographql/apollo-ios/blob/master/LICENSE>
-
-```
-The MIT License (MIT)
-
-Copyright (c) 2016-2017 Meteor Development Group, Inc.
+Copyright (c) 2018 iAdvize
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -844,74 +854,117 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-#### JSONWebToken
+[LICENSE](https://github.com/iadvize/swift-graylog/blob/master/LICENSE.txt)
 
-<https://github.com/kylef/JSONWebToken.swift/blob/master/LICENSE>
+- **Gifu**
 
 ```
-Copyright (c) 2015, Kyle Fuller
+The MIT License (MIT)
+
+Copyright (c) 2014-2018 Reda Lemeden.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+The name and characters used in the demo of this software are property of their
+respective owners.
+```
+
+[LICENSE](https://github.com/kaishin/Gifu/blob/master/LICENSE)
+
+- **XMPPFramework**
+
+```
+GCDAsyncSocket: (Public Domain)
+
+This class is released under the public domain.
+Originally created by Robbie Hanson in Q3 2010.
+Updated and maintained by Deusty LLC and the Mac/iOS development community.
+
+------------------------------------------------------------
+
+CocoaLumberjack: (BSD Style License)
+
+Copyright (c) 2010, Deusty, LLC
 All rights reserved.
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
+Redistribution and use of this software in source and binary forms,
+with or without modification, are permitted provided that the following conditions are met:
 
-* Redistributions of source code must retain the above copyright notice, this
-  list of conditions and the following disclaimer.
+* Redistributions of source code must retain the above
+  copyright notice, this list of conditions and the
+  following disclaimer.
 
-* Redistributions in binary form must reproduce the above copyright notice,
-  this list of conditions and the following disclaimer in the documentation
-  and/or other materials provided with the distribution.
+* Neither the name of Deusty nor the names of its
+  contributors may be used to endorse or promote products
+  derived from this software without specific prior
+  written permission of Deusty, LLC.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+------------------------------------------------------------
+
+
+XMPPStream and all other source code: (BSD Style License)
+
+Software License Agreement (BSD License)
+
+Copyright (c) 2007, Deusty Designs, LLC
+All rights reserved.
+
+Redistribution and use of this software in source and binary forms,
+with or without modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above
+  copyright notice, this list of conditions and the
+  following disclaimer.
+
+* Neither the name of Deusty Designs nor the names of its
+  contributors may be used to endorse or promote products
+  derived from this software without specific prior
+  written permission of Deusty Designs, LLC.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ```
 
-#### Reachability
+[LICENSE](https://github.com/robbiehanson/XMPPFramework/blob/master/copying.txt)
 
-<https://github.com/ashleymills/Reachability.swift/blob/master/LICENSE>
-
-**The MIT License (MIT)**
+- **TwilioVideo**
 
 ```
-Copyright (c) 2016 Ashley Mills
+Twilio Programmable Video for iOS is distributed under TWILIO-TOS.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+PLEASE REVIEW THESE TWILIO TERMS OF SERVICE CAREFULLY. ONCE ACCEPTED, THESE TWILIO TERMS OF SERVICE BECOME A BINDING LEGAL COMMITMENT BETWEEN YOU AND TWILIO. ONLY THE TERMS IN THIS RIGHT COLUMN ARE LEGALLY BINDING. THE EXPLANATIONS TO THE LEFT ARE FOR INFORMATIONAL PURPOSES ONLY AND NON-BINDING. IF YOU DO NOT AGREE TO BE BOUND BY THIS AGREEMENT, YOU SHOULD NOT ACCEPT THIS AGREEMENT, CREATE AN ACCOUNT, OR USE THE SERVICES (AS DEFINED IN SECTION 1 (DEFINITIONS) BELOW).
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+THE SERVICES ARE INTENDED FOR BUSINESS USE OR USE IN CONNECTION WITH AN INDIVIDUAL’S TRADE, CRAFT, OR PROFESSION ONLY.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+If you have a separate written agreement with Twilio for your use of the Services, these Twilio Terms of Service will not apply to you, unless that written agreement does not cover a particular Service, in which case, these Twilio Terms of Service apply solely to your use of that particular Service.
+
+These Twilio Terms of Service (“Agreement”) set forth the terms for your use of the Services and are effective as of the date you accept or otherwise agree to the terms of this Agreement (“Effective Date”). This Agreement is between the applicable Twilio entity identified below (“Twilio”) and you or the organization on whose behalf you are accepting or otherwise agreeing to the terms of this Agreement (“you", "your", "yours", or "Customer”).  
 ```
 
-#### RFISO860
+[TWILIO-TOS](https://www.twilio.com/legal/tos)
 
-<https://github.com/readefries/RFISO8601DateTime/blob/master/LICENSE>
-
-**The MIT License (MIT)**
+- **SwiftyMarkdown**
 
 ```
-
 The MIT License (MIT)
-Copyright (c) 2016 Hindrik Bruinsma <de@readefries.nl>
+
+Copyright (c) 2016 Simon Fairbairn
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -931,5 +984,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+[LICENSE](https://github.com/SimonFairbairn/SwiftyMarkdown/blob/master/LICENSE)
 
 END OF IADVIZE SOFTWARE DEVELOPMENT KIT ("SDK") OPEN SOURCE LICENSES
