@@ -1,3 +1,17 @@
+## 2.7.0 > 2.8.0
+
+Release 2.8 added support for chat-to-video escalation. Agents can now during a CHAT conversation
+propose a video call to a visitor. The experience and the flow are similar to the VIDEO channel
+conversations.
+
+The Chatbox API has seen some minor changes.
+
+`IAdvizeSDK.chatboxController.presentChatbox(context)` now does not open the Chatbox anymore if the
+conditions for conversation are not met. The conditions are the same than the ones controlling the
+display of the chat button : there should be either an ongoing conversation or an available active
+targeting rule. A new API has been added to close the Chatbox programmatically :
+`IAdvizeSDK.chatboxController.dismissChatbox()`
+
 ## 2.6.0 > 2.7.0
 
 *Nothing to report*

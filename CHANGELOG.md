@@ -1,3 +1,18 @@
+# 2.8.0
+
+### Release date 2022/10/20
+
+**Features**
+
+- Add support for chat-to-video escalation
+
+**Bug fixes**
+
+- Fix multiple answers on GDPR & Satisfaction messages
+- Add a failsafe on presentChatbox() API to prevent opening Chatbox when conditions are not met
+- Add a dismissChatbox() API to close the Chatbox programmatically
+- Add **FLAG_ACTIVITY_NEW_TASK** flag to SDK activities (issue for ReactNative integrations)
+
 # 2.7.0
 
 ### Release date 2022/08/24
