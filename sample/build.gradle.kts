@@ -8,6 +8,7 @@ buildscript {
     }
 
     dependencies {
+        classpath(Dependencies.Build.androidxNavigationSafeArgs)
         classpath(Dependencies.Build.gms)
         classpath(Dependencies.Build.gradle)
         classpath(Dependencies.Build.kotlin)

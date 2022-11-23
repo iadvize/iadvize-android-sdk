@@ -1,0 +1,20 @@
+<resources>
+
+    <style name="Theme.Demo" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/outer_space</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorAccent">@color/malachite</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:fontFamily">@font/montserrat_family</item>
+    </style>
+
+    <style name="Theme.Demo.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Sample.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Sample.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

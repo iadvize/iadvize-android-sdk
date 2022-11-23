@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="outer_space">#34393F</color>
+    <color name="storm_gray">#707689</color>
+    <color name="ghost">#C5C9CF</color>
+    <color name="whisper">#F5F6FA</color>
+    <color name="malachite">#1BC74E</color>
+    <color name="bright_sun">#FFD940</color>
+
+</resources>

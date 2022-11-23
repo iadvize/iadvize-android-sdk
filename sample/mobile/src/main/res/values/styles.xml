@@ -1,0 +1,29 @@
+<resources>
+
+    <style name="HeaderButton">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:text">@null</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">0dp</item>
+    </style>
+
+    <style name="HeaderButton.Light" parent="HeaderButton">
+        <item name="backgroundTint">@android:color/white</item>
+        <item name="iconTint">@color/outer_space</item>
+    </style>
+
+    <style name="HeaderButton.Dark" parent="HeaderButton">
+        <item name="backgroundTint">@color/outer_space</item>
+        <item name="iconTint">@color/whisper</item>
+    </style>
+
+    <style name="ProductPictureShape" parent="">
+        <item name="cornerSize">10dp</item>
+    </style>
+
+</resources>
