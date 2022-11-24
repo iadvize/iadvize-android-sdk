@@ -13,11 +13,14 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.iadvize.conversation.sdk.IAdvizeSDK
 import com.iadvize.conversation.sdk.demo.R
 import com.iadvize.conversation.sdk.demo.databinding.ProductDetailFragmentBinding
+import com.iadvize.conversation.sdk.demo.feature.IAdvizeSDKConfig
 import com.iadvize.conversation.sdk.demo.feature.service.ServiceAdapter
 import com.iadvize.conversation.sdk.demo.utility.dpToPx
 import com.iadvize.conversation.sdk.demo.utility.strikethrough
+import com.iadvize.conversation.sdk.feature.targeting.NavigationOption
 import kotlin.random.Random
 
 class ProductDetailFragment : Fragment() {
@@ -34,7 +37,15 @@ class ProductDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        loadView()
 
+        // Targeting rule is triggered on Product page
+        IAdvizeSDK.targetingController.registerUserNavigation(
+            NavigationOption.ActivateNewRule(IAdvizeSDKConfig.targetingRule)
+        )
+    }
+
+    private fun loadView() {
         val product = args.product
 
         // Title
