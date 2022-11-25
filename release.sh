@@ -41,8 +41,8 @@ if [ -f "IAdvizeSDK.zip" ]; then
         now=`date +"%Y%m%d%H%M0000"`
         sed -i '' "s/^    <lastUpdated>\(.*\)<\/lastUpdated>/    <lastUpdated>${now}<\/lastUpdated>/" com/iadvize/iadvize-sdk/maven-metadata.xml
 
-        echo -e "\033[1;42m => Updating sample build.gradle.kts. \033[0m"
-        sed -i '' "s/(\"com.iadvize:iadvize-sdk:\(.*\)\")/(\"com.iadvize:iadvize-sdk:${versionName}\")/" sample/app/build.gradle.kts
+        echo -e "\033[1;42m => Updating demo app build.gradle.kts to target latest SDK. \033[0m"
+        sed -i '' "s/(\"com.iadvize:iadvize-sdk:\(.*\)\")/(\"com.iadvize:iadvize-sdk:${versionName}\")/" mobile/build.gradle.kts
 
         echo -e "\033[1;42m => Updating CHANGELOG, UPGRADING & README. \033[0m"
         mv tmp/CHANGELOG.md CHANGELOG.md

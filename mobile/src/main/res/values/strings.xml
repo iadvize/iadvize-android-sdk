@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Smart</string>
+
+    <string name="products">Products</string>
+    <string name="other_products">People also bought</string>
+    <string name="see_all">See all</string>
+    <string name="reviews">%d reviews</string>
+    <string name="add_to_cart">Add to cart</string>
+</resources>

@@ -1,0 +1,16 @@
+object Versions {
+    const val androidxAppCompat = "1.5.1"
+    const val androidxCardView = "1.0.0"
+    const val androidxConstraintLayout = "2.1.4"
+    const val androidxCoreKtx = "1.9.0"
+    const val androidxFragment = "1.5.3"
+    const val androidxMultiDex = "2.0.1"
+    const val androidxNavigation = "2.5.2"
+    const val androidxRecyclerView = "1.2.1"
+    const val firebaseBom = "31.0.0"
+    const val gms = "4.3.14"
+    const val gradle = "7.3.1"
+    const val kotlin = "1.7.20"
+    const val kotlinCoroutines = "1.6.4"
+    const val material = "1.6.1"
+}

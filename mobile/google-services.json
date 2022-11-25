@@ -1,0 +1,113 @@
+{
+  "project_info": {
+    "project_number": "237920270154",
+    "firebase_url": "https://iadvize-conversation-sdk.firebaseio.com",
+    "project_id": "iadvize-conversation-sdk",
+    "storage_bucket": "iadvize-conversation-sdk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237920270154:android:c398156d29361d9e6f73b3",
+        "android_client_info": {
+          "package_name": "com.iadvize.conversation.sdk.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237920270154-7roopsr2682irij5ffq1063904e5vel8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQQGOIDU9v3lKY4wjwESxijSABwS1qpOo"
+        },
+        {
+          "current_key": "AIzaSyDUUeuR6hobKCManFJPQbDFMSfMRCIF8yQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237920270154-7roopsr2682irij5ffq1063904e5vel8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "237920270154-n16q1j481rc3og2efah22k49c1pmciri.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.iadvize.conversation.sdk.demo"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237920270154:android:1f3eeef42a8d4c0a6f73b3",
+        "android_client_info": {
+          "package_name": "com.iadvize.conversation.sdk.sample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237920270154-eciuhkkh712ona4rltn5l3uqm0becatr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iadvize.conversation.sdk.sample",
+            "certificate_hash": "1caf1322881d1b370278a5ae2c5bf06ee4bc36b4"
+          }
+        },
+        {
+          "client_id": "237920270154-tnc2a43omqmbb5b9bqdj2mub6175a6qh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iadvize.conversation.sdk.sample",
+            "certificate_hash": "a09ad2459ade2c2de54a1c8230a4427b6ef90c40"
+          }
+        },
+        {
+          "client_id": "237920270154-u2lm0vak5rqc5pj0nqbi7u0thggq3t8f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iadvize.conversation.sdk.sample",
+            "certificate_hash": "ee5099d2e9991046040f2c48add97cc0993a0543"
+          }
+        },
+        {
+          "client_id": "237920270154-7roopsr2682irij5ffq1063904e5vel8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQQGOIDU9v3lKY4wjwESxijSABwS1qpOo"
+        },
+        {
+          "current_key": "AIzaSyDUUeuR6hobKCManFJPQbDFMSfMRCIF8yQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237920270154-7roopsr2682irij5ffq1063904e5vel8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "237920270154-n16q1j481rc3og2efah22k49c1pmciri.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.iadvize.conversation.sdk.demo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
