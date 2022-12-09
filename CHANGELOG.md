@@ -1,3 +1,16 @@
+# 2.8.1
+
+### Release date 2022/12/09
+
+**Features**
+
+- Add support for visitor blocking
+
+**Bug fixes**
+
+- Fix intempestive "new message" badge showing on default floating button
+- Fix log levels on several warning stack traces
+
 # 2.8.0
 
 ### Release date 2022/10/20

@@ -1,3 +1,7 @@
+## 2.8.0 > 2.8.1
+
+*Nothing to report*
+
 ## 2.7.0 > 2.8.0
 
 Release 2.8 added support for chat-to-video escalation. Agents can now during a CHAT conversation
