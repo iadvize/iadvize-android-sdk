@@ -25,13 +25,22 @@ object IAdvizeSDKConfig {
     val logLevel = Logger.Level.VERBOSE
 
     // Authentication
-    const val projectId = 3585
-    val authOption = AuthenticationOption.Simple("B956F914-F893-4FE9-9A50-CDC836CC7BD7")
+    const val projectId = -1 // TODO Replace with your project id
+
+    // TODO Choose the correct auth option for your use case
     // val authOption = AuthenticationOption.Anonymous
+     val authOption = AuthenticationOption.Simple("uniqueUserId") 
+//    val authOption = AuthenticationOption.Secured(object : AuthenticationOption.JWEProvider {
+//        override fun onJWERequested(callback: AuthenticationOption.JWECallback) {
+//            // Fetch JWE from your own secure auth process
+//            callback.onJWERetrieved(jwe)
+//            // or callback.onJWEFailure(exception)
+//        }
+//    })
 
     // Targeting
-    private const val targetingRuleId = "a41611fe-c453-4df5-b6ef-3438527933b4"
-    private val targetingRuleChannel = ConversationChannel.CHAT // ConversationChannel.VIDEO
+    private const val targetingRuleId = "targetingRuleId" // TODO Replace with your rule id
+    private val targetingRuleChannel = ConversationChannel.CHAT // or ConversationChannel.VIDEO
     val targetingLanguage = LanguageOption.Custom(Language.fr)
     val targetingRule = TargetingRule(UUID.fromString(targetingRuleId), targetingRuleChannel)
 
