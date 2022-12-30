@@ -1,3 +1,11 @@
+# 2.8.2
+
+### Release date 2022/12/30
+
+**Bug fixes**
+
+- Fix NPS values to 0-10 (was 1-10)
+
 # 2.8.1
 
 ### Release date 2022/12/09
