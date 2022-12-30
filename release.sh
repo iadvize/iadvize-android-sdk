@@ -69,7 +69,7 @@ function updateReleaseFiles() {
 function printStartSuccess() {
   echo -e "\033[1;42m => Release ${newVersionName} is applied! This is what remains for you to do: \033[0m"
   echo -e "\033[1;95m - Test the sample project locally with this release \033[0m"
-  echo -e "\033[1;95m - Execute './scripts/release.sh finish' to continue the release process \033[0m"
+  echo -e "\033[1;95m - Execute './release.sh finish' to continue the release process \033[0m"
 }
 
 function checkCurrentRelease() {
