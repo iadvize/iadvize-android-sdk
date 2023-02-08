@@ -36,5 +36,7 @@ captures/
 
 # iAdvize artifacts
 IAdvizeSDK.zip
+IAdvizeSDK.checksums
+verification-metadata.xml
 
 tmp/

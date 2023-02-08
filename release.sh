@@ -109,7 +109,7 @@ function cleanRelease() {
 function printFinishSuccess() {
   echo -e "\033[1;42m => Release ${versionName} is now public! This is what remains for you to do: \033[0m"
   echo -e "\033[1;95m - Create a github release from tag ${versionName} : https://github.com/iadvize/iadvize-android-sdk/releases/new \033[0m"
-  echo -e "\033[1;95m - Fill description with changelog info \033[0m"
+  echo -e "\033[1;95m - Fill description with changelog info and add IAdvizeSDK.zip & checksum files to the release \033[0m"
 }
 
 if [[ "$1" == "start" ]]; then
