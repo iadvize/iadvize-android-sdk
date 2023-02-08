@@ -1,3 +1,7 @@
+## 2.8.2 > 2.8.3
+
+*Nothing to report*
+
 ## 2.8.1 > 2.8.2
 
 *Nothing to report*

@@ -1,3 +1,16 @@
+# 2.8.3
+
+### Release date 2023/02/08
+
+**Bug fixes**
+
+- Fix file picker permissions on Android 13
+
+**Dependencies**
+
+- Kotlin `1.7.20` -> `1.8.10`
+- Android Gradle Plugin `7.3.1` -> `7.4.1`
+
 # 2.8.2
 
 ### Release date 2022/12/30
