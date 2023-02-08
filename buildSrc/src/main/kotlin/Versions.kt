@@ -9,8 +9,8 @@ object Versions {
     const val androidxRecyclerView = "1.2.1"
     const val firebaseBom = "31.0.0"
     const val gms = "4.3.14"
-    const val gradle = "7.3.1"
-    const val kotlin = "1.7.20"
+    const val gradle = "7.4.1"
+    const val kotlin = "1.8.10"
     const val kotlinCoroutines = "1.6.4"
     const val material = "1.6.1"
 }
