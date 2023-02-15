@@ -3,7 +3,6 @@ package com.iadvize.conversation.sdk.demo.feature.service
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.iadvize.conversation.sdk.demo.databinding.ProductListItemViewBinding
 import com.iadvize.conversation.sdk.demo.databinding.ServiceListItemViewBinding
 
 class ServiceAdapter : RecyclerView.Adapter<ServiceAdapter.ViewHolder>() {

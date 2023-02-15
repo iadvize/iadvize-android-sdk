@@ -29,7 +29,7 @@ object IAdvizeSDKConfig {
 
     // TODO Choose the correct auth option for your use case
     // val authOption = AuthenticationOption.Anonymous
-     val authOption = AuthenticationOption.Simple("uniqueUserId") 
+    val authOption = AuthenticationOption.Simple("your-user-unique-simple-identifier")
 //    val authOption = AuthenticationOption.Secured(object : AuthenticationOption.JWEProvider {
 //        override fun onJWERequested(callback: AuthenticationOption.JWECallback) {
 //            // Fetch JWE from your own secure auth process
@@ -39,9 +39,9 @@ object IAdvizeSDKConfig {
 //    })
 
     // Targeting
-    private const val targetingRuleId = "targetingRuleId" // TODO Replace with your rule id
+    private const val targetingRuleId = "your-targeting-rule" // TODO Replace with your rule id
     private val targetingRuleChannel = ConversationChannel.CHAT // or ConversationChannel.VIDEO
-    val targetingLanguage = LanguageOption.Custom(Language.fr)
+    val targetingLanguage = LanguageOption.Custom(Language.en)
     val targetingRule = TargetingRule(UUID.fromString(targetingRuleId), targetingRuleChannel)
 
     // Conversation

@@ -53,9 +53,6 @@ function updateReleaseFiles() {
   now=`date +"%Y%m%d%H%M0000"`
   sed -i '' "s/^    <lastUpdated>\(.*\)<\/lastUpdated>/    <lastUpdated>${now}<\/lastUpdated>/" com/iadvize/iadvize-sdk/maven-metadata.xml
 
-  echo -e "\033[1;42m => Updating demo app build.gradle.kts to target latest SDK. \033[0m"
-  sed -i '' "s/(\"com.iadvize:iadvize-sdk:\(.*\)\")/(\"com.iadvize:iadvize-sdk:${versionName}\")/" mobile/build.gradle.kts
-
   echo -e "\033[1;42m => Updating CHANGELOG, UPGRADING & README. \033[0m"
   mv tmp/CHANGELOG.md CHANGELOG.md
   mv tmp/UPGRADING.md UPGRADING.md
@@ -67,7 +64,7 @@ function updateReleaseFiles() {
 }
 
 function printStartSuccess() {
-  echo -e "\033[1;42m => Release ${newVersionName} is applied! This is what remains for you to do: \033[0m"
+  echo -e "\033[1;42m => Release ${versionName} is applied! This is what remains for you to do: \033[0m"
   echo -e "\033[1;95m - Test the sample project locally with this release \033[0m"
   echo -e "\033[1;95m - Execute './release.sh finish' to continue the release process \033[0m"
 }
@@ -110,6 +107,7 @@ function printFinishSuccess() {
   echo -e "\033[1;42m => Release ${versionName} is now public! This is what remains for you to do: \033[0m"
   echo -e "\033[1;95m - Create a github release from tag ${versionName} : https://github.com/iadvize/iadvize-android-sdk/releases/new \033[0m"
   echo -e "\033[1;95m - Fill description with changelog info and add IAdvizeSDK.zip & checksum files to the release \033[0m"
+  echo -e "\033[1;95m - Update targeted SDK in example project build.gradle then commit/push \033[0m"
 }
 
 if [[ "$1" == "start" ]]; then
