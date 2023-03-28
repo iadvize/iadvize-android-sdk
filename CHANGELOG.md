@@ -1,3 +1,22 @@
+# 2.9.0
+
+### Release date 2023/03/28
+
+**Features**
+
+- Disable satisfaction survey after failed bot transfer if parametrized in the admin
+- Handle the Estimated Waiting Time messages
+
+**Bug fixes**
+
+- Fix pre-conversation custom data not being sent on conversation start
+- Fix targeting process not being fully restarted after conversation end
+
+**Dependencies**
+
+- Apollo `3.6.2` -> `3.7.5`
+- Twilio `7.5.1` -> `7.6.1`
+
 # 2.8.3
 
 ### Release date 2023/02/08

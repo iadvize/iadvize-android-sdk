@@ -203,6 +203,7 @@ $dokka.location:com.iadvize.conversation.sdk/IAdvizeSDK/targetingController/#/Po
 $dokka.location:com.iadvize.conversation.sdk/IAdvizeSDK/transactionController/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk/-i-advize-s-d-k/transaction-controller.html
 $dokka.location:com.iadvize.conversation.sdk/IAdvizeSDK/visitorController/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk/-i-advize-s-d-k/visitor-controller.html
 $dokka.location:com.iadvize.conversation.ui.extensions////PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.extensions/index.html
+$dokka.location:com.iadvize.conversation.ui.extensions//highlight/android.widget.TextView#kotlin.collections.List[kotlin.String]#com.iadvize.conversation.ui.models.Highlight#kotlin.Boolean/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.extensions/highlight.html
 $dokka.location:com.iadvize.conversation.ui.extensions//toPixelSize/kotlin.Int#android.content.Context/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.extensions/to-pixel-size.html
 $dokka.location:com.iadvize.conversation.ui.views.previewlink////PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.views.previewlink/index.html
 $dokka.location:com.iadvize.conversation.ui.views.previewlink/PreviewLinkRepository.Companion///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.ui.views.previewlink/-preview-link-repository/-companion/index.html

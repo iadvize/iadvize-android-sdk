@@ -53,10 +53,8 @@ function updateReleaseFiles() {
   now=`date +"%Y%m%d%H%M0000"`
   sed -i '' "s/^    <lastUpdated>\(.*\)<\/lastUpdated>/    <lastUpdated>${now}<\/lastUpdated>/" com/iadvize/iadvize-sdk/maven-metadata.xml
 
-  echo -e "\033[1;42m => Updating CHANGELOG, UPGRADING & README. \033[0m"
-  mv tmp/CHANGELOG.md CHANGELOG.md
-  mv tmp/UPGRADING.md UPGRADING.md
-  mv tmp/README.md README.md
+  echo -e "\033[1;42m => Updating CHANGELOG & UPGRADING & README & SUPPORT. \033[0m"
+  mv tmp/*.md .
 
   echo -e "\033[1;42m => Updating documentation \033[0m"
   rm -rf docs
