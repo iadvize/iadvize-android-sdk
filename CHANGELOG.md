@@ -1,3 +1,11 @@
+# 2.9.1
+
+### Release date 2023/03/30
+
+**Bug fixes**
+
+-  Fix message alignment on hybrid platforms
+
 # 2.9.0
 
 ### Release date 2023/03/28
