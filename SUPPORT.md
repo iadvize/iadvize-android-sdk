@@ -10,8 +10,8 @@ Here is the list of currently supported versions:
 
 | Version | Type                        | Status          |
 | ------- | --------------------------- | --------------- |
-| `2.9.1` | Latest release              | Full support    |
-| `2.9.0` | Current MINOR               | Full support    |
+| `2.9.2` | Latest release              | Full support    |
+| `2.9.z` | Current MINOR               | Full support    |
 | `2.8.z` | Current MAJOR, last 3 MINOR | Partial support |
 | `2.7.z` | Current MAJOR, last 3 MINOR | Partial support |
 | `2.6.z` | Current MAJOR, last 3 MINOR | Partial support |

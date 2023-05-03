@@ -1,10 +1,18 @@
+# 2.9.2
+
+### Release date 2023/05/03
+
+**Bug fixes**
+
+- Fix crash when message continas an unrecognized deeplink
+
 # 2.9.1
 
 ### Release date 2023/03/30
 
 **Bug fixes**
 
--  Fix message alignment on hybrid platforms
+- Fix message alignment on hybrid platforms
 
 # 2.9.0
 
