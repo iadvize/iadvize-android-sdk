@@ -1,3 +1,15 @@
+# 2.10.0 (Angelot)
+
+### Release date 2023/05/25
+
+**Features**
+
+- Disable file attachment buttons when it is disabled in Admin chatbox template
+
+**Bug fixes**
+
+- Fix wrong message alignment
+
 # 2.9.2
 
 ### Release date 2023/05/03
