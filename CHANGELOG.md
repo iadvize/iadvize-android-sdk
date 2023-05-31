@@ -1,3 +1,11 @@
+# 2.10.1 (Angelot)
+
+### Release date 2023/05/31
+
+**Bug fixes**
+
+- Fix font update on several message types
+
 # 2.10.0 (Angelot)
 
 ### Release date 2023/05/25
