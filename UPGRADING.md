@@ -1,3 +1,9 @@
+## 2.10.1 > 2.11.0
+
+This release deprecates the ChatboxConfiguration.mainColor setting and adds new ways to customize the look and feel of the messages, both the ones from the visitor and the ones from the agent. Please review the new parameters to customize them to your liking.
+
+This release adds a new LogLevel.NONE to disable all console logs and all logging capture. Please note that this disables iAdvize functional logs aggregation as well so debugging issues will be made harder if this mode is chosen.
+
 ## 2.10.0 > 2.10.1
 
 *Nothing to report*

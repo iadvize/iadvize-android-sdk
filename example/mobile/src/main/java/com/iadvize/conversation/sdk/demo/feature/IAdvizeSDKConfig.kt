@@ -64,8 +64,18 @@ object IAdvizeSDKConfig {
 
     // Chatbox
     fun chatboxConfiguration(context: Context) = ChatboxConfiguration(
-        automaticMessage = "Welcome to Smart Livechat! What can we do for you?",
         fontPath = "fonts/montserrat.ttf",
+        accentColor = context.resources.getColor(R.color.malachite),
+        incomingMessageBackgroundColor = context.resources.getColor(R.color.whisper),
+        incomingMessageTextColor = context.resources.getColor(R.color.outer_space),
+        incomingMessageStrokeColor = null,
+        outgoingMessageBackgroundColor = context.resources.getColor(R.color.outer_space),
+        outgoingMessageTextColor = context.resources.getColor(R.color.whisper),
+        outgoingMessageStrokeColor = null,
+        toolbarTitle = "Smart Livechat",
+        toolbarBackgroundColor = context.resources.getColor(R.color.outer_space),
+        toolbarMainColor = context.resources.getColor(R.color.whisper),
+        automaticMessage = "Welcome to Smart Livechat! What can we do for you?",
         gdprMessage = "For a better support, we need to save the history of the exchanges and view your activity on the mobile app during the conversation.",
         incomingMessageAvatar = IncomingMessageAvatar.Image(
             AppCompatResources.getDrawable(
@@ -73,9 +83,5 @@ object IAdvizeSDKConfig {
                 R.mipmap.ic_launcher
             )!!
         ),
-        mainColor = context.resources.getColor(R.color.outer_space),
-        toolbarBackgroundColor = context.resources.getColor(R.color.outer_space),
-        toolbarMainColor = context.resources.getColor(R.color.whisper),
-        toolbarTitle = "Smart Livechat"
     )
 }

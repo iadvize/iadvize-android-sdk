@@ -1,3 +1,24 @@
+# 2.11.0
+
+### Release date 2023/08/07
+
+**Features**
+
+- Allow a more sophisticated message color customization
+- Add a LogLevel mode to remove all logs
+
+**Bug fixes**
+
+- Fix conversation management after various network connection issues (phone sleep / app in bakground)
+
+**Dependencies**
+
+- Android Gradle Plugin `7.4.1` -> `8.1.0`
+- Android Build Tools `33.0.1` -> `33.0.2`
+- Kotlin `1.8.10` -> `1.8.21`
+- Apollo `3.7.5` -> `3.8.2`
+- Firebase `31.0.0` -> `32.1.0`
+
 # 2.10.1 (Angelot)
 
 ### Release date 2023/05/31
