@@ -1,4 +1,28 @@
-# 2.11.0
+# 2.12.1 (Cantal)
+
+### Release date 2023/10/23
+
+**Features**
+
+- Remove preview image when it is empty (previously used a placeholder)
+
+**Bug fixes**
+
+- Fix web & markdown links display
+
+# 2.12.0 (Cantal)
+
+### Release date 2023/10/23
+
+**Features**
+
+- Add automatic auth token refresh management
+
+**Dependencies**
+
+- Android Gradle Plugin `8.1.0` -> `8.1.1`
+
+# 2.11.0 (Beaufort)
 
 ### Release date 2023/08/07
 
