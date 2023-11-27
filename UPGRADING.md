@@ -1,3 +1,7 @@
+## 2.12.1 > 2.12.2
+
+*Nothing to report*
+
 ## 2.12.0 > 2.12.1
 
 *Nothing to report*

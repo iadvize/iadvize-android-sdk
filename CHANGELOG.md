@@ -1,3 +1,20 @@
+# 2.12.2 (Cantal)
+
+### Release date 2023/11/27
+
+**Bug fixes**
+
+- Fix potential stuck state during GDPR process
+- Fix conversation not being started properly if network disconnects during MUC/SUB subscription
+- Remove OnBackPressedHandler which was causing issues in hybrid integrations
+
+**Dependencies**
+
+- Android Target SDK `33` -> `34`
+- Android Gradle Plugin `8.1.1` -> `8.1.2`
+- Kotlin `1.8.21` -> `1.9.20`
+- Twilio `7.6.1` -> `7.6.4`
+
 # 2.12.1 (Cantal)
 
 ### Release date 2023/10/23
