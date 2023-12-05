@@ -1,3 +1,24 @@
+# 2.12.2-rnbackport (Cantal)
+
+### Release date 2023/12/05
+
+This is a version created from the `2.12.2` release for integration into the 
+ReactNative `0.72.7` plugin project.
+Please use the `2.12.2` version if you are integrating on native Android.
+
+**Dependencies**
+
+Dependencies were downgraded to be aligned to the ReactNative `0.72.7` standards:
+
+- Gradle `7.6`
+- Android Gradle Plugin `7.4.1`
+- Java `11`
+- Kotlin `1.7.22`
+- Android Minimum SDK `21`
+- Android Compile SDK `33`
+- Android Target SDK `33`
+- Android Build Tools `33.0.2`
+
 # 2.12.2 (Cantal)
 
 ### Release date 2023/11/27
