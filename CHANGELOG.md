@@ -1,3 +1,20 @@
+# 2.12.3 (Cantal)
+
+### Release date 2023/12/20
+
+**Features**
+
+- Support simple Markdown syntax inside QuickReply messages
+- Add some translations for GDPR messages (cs, da, pl, sk, sv)
+
+**Bug fixes**
+
+- Fix a display issue on ProductOffer messages when no offer pric is set
+
+**Dependencies**
+
+- Removed deprecated `play-services-safetynet` dependency in favor of `play-services-basement`
+
 # 2.12.2-rnbackport (Cantal)
 
 ### Release date 2023/12/05

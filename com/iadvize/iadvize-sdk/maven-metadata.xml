@@ -2,10 +2,10 @@
 <metadata>
   <groupId>com.iadvize</groupId>
   <artifactId>iadvize-sdk</artifactId>
-  <version>2.12.2</version>
+  <version>2.12.3</version>
   <versioning>
-    <latest>2.12.2</latest>
-    <release>2.12.2</release>
+    <latest>2.12.3</latest>
+    <release>2.12.3</release>
     <versions>
       <version>1.0.3</version>
       <version>1.1.0</version>
@@ -59,7 +59,9 @@
       <version>2.12.1</version>
       <version>2.12.2</version>
       <version>2.12.2-rnbackport</version>
+      <version>2.12.3</version>
+      <version>2.12.3-rnbackport</version>
     </versions>
-    <lastUpdated>2023120516470000</lastUpdated>
+    <lastUpdated>2023122011140000</lastUpdated>
   </versioning>
 </metadata>
