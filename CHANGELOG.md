@@ -1,3 +1,11 @@
+# 2.12.4
+
+### Release date 2024/01/11
+
+**Features**
+
+- Add APIs for managing iAdvize Push Notifications more finely
+
 # 2.12.3 (Cantal)
 
 ### Release date 2023/12/20

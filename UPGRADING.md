@@ -1,3 +1,34 @@
+## 2.12.3 > 2.12.4
+
+In this release the Push Notification APIs has been enhanced so that you can now clear the iAdvize Push Notifications on demand.
+
+The SDK now provides a specific Notification Channel, where all iAdvize push notifications may be placed. That way, the SDK will automatically clear this notification channel when Chatbox is opened, and you can clear it manually by calling one of the SDK APIs.
+
+First of all you need to create this noticfication channel:
+
+```
+IAdvizeSDK.notificationController.createNotificationChannel(context)
+```
+
+Like before, when receiving a notification, you can check if it's an iAdvize push notifications. If so specify the iAdvize SDK channel id when displaying it :
+
+```
+if (IAdvizeSDK.notificationController.isIAdvizePushNotification(remoteMessage.data)) {
+
+  val notification = NotificationCompat.Builder(this, IAdvizeSDK.notificationController.channelId)
+    ... // notification config
+    .build()
+} else {
+    // Host app notification handling
+}
+```
+
+This Notification Channel is automatically cleared when opening the Chatbox, if you want to clear it manually at another time you can call this API:
+
+```
+IAdvizeSDK.notificationController.clearIAdvizePushNotifications()
+```
+
 ## 2.12.2 > 2.12.3
 
 *Nothing to report*
