@@ -1,5 +1,6 @@
 object Plugins {
     const val androidApp = "com.android.application"
+    const val androidLib = "com.android.library"
     const val androidxNavigationSafeArgs = "androidx.navigation.safeargs.kotlin"
     const val gms = "com.google.gms.google-services"
     const val kotlin = "kotlin-android"
