@@ -1,17 +1,14 @@
-package com.iadvize.conversation.sdk.demo.feature
+package com.iadvize.conversation.sdk.demo.integratedbanner.feature
 
-import android.graphics.Color
-import android.view.Gravity
 import android.widget.Toast
-import android.widget.Toast.LENGTH_SHORT
 import androidx.appcompat.content.res.AppCompatResources
 import com.iadvize.conversation.sdk.IAdvizeSDK
-import com.iadvize.conversation.sdk.demo.R
+import com.iadvize.conversation.sdk.demo.feature.ConversationFlowManager
+import com.iadvize.conversation.sdk.demo.integratedbanner.R
 import com.iadvize.conversation.sdk.feature.authentication.AuthenticationOption
 import com.iadvize.conversation.sdk.feature.chatbox.ChatboxConfiguration
 import com.iadvize.conversation.sdk.feature.conversation.ConversationChannel
 import com.iadvize.conversation.sdk.feature.conversation.IncomingMessageAvatar
-import com.iadvize.conversation.sdk.feature.defaultfloatingbutton.DefaultFloatingButtonConfiguration
 import com.iadvize.conversation.sdk.feature.defaultfloatingbutton.DefaultFloatingButtonOption
 import com.iadvize.conversation.sdk.feature.gdpr.GDPROption
 import com.iadvize.conversation.sdk.feature.logger.Logger
@@ -36,26 +33,21 @@ object IAdvizeSDKConfig {
         // Configure the targeting language (should match the user language in a real use case)
         IAdvizeSDK.targetingController.language = LanguageOption.Custom(Language.en)
 
-        // Configure iAdvize SDK with its Default Floating Button
+        // Disable iAdvize Default Floating Button
         IAdvizeSDK.defaultFloatingButtonController.setupDefaultFloatingButton(
-            DefaultFloatingButtonOption.Enabled(
-                DefaultFloatingButtonConfiguration(
-                    anchor = Gravity.BOTTOM or Gravity.END,
-                    backgroundTint = res.getColor(R.color.outer_space),
-                    iconResIds = mapOf(
-                        ConversationChannel.CHAT to R.drawable.ic_logo_small,
-                        ConversationChannel.VIDEO to R.drawable.ic_logo_small
-                    ),
-                    iconTint = Color.TRANSPARENT
-                )
-            )
+            DefaultFloatingButtonOption.Disabled
         )
+
+        // Hook to iAdvize conversation flow
+        val flowManager = ConversationFlowManager()
+        IAdvizeSDK.targetingController.listeners.add(flowManager)
+        IAdvizeSDK.conversationController.listeners.add(flowManager)
 
         // Configure iAdvize Chatbox look & feel
         IAdvizeSDK.chatboxController.setupChatbox(
             ChatboxConfiguration(
                 fontPath = "fonts/montserrat.ttf",
-                accentColor = app.resources.getColor(R.color.malachite),
+                accentColor = app.resources.getColor(R.color.heliotrope),
                 incomingMessageBackgroundColor = res.getColor(R.color.whisper),
                 incomingMessageTextColor = res.getColor(R.color.outer_space),
                 incomingMessageStrokeColor = null,
@@ -74,7 +66,7 @@ object IAdvizeSDKConfig {
         )
 
         // Activate the iAdvize SDK (start a user session)
-        val authOption = AuthenticationOption.Simple("your-user-unique-simple-identifier")
+        val authOption = AuthenticationOption.Anonymous
         val gdprOption = GDPROption.Disabled
         IAdvizeSDK.activate(
             projectId,
@@ -83,13 +75,13 @@ object IAdvizeSDKConfig {
             object : IAdvizeSDK.Callback {
                 override fun onSuccess() {
                     Toast
-                        .makeText(app, "🎉 iAdvize SDK Activation success", LENGTH_SHORT)
+                        .makeText(app, "🎉 iAdvize SDK Activation success", Toast.LENGTH_SHORT)
                         .show()
                 }
 
                 override fun onFailure(t: Throwable) {
                     Toast
-                        .makeText(app, "❌ iAdvize SDK Activation failure", LENGTH_SHORT)
+                        .makeText(app, "❌ iAdvize SDK Activation failure", Toast.LENGTH_SHORT)
                         .show()
                 }
             }

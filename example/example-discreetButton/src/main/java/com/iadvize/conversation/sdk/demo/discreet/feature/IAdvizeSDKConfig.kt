@@ -18,9 +18,11 @@ import com.iadvize.conversation.sdk.type.Language
 import java.util.UUID
 
 object IAdvizeSDKConfig {
+    private const val projectId = -1 // TODO Replace with your project id
     private const val targetingRuleId = "your-targeting-rule" // TODO Replace with your rule id
     val targetingRule = TargetingRule(UUID.fromString(targetingRuleId), ConversationChannel.CHAT)
 
+    @Suppress("DEPRECATION")
     fun setup(app: App) {
         val res = app.resources
 
@@ -45,7 +47,7 @@ object IAdvizeSDKConfig {
         IAdvizeSDK.chatboxController.setupChatbox(
             ChatboxConfiguration(
                 fontPath = "fonts/montserrat.ttf",
-                accentColor = app.resources.getColor(R.color.malachite),
+                accentColor = app.resources.getColor(R.color.heliotrope),
                 incomingMessageBackgroundColor = res.getColor(R.color.whisper),
                 incomingMessageTextColor = res.getColor(R.color.outer_space),
                 incomingMessageStrokeColor = null,
@@ -64,7 +66,6 @@ object IAdvizeSDKConfig {
         )
 
         // Activate the iAdvize SDK (start a user session)
-        val projectId = -1 // TODO Replace with your project id
         val authOption = AuthenticationOption.Anonymous
         val gdprOption = GDPROption.Disabled
         IAdvizeSDK.activate(

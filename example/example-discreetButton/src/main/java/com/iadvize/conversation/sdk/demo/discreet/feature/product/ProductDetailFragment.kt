@@ -57,10 +57,17 @@ class ProductDetailFragment : Fragment() {
         on<ShowButton> { showButton() }
         on<HideButton> { hideButton() }
 
-        // Trigger the targeting rule on product page opening
-        IAdvizeSDK.targetingController.registerUserNavigation(
-            NavigationOption.ActivateNewRule(IAdvizeSDKConfig.targetingRule)
-        )
+        // Open chatbox on button click
+        binding?.discreetButton?.setOnClickListener {
+            IAdvizeSDK.chatboxController.presentChatbox(requireContext())
+        }
+
+        // Targeting rule is triggered on Product page opening
+        binding?.root?.postDelayed(1500) {
+            IAdvizeSDK.targetingController.registerUserNavigation(
+                NavigationOption.ActivateNewRule(IAdvizeSDKConfig.targetingRule)
+            )
+        }
     }
 
     private fun loadView() {

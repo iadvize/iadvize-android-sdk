@@ -11,3 +11,4 @@ pluginManagement {
 include(":common")
 include(":example-defaultFloatingButton")
 include(":example-discreetButton")
+include(":example-integratedBanner")

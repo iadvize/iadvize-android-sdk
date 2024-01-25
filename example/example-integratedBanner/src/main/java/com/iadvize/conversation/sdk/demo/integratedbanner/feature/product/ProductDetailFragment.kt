@@ -1,9 +1,12 @@
-package com.iadvize.conversation.sdk.demo.feature.product
+package com.iadvize.conversation.sdk.demo.integratedbanner.feature.product
 
+import android.animation.LayoutTransition
 import android.content.res.ColorStateList
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.appcompat.view.ContextThemeWrapper
@@ -15,11 +18,17 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.iadvize.conversation.sdk.IAdvizeSDK
-import com.iadvize.conversation.sdk.demo.R
-import com.iadvize.conversation.sdk.demo.databinding.ProductDetailFragmentBinding
-import com.iadvize.conversation.sdk.demo.feature.IAdvizeSDKConfig
+import com.iadvize.conversation.sdk.demo.feature.HideButton
+import com.iadvize.conversation.sdk.demo.feature.ShowButton
+import com.iadvize.conversation.sdk.demo.feature.product.ProductAdapter
+import com.iadvize.conversation.sdk.demo.feature.product.products
 import com.iadvize.conversation.sdk.demo.feature.service.ServiceAdapter
+import com.iadvize.conversation.sdk.demo.integratedbanner.R
+import com.iadvize.conversation.sdk.demo.integratedbanner.databinding.ProductDetailFragmentBinding
+import com.iadvize.conversation.sdk.demo.integratedbanner.feature.IAdvizeSDKConfig
+import com.iadvize.conversation.sdk.demo.integratedbanner.feature.uiScope
 import com.iadvize.conversation.sdk.demo.utility.dpToPx
+import com.iadvize.conversation.sdk.demo.utility.on
 import com.iadvize.conversation.sdk.demo.utility.strikethrough
 import com.iadvize.conversation.sdk.feature.targeting.NavigationOption
 import kotlin.random.Random
@@ -39,6 +48,18 @@ class ProductDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         loadView()
+
+        // Hook to button update events
+        on<ShowButton> { showBanner() }
+        on<HideButton> { hideBanner() }
+
+        // Open chatbox on banner click
+        binding?.banner?.setOnClickListener {
+            IAdvizeSDK.chatboxController.presentChatbox(requireContext())
+        }
+
+        // Activate layout update on change
+        binding?.container?.layoutTransition?.enableTransitionType(LayoutTransition.CHANGING)
 
         // Targeting rule is triggered on Product page opening
         binding?.root?.postDelayed(1500) {
@@ -100,4 +121,7 @@ class ProductDetailFragment : Fragment() {
             }
         }
     }
+
+    private fun showBanner() = uiScope { binding?.banner?.visibility = VISIBLE }
+    private fun hideBanner() = uiScope { binding?.banner?.visibility = GONE }
 }
