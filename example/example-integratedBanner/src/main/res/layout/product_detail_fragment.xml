@@ -178,27 +178,39 @@
             app:cardCornerRadius="2dp"
             tools:visibility="visible">
 
-            <androidx.appcompat.widget.LinearLayoutCompat
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
                 android:padding="8dp">
 
                 <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/bannerIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
                     android:src="@drawable/ic_tgai" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/bannerAction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_next"
+                    android:tint="@color/heliotrope" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="12dp"
-                    android:text="Need advice about this product? Ask our AI!"
+                    android:layout_toStartOf="@id/bannerAction"
+                    android:layout_toEndOf="@id/bannerIcon"
+                    android:text="Need advice? Ask anything to our AI!"
                     android:textColor="@color/heliotrope"
                     android:textSize="13sp" />
-            </androidx.appcompat.widget.LinearLayoutCompat>
+            </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
         <View
