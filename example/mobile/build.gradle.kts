@@ -49,11 +49,12 @@ android {
 configurations {
     all {
         exclude(group = "xpp3", module = "xpp3")
+        exclude(group = "xpp3", module = "xpp3_min")
     }
 }
 
 dependencies {
-    implementation("com.iadvize:iadvize-sdk:2.12.4")
+    implementation("com.iadvize:iadvize-sdk:2.12.5")
 
     implementation(Dependencies.App.androidxAppCompat)
     implementation(Dependencies.App.androidxCardView)

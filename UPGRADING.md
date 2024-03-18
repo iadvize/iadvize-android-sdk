@@ -1,3 +1,9 @@
+## 2.12.4 > 2.12.5
+
+The `initiate` API now has a IAdvizeSDK.Callback as an optional argument to inform the host app if it fails.
+Before calling that callback failure method, the API will first retry once, so if the callback failure is called it means the 
+API has failed twice to initiate the SDK.
+
 ## 2.12.3 > 2.12.4
 
 In this release the Push Notification APIs has been enhanced so that you can now clear the iAdvize Push Notifications on demand.

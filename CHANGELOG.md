@@ -1,4 +1,18 @@
-# 2.12.4
+# 2.12.5 (Cantal)
+
+### Release date 2024/03/18
+
+**Features**
+
+- Rework the initiate API, adding a callback + implementing retry behavior
+
+**Bug fixes**
+
+- Fix markdown links not triggering the SDK click handler
+- Fix a crash occuring when visitor spam messages
+- Add some missing obfuscation instructions
+
+# 2.12.4 (Cantal)
 
 ### Release date 2024/01/11
 
@@ -21,7 +35,7 @@
 
 **Dependencies**
 
-- Removed deprecated `play-services-safetynet` dependency in favor of `play-services-basement`
+- Remove deprecated `play-services-safetynet` dependency in favor of `play-services-basement`
 
 # 2.12.2-rnbackport (Cantal)
 
