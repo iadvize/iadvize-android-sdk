@@ -1,3 +1,7 @@
+## 2.12.5 > 2.12.6
+
+*Nothing to report*
+
 ## 2.12.4 > 2.12.5
 
 The `initiate` API now has a IAdvizeSDK.Callback as an optional argument to inform the host app if it fails.

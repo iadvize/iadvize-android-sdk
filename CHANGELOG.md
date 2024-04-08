@@ -1,3 +1,15 @@
+# 2.12.6 (Cantal)
+
+### Release date 2024/04/08
+
+**Features**
+
+- Add copy-paste selection in messages
+
+**Bug fixes**
+
+- Fix secured preferences initialization issue with Android auto-backup strategy
+
 # 2.12.5 (Cantal)
 
 ### Release date 2024/03/18
