@@ -1,3 +1,11 @@
+# 2.12.7 (Cantal)
+
+### Release date 2024/04/11
+
+**Bug fixes**
+
+- Fix secured preferences initialization issue in case of modified decryption key
+
 # 2.12.6 (Cantal)
 
 ### Release date 2024/04/08
