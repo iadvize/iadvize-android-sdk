@@ -1,3 +1,11 @@
+# 2.12.9 (Cantal)
+
+### Release date 2024/05/28
+
+**Bug fixes**
+
+- Fix isolated markdown deeplink handling
+
 # 2.12.8 (Cantal)
 
 ### Release date 2024/05/14
