@@ -1,3 +1,14 @@
+# 2.14.0 (Epoisses)
+
+### Release date 2024/09/17
+
+**Features**
+
+- Add debug info API to get SDK status
+- Add targeting rule trigger failure callback
+- Decrease severity of log when registering custom data outside of an ongoing conversation
+- Encapsulate iAdvize SDK errors into their own types
+
 # 2.13.1 (Dauphin)
 
 ### Release date 2024/07/02

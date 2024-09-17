@@ -43,7 +43,7 @@ class App : MultiDexApplication() {
                     ).show()
                 }
 
-                override fun onFailure(t: Throwable) {
+                override fun onFailure(error: IAdvizeSDK.Error) {
                     Toast.makeText(
                         baseContext,
                         "❌ iAdvize SDK Activation failure",

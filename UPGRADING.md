@@ -1,3 +1,96 @@
+## 2.13.1 > 2.14.0
+
+### Debug Info
+
+This releases adds a new `debugInfo` API that returns the status of the SDK at any given moment. This API could be used for debugging
+purposes, you can add the JSON string output to your log reporting tool.
+
+```
+IAdvizeSDK.debugInfo()
+```
+
+```
+{
+  "targeting": {
+    "screenId": "67BA3181-EBE2-4F05-B4F3-ECB07A62FA92",
+    "activeTargetingRule": {
+      "id": "D8821AD6-E0A2-4CB9-BF45-B2D8A3CF4F8D",
+      "conversationChannel": "chat"
+    },
+    "isActiveTargetingRuleAvailable": false,
+    "currentLanguage": "en"
+  },
+  "device": {
+    "model": "iPhone",
+    "osVersion": "17.5",
+    "os": "iOS"
+  },
+  "ongoingConversation": {
+    "conversationChannel": "chat",
+    "conversationId": "02012815-4BDA-42EF-87DC-5C6ED317AF7F"
+  },
+  "chatbox": {
+    "useDefaultFloatingButton": true,
+    "isChatboxPresented": false
+  },
+  "activation": {
+    "activationStatus": "activated",
+    "authenticationMode": "simple",
+    "projectId": "7260"
+  },
+  "connectivity": {
+    "wifi": true,
+    "isReachable": true,
+    "cellular": false
+  },
+  "visitor": {
+    "vuid": "d4a57969c7fc4e2a9380f3931fdcee3a965650eb9c6b4",
+    "tokenExpiration": "2025-02-27T08:14:11Z"
+  },
+  "sdkVersion": "2.15.4"
+}
+```
+
+### Targeting Listener failure callback
+
+This release also adds a callback to notify the integrator about targeting rule trigger failures. This takes the form of a new callback inside
+the `TargetingListener`: 
+
+```
+interface TargetingListener {
+    fun onActiveTargetingRuleAvailabilityUpdated(isActiveTargetingRuleAvailable: Boolean)
+
+    fun onActiveTargetingRuleAvailabilityUpdateFailed(error: IAdvizeSDK.Error)
+}
+```
+
+This will be called when triggering the targeting rule fails and give the reason of the failure when possible.
+Please note that the targeting rule triggering may fail, but for standard reasons (for instance if there is no agent availabale to answer). In those cases this `onActiveTargetingRuleAvailabilityUpdateFailed` callback would not be called, only the usual `onActiveTargetingRuleAvailabilityUpdated` would be called with a `false` value for `isActiveTargetingRuleAvailable`.
+
+> To integrate this update you will have to update your code where you use a `TargetingListener` to add this new callback.
+
+### Error ecapsulation
+
+The iAdvize SDK errors are now all part of a generic `IAdvizeSDK.Error` object. This is now the type that is used in the `IAdvizeSDK. Callback` failure method (that is used as an asynchronous return for multiple APIs).
+
+```
+IAdvizeSDK.activate(
+  projectId,
+  authenticationOption,
+  gdprOption,
+  object : IAdvizeSDK.Callback {
+      override fun onSuccess() {
+          // Success
+      }
+
+      override fun onFailure(error: IAdvizeSDK.Error) {
+          // Error
+      }
+  })
+```
+
+> To integrate this update you will have to update your code where you use an `IAdvizeSDK.Callback`, especially in the `initiate`, `activate` ot the notification methods.
+
 ## 2.13.0 > 2.13.1
 
 This release adds a new LogLevel.ALL to force the logging of all possible logs of the SDK. This must be used with caution as latencies may be noticed in the hosting app, so do not use this feature without iAdvize explicit authorization for live debugging.
