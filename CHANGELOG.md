@@ -1,3 +1,11 @@
+# 2.14.1
+
+### Release date 2024/09/23
+
+**Bug fixes**
+
+- Fix obfuscation folder conflict with external libraries
+
 # 2.14.0 (Epoisses)
 
 ### Release date 2024/09/17
