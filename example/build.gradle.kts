@@ -1,32 +1,8 @@
-buildscript {
-    repositories {
-        google()
-        maven(url = uri("https://plugins.gradle.org/m2/"))
-        maven(url = uri("https://jitpack.io"))
-        mavenCentral()
-        gradlePluginPortal()
-    }
-
-    dependencies {
-        classpath(Dependencies.Build.androidxNavigationSafeArgs)
-        classpath(Dependencies.Build.gms)
-        classpath(Dependencies.Build.gradle)
-        classpath(Dependencies.Build.kotlin)
-    }
-}
-
-allprojects {
-    repositories {
-        google()
-        gradlePluginPortal()
-        maven(url = uri("https://raw.github.com/iadvize/iadvize-android-sdk/master"))
-        maven(url = uri("https://plugins.gradle.org/m2/"))
-        maven(url = uri("https://jitpack.io"))
-        mavenCentral()
-        mavenLocal()
-    }
-}
-
-tasks.register("clean", Delete::class) {
-    delete(rootProject.buildDir)
+plugins {
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.androidx.navigation.safeargs.kotlin) apply false
+    alias(libs.plugins.gms) apply false
+    alias(libs.plugins.gradle.versions.plugin)
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.kotlin.parcelize) apply false
 }

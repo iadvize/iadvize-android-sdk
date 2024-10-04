@@ -1,23 +1,23 @@
 plugins {
-    id(Plugins.androidApp)
-    id(Plugins.kotlin)
-    id(Plugins.kotlinParcelize)
-    id(Plugins.androidxNavigationSafeArgs)
-    id(Plugins.gms)
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.gms)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.androidx.navigation.safeargs.kotlin)
 }
 
 android {
-    buildToolsVersion = AndroidConfig.buildToolsVersion
-    namespace = "com.iadvize.conversation.sdk.demo"
+    namespace = providers.gradleProperty("demo.namespace").get()
+    buildToolsVersion = providers.gradleProperty("demo.android.build.tools").get()
+    compileSdk = providers.gradleProperty("demo.android.target").get().toInt()
 
     defaultConfig {
-        applicationId = "com.iadvize.conversation.sdk.demo"
-        versionName = "1.0"
-        versionCode = 1
+        applicationId = providers.gradleProperty("demo.namespace").get()
+        versionName = providers.gradleProperty("demo.version.name").get()
+        versionCode = (System.currentTimeMillis() / 3_600_000).toInt()
 
-        minSdk = AndroidConfig.minSdkVersion
-        targetSdk = AndroidConfig.targetSdkVersion
-        compileSdk = AndroidConfig.compileSdkVersion
+        targetSdk = providers.gradleProperty("demo.android.target").get().toInt()
+        minSdk = providers.gradleProperty("demo.android.min.supported").get().toInt()
 
         multiDexEnabled = true
     }
@@ -32,12 +32,14 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = AndroidConfig.javaVersion
-        targetCompatibility = AndroidConfig.javaVersion
+        sourceCompatibility =
+            JavaVersion.toVersion(providers.gradleProperty("demo.java.target").get())
+        targetCompatibility =
+            JavaVersion.toVersion(providers.gradleProperty("demo.java.target").get())
     }
 
-    kotlinOptions {
-        jvmTarget = AndroidConfig.javaVersion.toString()
+    kotlin {
+        jvmToolchain(providers.gradleProperty("demo.java.target").get().toInt())
     }
 
     buildFeatures {
@@ -54,21 +56,19 @@ configurations {
 }
 
 dependencies {
-    implementation("com.iadvize:iadvize-sdk:2.14.1")
-
-    implementation(Dependencies.App.androidxAppCompat)
-    implementation(Dependencies.App.androidxCardView)
-    implementation(Dependencies.App.androidxConstraintLayout)
-    implementation(Dependencies.App.androidxCoreKtx)
-    implementation(Dependencies.App.androidxFragment)
-    implementation(Dependencies.App.androidxNavigationFragment)
-    implementation(Dependencies.App.androidxNavigationUi)
-    implementation(Dependencies.App.androidxMultiDex)
-    implementation(Dependencies.App.androidxRecyclerView)
-    implementation(platform(Dependencies.App.firebaseBom))
-    implementation(Dependencies.App.firebaseAnalytics)
-    implementation(Dependencies.App.firebaseMessaging)
-    implementation(Dependencies.App.kotlinStdlib)
-    implementation(Dependencies.App.kotlinCoroutines)
-    implementation(Dependencies.App.material)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.cardview)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.fragment.ktx)
+    implementation(libs.androidx.multidex)
+    implementation(libs.bundles.androidx.navigation)
+    implementation(libs.androidx.recyclerview)
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.bundles.firebase.tools)
+    implementation(libs.iadvize.sdk)
+    implementation(libs.insetter)
+    implementation(libs.kotlin.stdlib)
+    implementation(libs.kotlinx.coroutines)
+    implementation(libs.material)
 }
