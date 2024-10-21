@@ -64,25 +64,9 @@ commands:
           paths:
             - <<parameters.file_path>>
 
-  run-gradle-task:
-    parameters:
-      task:
-        default: "clean"
-        type: string
-      label:
-        default: "Run Gradle Task"
-        type: string
-    steps:
-      - run:
-          name: <<parameters.label>>
-          command: ./gradlew clean <<parameters.task>> --no-daemon --max-workers=2 --debug
-
   build-integration-project:
     steps:
-      - run: cd example
-      - run-gradle-task:
-          label: "Build integration project"
-          task: build
+      - run: cd example; ./gradlew clean build --no-daemon --max-workers=2 --debug
 
   download-artifacts:
     steps:
