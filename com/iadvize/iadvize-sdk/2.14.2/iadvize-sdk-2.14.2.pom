@@ -297,21 +297,6 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>com.iadvize.convui</groupId>
-      <artifactId>library</artifactId>
-      <scope>runtime</scope>
-      <exclusions>
-        <exclusion>
-          <groupId>xpp3</groupId>
-          <artifactId>xpp3</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>xpp3</groupId>
-          <artifactId>xpp3_min</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
       <groupId>dev.chrisbanes.insetter</groupId>
       <artifactId>insetter</artifactId>
       <version>0.6.1</version>
