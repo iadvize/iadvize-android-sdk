@@ -1,0 +1,164 @@
+version: 2.1
+
+orbs:
+  android: circleci/android@3.0.0
+  go: circleci/go@1.7.3
+
+commands:
+  save-sdk-config-to-workspace:
+    steps:
+      - run:
+          name: "Save SDK config to workspace"
+          command: |
+            versionName=$(grep 'iadvize-sdk = "' example/gradle/libs.versions.toml | sed 's/iadvize-sdk = "\(.*\)"/\1/')
+            echo "Version name is $versionName"
+            releaseName=$(grep '# '"${versionName}"' (' CHANGELOG.md | sed 's/# '"${versionName}"' (\(.*\))/\1/')
+            echo "Release name is $releaseName"
+            releaseTitle="$versionName ($releaseName)"
+            echo "Release title is $releaseTitle"
+            releaseNotes=$(sed '1,4 d' CHANGELOG.md | sed '/# /q' | sed '$d' | sed '$d')
+            echo "Release note are:"
+            echo "$releaseNotes"
+            echo "Save them into workspace"
+            echo "$versionName" > sdk-version-name
+            echo "$releaseName" > sdk-release-name
+            echo "$releaseTitle" > sdk-release-title
+            echo "$releaseNotes" > sdk-release-notes
+      - save-in-workspace:
+          file_path: sdk-version-name
+      - save-in-workspace:
+          file_path: sdk-release-name
+      - save-in-workspace:
+          file_path: sdk-release-title
+      - save-in-workspace:
+          file_path: sdk-release-notes
+
+  get-sdk-config-from-workspace:
+    steps:
+      - run:
+          name: "Get SDK config from workspace"
+          command: |
+            SDK_VERSION_NAME=$(cat sdk-version-name)
+            SDK_RELEASE_NAME=$(cat sdk-release-name)
+            SDK_RELEASE_TITLE=$(cat sdk-release-title)
+            SDK_RELEASE_NOTES=$(cat sdk-release-notes)
+            echo "Version name is $SDK_VERSION_NAME"
+            echo "Release name is $SDK_RELEASE_NAME"
+            echo "Release title is $SDK_RELEASE_TITLE"
+            echo "Release note are:"
+            echo "$SDK_RELEASE_NOTES"
+            echo "Save them into BASH_ENV ($BASH_ENV)"
+            echo "export SDK_VERSION_NAME=\"$SDK_VERSION_NAME\"" >> $BASH_ENV
+            echo "export SDK_RELEASE_NAME=\"$SDK_RELEASE_NAME\"" >> $BASH_ENV
+            echo "export SDK_RELEASE_TITLE=\"$SDK_RELEASE_TITLE\"" >> $BASH_ENV
+            echo "export SDK_RELEASE_NOTES=\"$SDK_RELEASE_NOTES\"" >> $BASH_ENV
+
+  save-in-workspace:
+    parameters:
+      file_path:
+        default: ""
+        type: string
+    steps:
+      - persist_to_workspace:
+          root: .
+          paths:
+            - <<parameters.file_path>>
+
+  run-gradle-task:
+    parameters:
+      task:
+        default: "clean"
+        type: string
+      label:
+        default: "Run Gradle Task"
+        type: string
+    steps:
+      - run:
+          name: <<parameters.label>>
+          command: ./gradlew clean <<parameters.task>> --no-daemon --max-workers=2 --debug
+
+  build-integration-project:
+    steps:
+      - run: cd example
+      - run-gradle-task:
+          label: "Build integration project"
+          task: build
+
+  download-artifacts:
+    steps:
+      - run:
+          name: "Download artifacts"
+          command: |
+            repo_url="https://api.github.com/repos/iadvize/mobile-android-sdk-conversation-library"
+            release_json=$(curl -L -H "Accept: application/vnd.github+json" -H "Authorization: Bearer ${GITHUB_TOKEN}" "${repo_url}/releases/tags/${SDK_VERSION_NAME}")
+            asset_ids=($(echo "${release_json}" | grep "\"url\": \"${repo_url}/releases/assets/" | sed "s#\(.*\)/releases/assets/\(.*\)\"\(.*\)#\2#"))
+            for asset_id in "${asset_ids[@]}";
+            do
+                curl -LJO -H 'Accept: application/octet-stream' -H "Authorization: Bearer ${GITHUB_TOKEN}" "${repo_url}/releases/assets/${asset_id}"
+            done
+
+  prepare-artifacts:
+    steps:
+      - run:
+          name: "Prepare artifacts"
+          command: |
+            mkdir artifacts
+            downloaded_files=("IAdvizeSDK.zip" "verification-metadata.xml" "IAdvizeSDK.checksums")
+            for downloaded_file in "${downloaded_files[@]}";
+            do
+                if ! [ -f "${downloaded_file}" ]; then
+                    echo "ERROR: can't find ${downloaded_file}"
+                    exit 1
+                else
+                    mv "${downloaded_file}" artifacts
+                fi
+            done
+
+  create-github-release:
+    steps:
+      - run:
+          name: "Create GitHub release"
+          command: |
+            echo "Create release \"${SDK_RELEASE_TITLE}\" on GitHub"
+            go install github.com/tcnksm/ghr@v0.16.2
+            ghr -t "${GITHUB_TOKEN}" -u "${CIRCLE_PROJECT_USERNAME}" -r "${CIRCLE_PROJECT_REPONAME}" -c "${CIRCLE_SHA1}" -n "${SDK_RELEASE_TITLE}" -b "${SDK_RELEASE_NOTES}" "${SDK_VERSION_NAME}" artifacts/
+
+jobs:
+  build:
+    description: "Check integration project build"
+    executor:
+      name: android/android_docker
+      resource_class: large
+      tag: 2024.04.1
+    steps:
+      - checkout
+      - save-sdk-config-to-workspace
+      - get-sdk-config-from-workspace
+      - build-integration-project
+
+  release:
+    description: "Release SDK on GitHub"
+    executor:
+      name: go/default
+      tag: '1.19.2'
+    steps:
+      - get-sdk-config-from-workspace
+      - download-artifacts
+      - prepare-artifacts
+      - create-github-release
+
+on-version-tags: &on-version-tags
+  filters:
+    tags:
+      only: /^[0-9]*\.[0-9]*\.[0-9]*$/
+    branches:
+      ignore: /.*/
+
+workflows:
+  release:
+    jobs:
+      - build: *on-version-tags
+      - release:
+          <<: *on-version-tags
+          requires:
+            - build
