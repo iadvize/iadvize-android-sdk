@@ -126,6 +126,8 @@ jobs:
       name: go/default
       tag: '1.19.2'
     steps:
+      - attach_workspace:
+          at: .
       - get-sdk-config-from-workspace
       - download-artifacts
       - prepare-artifacts
