@@ -1,22 +1,3 @@
-# 2.14.2 (Epoisses)
-
-### Release date 2024/10/15
-
-**Feature**
-
-- Implemented Android Media partial access for media picker
-
-**Dependencies**
-
-- Gradle `8.10.2`
-- Android Gradle Plugin `8.6.1`
-- Java `17`
-- Kotlin `2.0.0`
-- Android Minimum SDK `24`
-- Android Compile SDK `35`
-- Android Target SDK `35`
-- Android Build Tools `35.0.0`
-
 # 2.14.1 (Epoisses)
 
 ### Release date 2024/09/23

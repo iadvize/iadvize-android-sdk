@@ -1,18 +1,3 @@
-## 2.14.1 > 2.14.2
-
-This release updates the build configuration to the following:
-
-- Gradle `8.10.2`
-- Android Gradle Plugin `8.6.1`
-- Java `17`
-- Kotlin `2.0.0`
-- Android Minimum SDK `24`
-- Android Compile SDK `35`
-- Android Target SDK `35`
-- Android Build Tools `35.0.0`
-
-Depending on your project, you may need to update your configuration to integrate this version.
-
 ## 2.14.0 > 2.14.1
 
 *Nothing to report*
