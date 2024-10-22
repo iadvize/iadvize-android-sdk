@@ -98,7 +98,7 @@ do
 done
 
 echo -e "${GREEN}Release${DEFAULT} ${GREEN_HIGHLIGHT}${sdk_version}${DEFAULT} ${GREEN}is now applied${DEFAULT}"
-echo -e "${PINK}Check the functionality and update the integration project if needed${DEFAULT}"
+echo -e "${PINK}Check the functionality by integrating the SDK locally, update the integration project if needed${DEFAULT}"
 echo -e "${PINK}Commit, tag with${DEFAULT} ${GREEN_HIGHLIGHT}${sdk_version}${DEFAULT} ${PINK}then push to trigger the public release${DEFAULT}"
 
 exit 0
