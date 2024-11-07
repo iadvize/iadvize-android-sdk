@@ -1,3 +1,15 @@
+# 2.14.3 (Epoisses)
+
+### Release date 2024/11/07
+
+**Features**
+
+- Migrate to Android permission-less Photo Picker
+
+**Bug fixes**
+
+- Fix crash due to missing flag on downloaded files broadcast receiver
+
 # 2.14.2 (Epoisses)
 
 ### Release date 2024/10/15
