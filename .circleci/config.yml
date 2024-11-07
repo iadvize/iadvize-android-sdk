@@ -45,7 +45,7 @@ commands:
       - run:
           name: "Read SDK config"
           command: |
-            SDK_VERSION_NAME=$(grep 'sdk.version.name=' gradle.properties | sed 's/sdk.version.name=\(.*\)/\1/')
+            SDK_VERSION_NAME=$(grep 'iadvize-sdk = "' example/gradle/libs.versions.toml | sed 's/iadvize-sdk = "\(.*\)"/\1/')
             SDK_RELEASE_NAME=$(grep '# '"${SDK_VERSION_NAME}"' (' CHANGELOG.md | sed 's/# '"${SDK_VERSION_NAME}"' (\(.*\))/\1/')
             SDK_RELEASE_TITLE="$SDK_VERSION_NAME ($SDK_RELEASE_NAME)"
             SDK_RELEASE_NOTES=$(sed '1,4 d' CHANGELOG.md | sed '/# /q' | sed '$d' | sed '$d')
