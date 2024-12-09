@@ -12,7 +12,7 @@ and will receive answers directly on their devices.
 
 | SDK    | Android  | Kotlin |
 |--------|----------|--------|
-| 2.14.3 | 24 -> 35 | 2.0.0  |
+| 2.14.4 | 24 -> 35 | 2.0.0  |
 
 ## Integration
 

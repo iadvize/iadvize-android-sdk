@@ -1,3 +1,15 @@
+## 2.14.3 > 2.14.4
+
+**Automatic Push Notifications Handling**
+
+Push notifications are now **automatically enabled** every time a visitor is activated using IAdvizeSDK.activate(projectId:authenticationOption:gdprOption:completion:).
+
+  - Previously, push notifications were only enabled during the first activation. After logout, they were disabled, requiring manual re-enablement on subsequent activations.
+
+  - Now, push notifications will automatically re-enable during every activation, regardless of whether it’s the visitor’s first or a subsequent activation.
+
+You only need to call NotificationController.enablePushNotifications if you previously disabled them using NotificationController.disablePushNotifications.
+
 ## 2.14.2 > 2.14.3
 
 *Nothing to report*

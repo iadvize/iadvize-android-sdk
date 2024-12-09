@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   android: circleci/android@3.0.1
-  go: circleci/go@1.7.3
+  go: circleci/go@1.12.0
 
 # ================================================================
 # Triggers
@@ -26,7 +26,7 @@ android-docker-executor: &android-docker-executor
 go-machine-executor: &go-machine-executor
   executor:
     name: go/default
-    tag: '1.19.2'
+    tag: '1.23.3'
 
 # ================================================================
 # Commands
@@ -34,14 +34,7 @@ go-machine-executor: &go-machine-executor
 commands:
   checkout-git-repo:
     steps:
-      - add_ssh_keys:
-          fingerprints: "SHA256:MQy96z4jnXqgzvsaokado+cUHPF8/W33b3OqOBosxeo"
       - checkout
-      - run:
-          name: "Checkout git submodules"
-          command: |
-            git submodule sync
-            git submodule update --init
       - run:
           name: "Read SDK config"
           command: |
