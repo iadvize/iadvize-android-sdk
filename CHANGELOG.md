@@ -1,3 +1,11 @@
+# 2.14.5 (Epoisses)
+
+### Release date 2025/01/31
+
+**Bug fixes**
+
+- Fix crash in image viewer by downsampling bitmaps
+
 # 2.14.4 (Epoisses)
 
 ### Release date 2024/12/09
