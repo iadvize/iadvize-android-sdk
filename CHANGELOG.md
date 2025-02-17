@@ -1,3 +1,25 @@
+# 2.15.0 (Fourme)
+
+### Release date 2025/02/17
+
+**Updated**
+
+- The Chatbox can now be presented in a compact mode.
+
+The visitor can then expand the chatbox manually. The chatbox is automatically expanded when the keyboard opens.
+This compact mode can be enabled by using a flag in the `ChatboxConfiguration`:
+
+```
+val configuration = ChatboxConfiguration()
+configuration.smallerChatboxEnabled = true // Default is false
+IAdvizeSDK.chatboxController.setupChatbox(configuration)
+```
+
+**Bug fixes**
+
+- Fix default floating button insets for Android 15
+- Fix some intempestive logs related to tracking & coroutines
+
 # 2.14.5 (Epoisses)
 
 ### Release date 2025/01/31

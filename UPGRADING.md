@@ -1,3 +1,16 @@
+## 2.14.5 > 2.15.0
+
+**Smaller Chatbox**
+
+The Chatbox can now be presented in a compact mode, the visitor can resize the chatbox manually by dragging the toolbar.
+The chatbox is automatically expanded when the keyboard opens. This compact mode can be enabled by using a flag in the `ChatboxConfiguration`:
+
+```
+val configuration = ChatboxConfiguration()
+configuration.smallerChatboxEnabled = true // Default is false
+IAdvizeSDK.chatboxController.setupChatbox(configuration)
+```
+
 ## 2.14.4 > 2.14.5
 
 *Nothing to report*
