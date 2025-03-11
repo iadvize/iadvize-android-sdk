@@ -1,3 +1,20 @@
+# 2.15.1 (Fourme)
+
+### Release date 2025/03/10
+
+**Bug fixes**
+
+- Fix gesture navigation insets in chatbox
+- Fix some accessibility issues (TalkBack)
+- Fix auth token request management to avoid successive call on token expiration
+
+**Dependencies**
+
+- Gradle `8.10.2` > `8.13`
+- Android Gradle Plugin `8.6.1` > `8.9.0`
+- Kotlin `2.0.21` > `2.1.10`
+- Firebase `33.6.0` > `33.10.0`
+
 # 2.15.0 (Fourme)
 
 ### Release date 2025/02/17

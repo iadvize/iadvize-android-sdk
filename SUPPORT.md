@@ -10,7 +10,7 @@ Here is the list of currently supported versions:
 
 | Version  | Type                        | Status          |
 | -------- | --------------------------- | --------------- |
-| `2.15.0` | Latest release              | Full support    |
+| `2.15.1` | Latest release              | Full support    |
 | `2.15.z` | Current MINOR               | Full support    |
 | `2.14.z` | Current MAJOR, last 3 MINOR | Partial support |
 | `2.13.z` | Current MAJOR, last 3 MINOR | Partial support |

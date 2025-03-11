@@ -202,8 +202,8 @@ END OF IADVIZE SOFTWARE DEVELOPMENT KIT ("SDK") LICENSE AGREEMENT
 ## Android
 
 #### AndroidX
-*Including the following sublibraires : AppCompat, CardView, ConstraintLayout, CoreKtx, Emoji2, ExifInterface, MultiDex, PreferenceKtx, RecyclerView*
 
+*Including the following sublibraries : AppCompat, CardView, ConstraintLayout, CoreKtx, Emoji2, ExifInterface, MultiDex, PreferenceKtx, RecyclerView, SecurityCrypto*
 
 ```
 Copyright (C) The Android Open Source Project
@@ -228,7 +228,7 @@ limitations under the License.
 ```
 The MIT License (MIT)
 
-Copyright (c) 2016-2020 Apollo Graph, Inc. (Formerly Meteor Development Group, Inc.)
+Copyright (c) 2016-2024 Apollo Graph, Inc. (Formerly Meteor Development Group, Inc.)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -254,7 +254,7 @@ SOFTWARE.
 #### Dokka
 
 ```
-Copyright 2000-2021 JetBrains s.r.o.
+Copyright 2014-2019 JetBrains s.r.o. and Dokka project contributors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -269,7 +269,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ```
 
-[LICENSE](https://github.com/Kotlin/dokka/blob/master/LICENSE)
+[LICENSE](https://github.com/Kotlin/dokka/blob/master/LICENSE.txt)
 
 #### Firebase Android
 
@@ -346,7 +346,7 @@ limitations under the License.
 #### Gson
 
 ```
-Copyright 2008-2011 Google Inc.
+Copyright Google Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -362,6 +362,26 @@ limitations under the License.
 ```
 
 [LICENSE](https://github.com/google/gson/blob/master/LICENSE)
+
+#### Insetter
+
+```
+Copyright 2019 Google LLC.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
+
+[LICENSE](https://github.com/chrisbanes/insetter/blob/main/LICENSE)
 
 #### JSON Web Token
 
@@ -419,12 +439,49 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 OF SUCH DAMAGE.
 ```
 
+Additionally, the following classes were copied from the Apache Commons-Codec project, with further JJWT-specific
+modifications:
+* io.jsonwebtoken.impl.io.Base64Codec
+* io.jsonwebtoken.impl.io.Base64InputStream
+* io.jsonwebtoken.impl.io.Base64OutputStream
+* io.jsonwebtoken.impl.io.BaseNCodec
+* io.jsonwebtoken.impl.io.BaseNCodecInputStream
+* io.jsonwebtoken.impl.io.BaseNCodecOutputStream
+* io.jsonwebtoken.impl.io.CodecPolicy
+
+Its attribution:
+
+```
+Apache Commons Codec
+Copyright 2002-2023 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (https://www.apache.org/).
+```
+
+Also, the following classes were copied from the Apache Commons-IO project, with further JJWT-specific modifications:
+* io.jsonwebtoken.impl.io.CharSequenceReader
+* io.jsonwebtoken.impl.io.FilteredInputStream
+* io.jsonwebtoken.impl.io.FilteredOutputStream
+* io.jsonwebtoken.impl.io.ClosedInputStream
+* io.jsonwebtoken.impl.io.UncloseableInputStream
+
+It's attribution:
+
+```
+Apache Commons IO
+Copyright 2002-2023 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (https://www.apache.org/).
+```
+
 #### jsoup
 
 ```
 The MIT License
 
-Copyright (c) 2009-2022 Jonathan Hedley <https://jsoup.org/>
+Copyright (c) 2009-2025 Jonathan Hedley <https://jsoup.org/>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -465,18 +522,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ```
 
-[LICENSE](https://github.com/JetBrains/kotlin/blob/master/license/LICENSE.txt)
-
-```
-=========================================================================
-==  NOTICE file corresponding to the section 4 d of                    ==
-==  the Apache License, Version 2.0,                                   ==
-==  in this case for the Kotlin Compiler distribution.                 ==
-=========================================================================
-
-Kotlin Compiler
-Copyright 2010-2020 JetBrains s.r.o and respective authors and developers
-```
+[LICENSE](https://github.com/JetBrains/kotlin/blob/master/license/README.md)
 
 #### Markwon
 
@@ -768,7 +814,6 @@ limitations under the License.
 ```
 
 [LICENSE](https://github.com/twilio/audioswitch/blob/master/LICENSE.txt)
-
 
 **iOS**
 
