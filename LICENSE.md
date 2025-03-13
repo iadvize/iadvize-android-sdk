@@ -441,6 +441,7 @@ OF SUCH DAMAGE.
 
 Additionally, the following classes were copied from the Apache Commons-Codec project, with further JJWT-specific
 modifications:
+
 * io.jsonwebtoken.impl.io.Base64Codec
 * io.jsonwebtoken.impl.io.Base64InputStream
 * io.jsonwebtoken.impl.io.Base64OutputStream
@@ -460,6 +461,7 @@ The Apache Software Foundation (https://www.apache.org/).
 ```
 
 Also, the following classes were copied from the Apache Commons-IO project, with further JJWT-specific modifications:
+
 * io.jsonwebtoken.impl.io.CharSequenceReader
 * io.jsonwebtoken.impl.io.FilteredInputStream
 * io.jsonwebtoken.impl.io.FilteredOutputStream
@@ -643,7 +645,6 @@ limitations under the License.
 [LICENSE](https://github.com/igniterealtime/Smack/blob/master/LICENSE)
 
 ```
-
                  Smack
 
        An open-source XMPP library
@@ -815,9 +816,9 @@ limitations under the License.
 
 [LICENSE](https://github.com/twilio/audioswitch/blob/master/LICENSE.txt)
 
-**iOS**
+## iOS
 
-- **apollo-ios**
+#### apollo-ios
 
 ```
 The MIT License (MIT)
@@ -845,7 +846,7 @@ SOFTWARE.
 
 [LICENSE](https://github.com/apollographql/apollo-ios/blob/main/LICENSE)
 
-- **JWTDecode.swift**
+#### JWTDecode.swift
 
 ```
 The MIT License (MIT)
@@ -873,12 +874,40 @@ SOFTWARE.
 
 [LICENSE](https://github.com/auth0/JWTDecode.swift/blob/master/LICENSE)
 
-- **swift-graylog**
+#### keychain-swift
 
 ```
-MIT License
+The MIT License
 
-Copyright (c) 2018 iAdvize
+Copyright (c) 2015 - 2024 Evgenii Neumerzhitckii
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+```
+
+[LICENSE](https://github.com/evgenyneu/keychain-swift/blob/master/LICENSE)
+
+#### SwiftyMarkdown
+
+```
+The MIT License (MIT)
+
+Copyright (c) 2016 Simon Fairbairn
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -899,39 +928,17 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-[LICENSE](https://github.com/iadvize/swift-graylog/blob/master/LICENSE.txt)
+[LICENSE](https://github.com/SimonFairbairn/SwiftyMarkdown/blob/master/LICENSE)
 
-- **Gifu**
+#### TwilioVideo
 
 ```
-The MIT License (MIT)
-
-Copyright (c) 2014-2018 Reda Lemeden.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-The name and characters used in the demo of this software are property of their
-respective owners.
+Twilio Programmable Video for iOS is distributed under TWILIO-TOS.
 ```
 
-[LICENSE](https://github.com/kaishin/Gifu/blob/master/LICENSE)
+[TWILIO-TOS](https://www.twilio.com/legal/tos)
 
-- **XMPPFramework**
+#### XMPPFramework
 
 ```
 GCDAsyncSocket: (Public Domain)
@@ -987,49 +994,5 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 ```
 
 [LICENSE](https://github.com/robbiehanson/XMPPFramework/blob/master/copying.txt)
-
-- **TwilioVideo**
-
-```
-Twilio Programmable Video for iOS is distributed under TWILIO-TOS.
-
-PLEASE REVIEW THESE TWILIO TERMS OF SERVICE CAREFULLY. ONCE ACCEPTED, THESE TWILIO TERMS OF SERVICE BECOME A BINDING LEGAL COMMITMENT BETWEEN YOU AND TWILIO. ONLY THE TERMS IN THIS RIGHT COLUMN ARE LEGALLY BINDING. THE EXPLANATIONS TO THE LEFT ARE FOR INFORMATIONAL PURPOSES ONLY AND NON-BINDING. IF YOU DO NOT AGREE TO BE BOUND BY THIS AGREEMENT, YOU SHOULD NOT ACCEPT THIS AGREEMENT, CREATE AN ACCOUNT, OR USE THE SERVICES (AS DEFINED IN SECTION 1 (DEFINITIONS) BELOW).
-
-THE SERVICES ARE INTENDED FOR BUSINESS USE OR USE IN CONNECTION WITH AN INDIVIDUAL’S TRADE, CRAFT, OR PROFESSION ONLY.
-
-If you have a separate written agreement with Twilio for your use of the Services, these Twilio Terms of Service will not apply to you, unless that written agreement does not cover a particular Service, in which case, these Twilio Terms of Service apply solely to your use of that particular Service.
-
-These Twilio Terms of Service (“Agreement”) set forth the terms for your use of the Services and are effective as of the date you accept or otherwise agree to the terms of this Agreement (“Effective Date”). This Agreement is between the applicable Twilio entity identified below (“Twilio”) and you or the organization on whose behalf you are accepting or otherwise agreeing to the terms of this Agreement (“you", "your", "yours", or "Customer”).  
-```
-
-[TWILIO-TOS](https://www.twilio.com/legal/tos)
-
-- **SwiftyMarkdown**
-
-```
-The MIT License (MIT)
-
-Copyright (c) 2016 Simon Fairbairn
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
-[LICENSE](https://github.com/SimonFairbairn/SwiftyMarkdown/blob/master/LICENSE)
 
 END OF IADVIZE SOFTWARE DEVELOPMENT KIT ("SDK") OPEN SOURCE LICENSES
