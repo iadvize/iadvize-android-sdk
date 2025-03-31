@@ -1,3 +1,11 @@
+# 2.15.2 (Fourme)
+
+### Release date 2025/03/31
+
+**Bug fixes**
+
+- Fix the toolbar color not updating correctly
+
 # 2.15.1 (Fourme)
 
 ### Release date 2025/03/10
