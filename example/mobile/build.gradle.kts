@@ -32,6 +32,7 @@ android {
     }
 
     compileOptions {
+        isCoreLibraryDesugaringEnabled = true
         sourceCompatibility =
             JavaVersion.toVersion(providers.gradleProperty("demo.java.target").get())
         targetCompatibility =
@@ -56,6 +57,8 @@ configurations {
 }
 
 dependencies {
+    coreLibraryDesugaring(libs.desugaring)
+
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.cardview)
     implementation(libs.androidx.constraintlayout)

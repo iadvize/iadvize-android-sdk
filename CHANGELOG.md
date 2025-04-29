@@ -1,3 +1,12 @@
+# 2.15.3 (Fourme)
+
+### Release date 2025/04/29
+
+**Bug fixes**
+
+- Fix smaller chatbox animation possibly running on background thread
+- Fix insets trying to apply on a detached view
+
 # 2.15.2 (Fourme)
 
 ### Release date 2025/03/31
