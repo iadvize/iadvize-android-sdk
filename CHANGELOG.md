@@ -1,3 +1,16 @@
+# 2.15.3-kotlin1 (Fourme)
+
+### Release date 2025/04/29
+
+**Dependencies**
+
+This version is a downgrade of `2.15.3` to use Kotlin 2.0, as React Native Expo 58 (latest to date)
+is not supporting Kotlin 2.1
+
+- Gradle `8.10.2`
+- Android Gradle Plugin `8.6.1`
+- Kotlin `2.0.0`
+
 # 2.15.3 (Fourme)
 
 ### Release date 2025/04/29
