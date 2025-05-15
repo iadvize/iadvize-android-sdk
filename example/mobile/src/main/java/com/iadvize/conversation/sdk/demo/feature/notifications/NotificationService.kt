@@ -25,13 +25,13 @@ class NotificationService : FirebaseMessagingService() {
 
         fun init(context: Context) {
             if (SDK_INT >= O) {
+                // Create app specific notification channel
                 notificationManager(context).createNotificationChannel(
-                    NotificationChannel(
-                        CHANNEL_ID,
-                        CHANNEL_ID,
-                        IMPORTANCE_HIGH
-                    )
+                    NotificationChannel(CHANNEL_ID, CHANNEL_ID, IMPORTANCE_HIGH)
                 )
+
+                // Create iAdvize specific notification channel
+                IAdvizeSDK.notificationController.createNotificationChannel(context)
             }
         }
 
@@ -62,19 +62,32 @@ class NotificationService : FirebaseMessagingService() {
      * @param remoteMessage Object representing the message received from Firebase Cloud Messaging.
      */
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
-        if (IAdvizeSDK.notificationController.isIAdvizePushNotification(remoteMessage.data)
-            && !IAdvizeSDK.chatboxController.isChatboxPresented()
-        ) {
-            val content = remoteMessage.data["content"]
-                ?: baseContext.resources.getString(R.string.iadvize_conversation_attachment_operator)
-            showNotification(content)
+        if (IAdvizeSDK.notificationController.isIAdvizePushNotification(remoteMessage.data)) {
+            handleIAdvizeNotification(remoteMessage)
+        } else {
+            handleAppNotification(remoteMessage)
         }
+    }
+
+    private fun handleIAdvizeNotification(remoteMessage: RemoteMessage) {
+        // Do not display notification if chatbox is opened to the user
+        if (IAdvizeSDK.chatboxController.isChatboxPresented()) return
+
+        // Display notification in iAdvize specific channel
+        val text = remoteMessage.data["content"]
+            ?: baseContext.resources.getString(R.string.iadvize_conversation_attachment_operator)
+        showNotification(text, IAdvizeSDK.notificationController.channelId)
+    }
+
+    private fun handleAppNotification(remoteMessage: RemoteMessage) {
+        // Display notification inside app specific channel
+        showNotification("Smart app notification", CHANNEL_ID)
     }
 
     /**
      * Create and show a simple notification.
      */
-    private fun showNotification(text: String) {
+    private fun showNotification(text: String, channelId: String) {
         val intent = Intent(this, RootActivity::class.java)
         intent.addFlags(FLAG_ACTIVITY_CLEAR_TOP)
         val pendingIntent: PendingIntent = NavDeepLinkBuilder(this)
@@ -83,7 +96,7 @@ class NotificationService : FirebaseMessagingService() {
             .createPendingIntent()
 
         val defaultSoundUri = RingtoneManager.getDefaultUri(TYPE_NOTIFICATION)
-        val notificationBuilder = NotificationCompat.Builder(this, CHANNEL_ID)
+        val notificationBuilder = NotificationCompat.Builder(this, channelId)
             .setSmallIcon(R.drawable.ic_notification)
             .setColor(resources.getColor(R.color.outer_space))
             .setContentTitle(getString(R.string.app_name))

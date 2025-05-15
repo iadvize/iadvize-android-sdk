@@ -8,10 +8,18 @@ import dev.chrisbanes.insetter.applyInsetter
 class RootActivity : AppCompatActivity() {
     private lateinit var binding: RootActivityBinding
 
+    private val notificationPermissionLauncher =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
+            Log.v("RootActivity", "Notification Permission ${if (granted) "granted" else "denied"}")
+        }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = RootActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Request notif permission for Android 13
+        if (SDK_INT >= TIRAMISU) notificationPermissionLauncher.launch(POST_NOTIFICATIONS)
 
         applyInsets()
     }
