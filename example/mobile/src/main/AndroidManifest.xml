@@ -25,7 +25,6 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/iadvize_malachite" />
 
-
         <activity
             android:name=".feature.root.RootActivity"
             android:exported="true"

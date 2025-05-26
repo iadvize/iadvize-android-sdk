@@ -15,7 +15,6 @@ import com.iadvize.conversation.sdk.demo.feature.product.products
 import com.iadvize.conversation.sdk.demo.feature.service.ServiceAdapter
 import com.iadvize.conversation.sdk.demo.utility.strikethrough
 import com.iadvize.conversation.sdk.demo.utility.underline
-import com.iadvize.conversation.sdk.feature.targeting.NavigationOption
 
 class HomeFragment : Fragment() {
     private var binding: HomeFragmentBinding? = null
@@ -33,7 +32,7 @@ class HomeFragment : Fragment() {
         loadView()
 
         // No rule triggered on Home page
-        IAdvizeSDK.targetingController.registerUserNavigation(NavigationOption.ClearActiveRule)
+        IAdvizeSDK.targetingController.deactivateTargetingRule()
     }
 
     private fun loadView() {

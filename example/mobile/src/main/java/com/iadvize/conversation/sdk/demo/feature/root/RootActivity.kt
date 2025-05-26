@@ -1,6 +1,11 @@
 package com.iadvize.conversation.sdk.demo.feature.root
 
+import android.Manifest.permission.POST_NOTIFICATIONS
+import android.os.Build.VERSION.SDK_INT
+import android.os.Build.VERSION_CODES.TIRAMISU
 import android.os.Bundle
+import android.util.Log
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.iadvize.conversation.sdk.demo.databinding.RootActivityBinding
 import dev.chrisbanes.insetter.applyInsetter

@@ -20,7 +20,6 @@ import com.iadvize.conversation.sdk.demo.feature.IAdvizeSDKConfig
 import com.iadvize.conversation.sdk.demo.feature.service.ServiceAdapter
 import com.iadvize.conversation.sdk.demo.utility.dpToPx
 import com.iadvize.conversation.sdk.demo.utility.strikethrough
-import com.iadvize.conversation.sdk.feature.targeting.NavigationOption
 import kotlin.random.Random
 
 class ProductDetailFragment : Fragment() {
@@ -40,9 +39,7 @@ class ProductDetailFragment : Fragment() {
         loadView()
 
         // Targeting rule is triggered on Product page
-        IAdvizeSDK.targetingController.registerUserNavigation(
-            NavigationOption.ActivateNewRule(IAdvizeSDKConfig.targetingRule)
-        )
+        IAdvizeSDK.targetingController.activateTargetingRule(IAdvizeSDKConfig.targetingRule)
     }
 
     private fun loadView() {

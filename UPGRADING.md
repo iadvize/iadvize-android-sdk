@@ -1,3 +1,48 @@
+## 2.15.3 > 2.16.0
+
+The visitor targeting workflow has been simplified.
+ 
+You do not need to register the visitor navigation anymore.
+Thus, the method `registerUserNavigation(navigationOption: NavigationOption)` is now deprecated.
+
+You now manage targeting using only these 2 methods:
+
+- To engage the visitor, call `activateTargetingRule(targetingRule: TargetingRule)` (as you already do).
+- To stop engaging the visitor, calls `deactivateTargetingRule()` (this is new).
+
+Between these 2 calls, the iAdvize SDK automatically updates the targeting rule availability (every 30 seconds) and updates the chat button accordingly. 
+
+If the update fails (e.g.: if there is no connection), you do not need to perform any special actions. The iAdvize SDK will try to update it again 30 seconds later.
+
+*Activating a new rule*
+
+```
+// BEFORE
+IAdvizeSDK.targetingController.registerUserNavigation(NavigationOption.ActivateNewRule(yourOtherTargetingRule))
+
+// AFTER: simply activate the new rule
+IAdvizeSDK.targetingController.activateTargetingRule(yourOtherTargetingRule)
+```
+
+*Deactivating the rule*
+
+```
+// BEFORE
+IAdvizeSDK.targetingController.registerUserNavigation(NavigationOption.ClearActiveRule)
+
+// AFTER: deactivate the active rule
+IAdvizeSDK.targetingController.deactivateTargetingRule()
+```
+
+*Register user navigation (new screen)*
+
+```
+// BEFORE
+IAdvizeSDK.targetingController.registerUserNavigation(NavigationOption.KeepActiveRule)
+
+// AFTER: Nothing to do the SDK handles it
+```
+
 ## 2.15.2 > 2.15.3
 
 *Nothing to report*

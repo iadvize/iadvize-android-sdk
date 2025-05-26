@@ -1,9 +1,11 @@
 package com.iadvize.conversation.sdk.demo.feature
 
+import android.util.Log
 import android.widget.Toast
 import androidx.multidex.MultiDexApplication
 import com.iadvize.conversation.sdk.IAdvizeSDK
 import com.iadvize.conversation.sdk.demo.feature.notifications.NotificationService
+import com.iadvize.conversation.sdk.feature.targeting.TargetingListener
 
 class App : MultiDexApplication() {
     override fun onCreate() {
@@ -28,6 +30,51 @@ class App : MultiDexApplication() {
         IAdvizeSDK.chatboxController.setupChatbox(
             IAdvizeSDKConfig.chatboxConfiguration(this)
         )
+
+        IAdvizeSDK.targetingController.listeners.add(object : TargetingListener {
+            override fun onActiveTargetingRuleAvailabilityUpdated(isActiveTargetingRuleAvailable: Boolean) {
+                Log.i(
+                    "App",
+                    "Targeting Rule is ${if (isActiveTargetingRuleAvailable) "" else "un"}available"
+                )
+            }
+
+            override fun onActiveTargetingRuleAvailabilityUpdateFailed(error: IAdvizeSDK.Error) {
+                when (error) {
+                    is IAdvizeSDK.Error.NetworkUnreachableException -> {
+                        Log.d(
+                            "App",
+                            "Rule could not be triggered because network was down. TargetingController will automatically retry to activate the rule."
+                        )
+                        // Nothing to do targeting will retry automatically after a delay
+                    }
+
+                    is IAdvizeSDK.Error.TargetingRuleTriggerException -> {
+                        Log.d(
+                            "App",
+                            "Rule could not be triggered because of a technical error. TargetingController will automatically retry to activate the rule."
+                        )
+                        // Nothing to do targeting will retry automatically after a delay
+                    }
+
+                    is IAdvizeSDK.Error.NotActivatedException -> {
+                        Log.d(
+                            "App",
+                            "Rule could not be triggered because the SDK is not yet activated, please call activate beforehand."
+                        )
+                        // ... Relaunch activation process
+                    }
+
+                    else -> {
+                        Log.d(
+                            "App",
+                            "Rule could not be triggered because of an unknown error."
+                        )
+                        // ... Relaunch activation process
+                    }
+                }
+            }
+        })
 
         // Activate the iAdvize SDK (start a user session)
         IAdvizeSDK.activate(
