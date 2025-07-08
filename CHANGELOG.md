@@ -1,4 +1,4 @@
-# 2.16.1 (__CHEESE NAME GOES HERE__)
+# 2.16.1 (Gaperon)
 
 ### Release date 2025/07/07
 
