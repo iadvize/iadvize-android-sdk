@@ -1,3 +1,15 @@
+# 2.16.1 (__CHEESE NAME GOES HERE__)
+
+### Release date 2025/07/07
+
+**Features**
+
+- Add support for AI Quick Replies
+
+**Dependencies**
+
+- Android Gradle Plugin `8.10.0` > `8.10.1`
+
 # 2.16.0 (Gaperon)
 
 ### Release date 2025/05/26
@@ -5,7 +17,7 @@
 **Features**
 
 The visitor targeting workflow has been simplified.
- 
+
 You do not need to register the visitor navigation anymore.
 Thus, the method `registerUserNavigation(navigationOption: NavigationOption)` is now deprecated.
 

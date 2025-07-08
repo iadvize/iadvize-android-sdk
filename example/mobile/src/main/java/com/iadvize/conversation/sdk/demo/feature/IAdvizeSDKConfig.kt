@@ -83,5 +83,6 @@ object IAdvizeSDKConfig {
                 R.mipmap.ic_launcher
             )!!
         ),
+        smallerChatboxEnabled = false
     )
 }

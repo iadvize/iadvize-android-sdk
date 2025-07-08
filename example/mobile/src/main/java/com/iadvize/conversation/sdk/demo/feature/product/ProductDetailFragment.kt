@@ -20,11 +20,13 @@ import com.iadvize.conversation.sdk.demo.feature.IAdvizeSDKConfig
 import com.iadvize.conversation.sdk.demo.feature.service.ServiceAdapter
 import com.iadvize.conversation.sdk.demo.utility.dpToPx
 import com.iadvize.conversation.sdk.demo.utility.strikethrough
+import com.iadvize.conversation.sdk.feature.visitor.CustomData
 import kotlin.random.Random
 
 class ProductDetailFragment : Fragment() {
     private val args: ProductDetailFragmentArgs by navArgs()
     private var binding: ProductDetailFragmentBinding? = null
+    private var product: Product? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,17 +38,28 @@ class ProductDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        product = args.product
         loadView()
 
-        // Targeting rule is triggered on Product page
-        IAdvizeSDK.targetingController.activateTargetingRule(IAdvizeSDKConfig.targetingRule)
+        product?.productId?.let {
+            // Set custom data
+            val customData = CustomData.fromString("productId", it)
+            IAdvizeSDK.visitorController.registerCustomData(listOf(customData))
+
+            // Trigger targeting rule only on products with product id
+            IAdvizeSDK.targetingController.activateTargetingRule(IAdvizeSDKConfig.targetingRule)
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        IAdvizeSDK.targetingController.deactivateTargetingRule()
     }
 
     private fun loadView() {
-        val product = args.product
-
         // Title
-        binding?.name?.text = product.name
+        binding?.name?.text = product?.name
 
         // Rating
         binding?.productRatingView?.reviewCount?.text =
@@ -64,15 +77,15 @@ class ProductDetailFragment : Fragment() {
         }
 
         // Pictures
-        binding?.picture?.setImageResource(product.pictureResId)
+        product?.pictureResId?.let { binding?.picture?.setImageResource(it) }
 
         // Prices
-        binding?.newPrice?.text = product.newPrice
-        binding?.oldPrice?.text = product.oldPrice
+        binding?.newPrice?.text = product?.newPrice
+        binding?.oldPrice?.text = product?.oldPrice
         binding?.oldPrice?.strikethrough()
 
         // Description
-        binding?.description?.text = product.description
+        binding?.description?.text = product?.description
 
         // Service List
         binding?.serviceListView?.recycler?.let {

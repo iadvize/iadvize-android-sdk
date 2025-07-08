@@ -1,7 +1,11 @@
+## 2.16.0 > 2.16.1
+
+*Nothing to report*
+
 ## 2.15.3 > 2.16.0
 
 The visitor targeting workflow has been simplified.
- 
+
 You do not need to register the visitor navigation anymore.
 Thus, the method `registerUserNavigation(navigationOption: NavigationOption)` is now deprecated.
 
