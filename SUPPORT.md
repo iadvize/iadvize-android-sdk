@@ -9,8 +9,8 @@ iAdvize Android SDK support comes in several distinct status:
 Here is the list of currently supported versions:
 
 | Version  | Type                        | Status          |
-| -------- | --------------------------- | --------------- |
-| `2.16.1` | Latest release              | Full support    |
+|----------|-----------------------------|-----------------|
+| `2.16.2` | Latest release              | Full support    |
 | `2.16.z` | Current MINOR               | Full support    |
 | `2.15.z` | Current MAJOR, last 3 MINOR | Partial support |
 | `2.14.z` | Current MAJOR, last 3 MINOR | Partial support |

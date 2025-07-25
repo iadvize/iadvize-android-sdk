@@ -47,6 +47,7 @@ $dokka.location:com.iadvize.conversation.sdk.feature.conversation/ConversationCh
 $dokka.location:com.iadvize.conversation.sdk.feature.conversation/ConversationChannel.Companion///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.conversation/-conversation-channel/-companion/index.html
 $dokka.location:com.iadvize.conversation.sdk.feature.conversation/ConversationChannel.VIDEO///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.conversation/-conversation-channel/-v-i-d-e-o/index.html
 $dokka.location:com.iadvize.conversation.sdk.feature.conversation/ConversationChannel///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.conversation/-conversation-channel/index.html
+$dokka.location:com.iadvize.conversation.sdk.feature.conversation/ConversationChannel/entries/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.conversation/-conversation-channel/entries.html
 $dokka.location:com.iadvize.conversation.sdk.feature.conversation/ConversationChannel/valueOf/#kotlin.String/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.conversation/-conversation-channel/value-of.html
 $dokka.location:com.iadvize.conversation.sdk.feature.conversation/ConversationChannel/values/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.conversation/-conversation-channel/values.html
 $dokka.location:com.iadvize.conversation.sdk.feature.conversation/ConversationController///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.conversation/-conversation-controller/index.html
@@ -127,6 +128,7 @@ $dokka.location:com.iadvize.conversation.sdk.feature.logger/Logger.Level.NONE///
 $dokka.location:com.iadvize.conversation.sdk.feature.logger/Logger.Level.VERBOSE///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.logger/-logger/-level/-v-e-r-b-o-s-e/index.html
 $dokka.location:com.iadvize.conversation.sdk.feature.logger/Logger.Level.WARNING///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.logger/-logger/-level/-w-a-r-n-i-n-g/index.html
 $dokka.location:com.iadvize.conversation.sdk.feature.logger/Logger.Level///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.logger/-logger/-level/index.html
+$dokka.location:com.iadvize.conversation.sdk.feature.logger/Logger.Level/entries/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.logger/-logger/-level/entries.html
 $dokka.location:com.iadvize.conversation.sdk.feature.logger/Logger.Level/valueOf/#kotlin.String/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.logger/-logger/-level/value-of.html
 $dokka.location:com.iadvize.conversation.sdk.feature.logger/Logger.Level/values/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.logger/-logger/-level/values.html
 $dokka.location:com.iadvize.conversation.sdk.feature.logger/Logger///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.logger/-logger/index.html
@@ -212,6 +214,7 @@ $dokka.location:com.iadvize.conversation.sdk/IAdvizeSDK.ActivationStatus.ACTIVAT
 $dokka.location:com.iadvize.conversation.sdk/IAdvizeSDK.ActivationStatus.INITIALIZED///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}i-advize -android -s-d-k/com.iadvize.conversation.sdk/-i-advize-s-d-k/-activation-status/-i-n-i-t-i-a-l-i-z-e-d/index.html
 $dokka.location:com.iadvize.conversation.sdk/IAdvizeSDK.ActivationStatus.OFF///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}i-advize -android -s-d-k/com.iadvize.conversation.sdk/-i-advize-s-d-k/-activation-status/-o-f-f/index.html
 $dokka.location:com.iadvize.conversation.sdk/IAdvizeSDK.ActivationStatus///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk/-i-advize-s-d-k/-activation-status/index.html
+$dokka.location:com.iadvize.conversation.sdk/IAdvizeSDK.ActivationStatus/entries/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk/-i-advize-s-d-k/-activation-status/entries.html
 $dokka.location:com.iadvize.conversation.sdk/IAdvizeSDK.ActivationStatus/valueOf/#kotlin.String/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk/-i-advize-s-d-k/-activation-status/value-of.html
 $dokka.location:com.iadvize.conversation.sdk/IAdvizeSDK.ActivationStatus/values/#/PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk/-i-advize-s-d-k/-activation-status/values.html
 $dokka.location:com.iadvize.conversation.sdk/IAdvizeSDK.Callback///PointingToDeclaration/i-advize -android -s-d-k/com.iadvize.conversation.sdk/-i-advize-s-d-k/-callback/index.html
@@ -272,4 +275,3 @@ com.iadvize.conversation.sdk.feature.targeting
 com.iadvize.conversation.sdk.feature.transaction
 com.iadvize.conversation.sdk.feature.visitor
 com.iadvize.conversation.sdk.utility
-

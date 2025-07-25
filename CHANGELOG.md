@@ -1,3 +1,18 @@
+# 2.16.2 (Gaperon)
+
+### Release date 2025/07/24
+
+**Bug fixes**
+
+- Fix chatbox edge-to-edge display on pre-Android 15 devices
+
+**Dependencies**
+
+- Gradle `8.14` > `8.14.3`
+- Android Gradle Plugin `8.10.1` > `8.11.1`
+- Kotlin `2.1.20` > `2.2.0`
+- Firebase `33.14.0` > `34.0.0`
+
 # 2.16.1 (Gaperon)
 
 ### Release date 2025/07/07
