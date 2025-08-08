@@ -1,3 +1,20 @@
+# 2.16.3 (Gaperon)
+
+### Release date 2025/08/08
+
+**Features**
+
+- Update chatbox accessibility management (TalkBack message handling, color contrast, icon labels)
+
+**Bug fixes**
+
+- Fix chatbox insets on pre-Android 30
+
+**Dependencies**
+
+- Android Gradle Plugin `8.11.1` > `8.12.0`
+- Apollo GraphQL `3.8` > `4.3`
+
 # 2.16.2 (Gaperon)
 
 ### Release date 2025/07/24
