@@ -2,13 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="96dp">
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="24dp">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_marginStart="24dp"
         android:src="@drawable/ic_logo_large" />
 
     <com.google.android.material.button.MaterialButton
@@ -16,14 +16,17 @@
         style="@style/HeaderButton.Dark"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
         app:icon="@drawable/ic_menu" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/cart"
         style="@style/HeaderButton.Light"
         android:layout_centerVertical="true"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
         android:layout_toStartOf="@id/menu"
         app:icon="@drawable/ic_cart" />
 
@@ -31,7 +34,9 @@
         android:id="@+id/profile"
         style="@style/HeaderButton.Light"
         android:layout_centerVertical="true"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
         android:layout_toStartOf="@id/cart"
         app:icon="@drawable/ic_profile" />
 

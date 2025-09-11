@@ -4,7 +4,6 @@
         <item name="colorPrimary">@color/outer_space</item>
         <item name="colorOnPrimary">@android:color/white</item>
         <item name="colorAccent">@color/malachite</item>
-        <item name="android:statusBarColor">?attr/colorPrimary</item>
         <item name="android:fontFamily">@font/montserrat_family</item>
     </style>
 

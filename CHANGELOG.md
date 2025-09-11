@@ -1,3 +1,16 @@
+# 2.16.4 (Gaperon)
+
+### Release date 2025/09/11
+
+**Dependencies**
+
+Update app target for Android 16
+
+- Android SDK `35.0.0` > `36.0.0`
+- Android Gradle Plugin `8.12.0` > `8.12.2`
+- Kotlin `2.2.0` > `2.2.10`
+- Firebase `34.0.0` > `34.2.0`
+
 # 2.16.3 (Gaperon)
 
 ### Release date 2025/08/08

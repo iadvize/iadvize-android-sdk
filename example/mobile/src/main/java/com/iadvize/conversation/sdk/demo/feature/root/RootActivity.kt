@@ -5,6 +5,7 @@ import android.os.Build.VERSION.SDK_INT
 import android.os.Build.VERSION_CODES.TIRAMISU
 import android.os.Bundle
 import android.util.Log
+import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.iadvize.conversation.sdk.demo.databinding.RootActivityBinding
@@ -19,6 +20,7 @@ class RootActivity : AppCompatActivity() {
         }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         binding = RootActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -30,11 +32,14 @@ class RootActivity : AppCompatActivity() {
     }
 
     private fun applyInsets() {
-        binding.toolbar.root.applyInsetter {
-            type(statusBars = true) { margin(top = true) }
-        }
-        binding.navHostFragment.applyInsetter {
-            type(navigationBars = true, ime = true) { padding(bottom = true) }
+        binding.container.applyInsetter {
+            type(
+                statusBars = true,
+                mandatorySystemGestures = true,
+                navigationBars = true,
+                displayCutout = true,
+                ime = true
+            ) { padding() }
         }
     }
 }
