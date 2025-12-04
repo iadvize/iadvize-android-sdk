@@ -16,7 +16,7 @@ dependencyResolutionManagement {
         google()
         maven(url = uri("https://plugins.gradle.org/m2/"))
         maven(url = uri("https://jitpack.io"))
-        maven(url = uri("https://raw.github.com/iadvize/iadvize-android-sdk/master"))
+        maven(url = uri("https://raw.githubusercontent.com/iadvize/iadvize-android-sdk/master"))
         mavenCentral()
         gradlePluginPortal()
     }

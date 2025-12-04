@@ -1,3 +1,16 @@
+# 2.16.5 (Gaperon)
+
+### Release date 2025/12/04
+
+**Features**
+
+- Add romanian localization
+
+**Dependencies**
+
+- Android Gradle Plugin `8.12.2` > `8.13.0`
+- Kotlin `2.2.10` > `2.2.20`
+
 # 2.16.4 (Gaperon)
 
 ### Release date 2025/09/11
