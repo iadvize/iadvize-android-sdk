@@ -1,3 +1,11 @@
+# 2.16.6 (Gaperon)
+
+### Release date 2025/12/04
+
+**Fix**
+
+- Updated romanian localization
+
 # 2.16.5 (Gaperon)
 
 ### Release date 2025/12/04
