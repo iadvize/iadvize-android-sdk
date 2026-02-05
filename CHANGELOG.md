@@ -1,10 +1,18 @@
-# 2.16.6 (Gaperon)
+# 2.16.7 (Gaperon)
 
-### Release date 2025/12/04
+### Release date 2026/02/03
 
 **Fix**
 
-- Updated romanian localization
+- Fix empty product card text showing separator when selected
+
+# 2.16.6 (Gaperon)
+
+### Release date 2026/01/27
+
+**Fix**
+
+- Update Romanian localization
 
 # 2.16.5 (Gaperon)
 
@@ -89,12 +97,15 @@ Thus, the method `registerUserNavigation(navigationOption: NavigationOption)` is
 
 You now manage targeting using only these 2 methods:
 
-- To engage the visitor, call `activateTargetingRule(targetingRule: TargetingRule)` (as you already do).
+- To engage the visitor, call `activateTargetingRule(targetingRule: TargetingRule)` (as you already
+  do).
 - To stop engaging the visitor, calls `deactivateTargetingRule()` (this is new).
 
-Between these 2 calls, the iAdvize SDK automatically updates the targeting rule availability (every 30 seconds) and updates the chat button accordingly. 
+Between these 2 calls, the iAdvize SDK automatically updates the targeting rule availability (every
+30 seconds) and updates the chat button accordingly.
 
-If the update fails (e.g.: if there is no connection), you do not need to perform any special actions. The iAdvize SDK will try to update it again 30 seconds later.
+If the update fails (e.g.: if there is no connection), you do not need to perform any special
+actions. The iAdvize SDK will try to update it again 30 seconds later.
 
 *Activating a new rule*
 
@@ -133,7 +144,8 @@ IAdvizeSDK.targetingController.registerUserNavigation(NavigationOption.KeepActiv
 - Firebase `33.13.0` > `33.14.0`
 - Twilio `7.6.4` > `7.8.0`
 
-This Twilio update ensures that the SDK is now compatible with the new Android `16 KB page sizes` feature.
+This Twilio update ensures that the SDK is now compatible with the new Android `16 KB page sizes`
+feature.
 https://developer.android.com/guide/practices/page-sizes
 
 # 2.15.3 (Fourme)
@@ -147,9 +159,12 @@ https://developer.android.com/guide/practices/page-sizes
 
 **Dependencies**
 
-The update of `google-play-services-basement` library to version `18.7` adds the obligation to activate `coreLibraryDesugaring` inside the apps integrating the iAdvize Mobile SDK (see https://developers.google.com/android/guides/releases#april_14_2025)
+The update of `google-play-services-basement` library to version `18.7` adds the obligation to
+activate `coreLibraryDesugaring` inside the apps integrating the iAdvize Mobile SDK (
+see https://developers.google.com/android/guides/releases#april_14_2025)
 
-For more information on how to proceed, see https://developer.android.com/studio/write/java8-support#library-desugaring
+For more information on how to proceed,
+see https://developer.android.com/studio/write/java8-support#library-desugaring
 
 # 2.15.2 (Fourme)
 
@@ -184,7 +199,8 @@ For more information on how to proceed, see https://developer.android.com/studio
 
 - The Chatbox can now be presented in a compact mode.
 
-The visitor can then expand the chatbox manually. The chatbox is automatically expanded when the keyboard opens.
+The visitor can then expand the chatbox manually. The chatbox is automatically expanded when the
+keyboard opens.
 This compact mode can be enabled by using a flag in the `ChatboxConfiguration`:
 
 ```
@@ -221,13 +237,17 @@ IAdvizeSDK.chatboxController.setupChatbox(configuration)
 
 **Automatic Push Notifications Handling**
 
-Push notifications are now **automatically enabled** every time a visitor is activated using IAdvizeSDK.activate(projectId:authenticationOption:gdprOption:completion:).
+Push notifications are now **automatically enabled** every time a visitor is activated using
+IAdvizeSDK.activate(projectId:authenticationOption:gdprOption:completion:).
 
-  - Previously, push notifications were only enabled during the first activation. After logout, they were disabled, requiring manual re-enablement on subsequent activations.
+- Previously, push notifications were only enabled during the first activation. After logout, they
+  were disabled, requiring manual re-enablement on subsequent activations.
 
-  - Now, push notifications will automatically re-enable during every activation, regardless of whether it’s the visitor’s first or a subsequent activation.
+- Now, push notifications will automatically re-enable during every activation, regardless of
+  whether it’s the visitor’s first or a subsequent activation.
 
-You only need to call NotificationController.enablePushNotifications if you previously disabled them using NotificationController.disablePushNotifications.
+You only need to call NotificationController.enablePushNotifications if you previously disabled them
+using NotificationController.disablePushNotifications.
 
 # 2.14.3 (Epoisses)
 
@@ -377,7 +397,7 @@ You only need to call NotificationController.enablePushNotifications if you prev
 
 ### Release date 2023/12/05
 
-This is a version created from the `2.12.2` release for integration into the 
+This is a version created from the `2.12.2` release for integration into the
 ReactNative `0.72.7` plugin project.
 Please use the `2.12.2` version if you are integrating on native Android.
 
@@ -446,7 +466,8 @@ Dependencies were downgraded to be aligned to the ReactNative `0.72.7` standards
 
 **Bug fixes**
 
-- Fix conversation management after various network connection issues (phone sleep / app in bakground)
+- Fix conversation management after various network connection issues (phone sleep / app in
+  bakground)
 
 **Dependencies**
 

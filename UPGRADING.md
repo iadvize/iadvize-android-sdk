@@ -1,3 +1,7 @@
+## 2.16.6 > 2.16.7
+
+*Nothing to report*
+
 ## 2.16.5 > 2.16.6
 
 *Nothing to report*
@@ -31,12 +35,15 @@ Thus, the method `registerUserNavigation(navigationOption: NavigationOption)` is
 
 You now manage targeting using only these 2 methods:
 
-- To engage the visitor, call `activateTargetingRule(targetingRule: TargetingRule)` (as you already do).
+- To engage the visitor, call `activateTargetingRule(targetingRule: TargetingRule)` (as you already
+  do).
 - To stop engaging the visitor, calls `deactivateTargetingRule()` (this is new).
 
-Between these 2 calls, the iAdvize SDK automatically updates the targeting rule availability (every 30 seconds) and updates the chat button accordingly. 
+Between these 2 calls, the iAdvize SDK automatically updates the targeting rule availability (every
+30 seconds) and updates the chat button accordingly.
 
-If the update fails (e.g.: if there is no connection), you do not need to perform any special actions. The iAdvize SDK will try to update it again 30 seconds later.
+If the update fails (e.g.: if there is no connection), you do not need to perform any special
+actions. The iAdvize SDK will try to update it again 30 seconds later.
 
 *Activating a new rule*
 
@@ -83,8 +90,10 @@ IAdvizeSDK.targetingController.registerUserNavigation(NavigationOption.KeepActiv
 
 **Smaller Chatbox**
 
-The Chatbox can now be presented in a compact mode, the visitor can resize the chatbox manually by dragging the toolbar.
-The chatbox is automatically expanded when the keyboard opens. This compact mode can be enabled by using a flag in the `ChatboxConfiguration`:
+The Chatbox can now be presented in a compact mode, the visitor can resize the chatbox manually by
+dragging the toolbar.
+The chatbox is automatically expanded when the keyboard opens. This compact mode can be enabled by
+using a flag in the `ChatboxConfiguration`:
 
 ```
 val configuration = ChatboxConfiguration()
@@ -100,13 +109,17 @@ IAdvizeSDK.chatboxController.setupChatbox(configuration)
 
 **Automatic Push Notifications Handling**
 
-Push notifications are now **automatically enabled** every time a visitor is activated using IAdvizeSDK.activate(projectId:authenticationOption:gdprOption:completion:).
+Push notifications are now **automatically enabled** every time a visitor is activated using
+IAdvizeSDK.activate(projectId:authenticationOption:gdprOption:completion:).
 
-  - Previously, push notifications were only enabled during the first activation. After logout, they were disabled, requiring manual re-enablement on subsequent activations.
+- Previously, push notifications were only enabled during the first activation. After logout, they
+  were disabled, requiring manual re-enablement on subsequent activations.
 
-  - Now, push notifications will automatically re-enable during every activation, regardless of whether it’s the visitor’s first or a subsequent activation.
+- Now, push notifications will automatically re-enable during every activation, regardless of
+  whether it’s the visitor’s first or a subsequent activation.
 
-You only need to call NotificationController.enablePushNotifications if you previously disabled them using NotificationController.disablePushNotifications.
+You only need to call NotificationController.enablePushNotifications if you previously disabled them
+using NotificationController.disablePushNotifications.
 
 ## 2.14.2 > 2.14.3
 
@@ -135,7 +148,8 @@ Depending on your project, you may need to update your configuration to integrat
 
 ### Debug Info
 
-This releases adds a new `debugInfo` API that returns the status of the SDK at any given moment. This API could be used for debugging
+This releases adds a new `debugInfo` API that returns the status of the SDK at any given moment.
+This API could be used for debugging
 purposes, you can add the JSON string output to your log reporting tool.
 
 ```
@@ -186,8 +200,9 @@ IAdvizeSDK.debugInfo()
 
 ### Targeting Listener failure callback
 
-This release also adds a callback to notify the integrator about targeting rule trigger failures. This takes the form of a new callback inside
-the `TargetingListener`: 
+This release also adds a callback to notify the integrator about targeting rule trigger failures.
+This takes the form of a new callback inside
+the `TargetingListener`:
 
 ```
 interface TargetingListener {
@@ -197,14 +212,22 @@ interface TargetingListener {
 }
 ```
 
-This will be called when triggering the targeting rule fails and give the reason of the failure when possible.
-Please note that the targeting rule triggering may fail, but for standard reasons (for instance if there is no agent availabale to answer). In those cases this `onActiveTargetingRuleAvailabilityUpdateFailed` callback would not be called, only the usual `onActiveTargetingRuleAvailabilityUpdated` would be called with a `false` value for `isActiveTargetingRuleAvailable`.
+This will be called when triggering the targeting rule fails and give the reason of the failure when
+possible.
+Please note that the targeting rule triggering may fail, but for standard reasons (for instance if
+there is no agent availabale to answer). In those cases this
+`onActiveTargetingRuleAvailabilityUpdateFailed` callback would not be called, only the usual
+`onActiveTargetingRuleAvailabilityUpdated` would be called with a `false` value for
+`isActiveTargetingRuleAvailable`.
 
-> To integrate this update you will have to update your code where you use a `TargetingListener` to add this new callback.
+> To integrate this update you will have to update your code where you use a `TargetingListener` to
+> add this new callback.
 
 ### Error ecapsulation
 
-The iAdvize SDK errors are now all part of a generic `IAdvizeSDK.Error` object. This is now the type that is used in the `IAdvizeSDK. Callback` failure method (that is used as an asynchronous return for multiple APIs).
+The iAdvize SDK errors are now all part of a generic `IAdvizeSDK.Error` object. This is now the type
+that is used in the `IAdvizeSDK. Callback` failure method (that is used as an asynchronous return
+for multiple APIs).
 
 ```
 IAdvizeSDK.activate(
@@ -222,11 +245,14 @@ IAdvizeSDK.activate(
   })
 ```
 
-> To integrate this update you will have to update your code where you use an `IAdvizeSDK.Callback`, especially in the `initiate`, `activate` ot the notification methods.
+> To integrate this update you will have to update your code where you use an `IAdvizeSDK.Callback`,
+> especially in the `initiate`, `activate` ot the notification methods.
 
 ## 2.13.0 > 2.13.1
 
-This release adds a new LogLevel.ALL to force the logging of all possible logs of the SDK. This must be used with caution as latencies may be noticed in the hosting app, so do not use this feature without iAdvize explicit authorization for live debugging.
+This release adds a new LogLevel.ALL to force the logging of all possible logs of the SDK. This must
+be used with caution as latencies may be noticed in the hosting app, so do not use this feature
+without iAdvize explicit authorization for live debugging.
 
 ## 2.12.9 > 2.13.0
 
@@ -250,15 +276,20 @@ This release adds a new LogLevel.ALL to force the logging of all possible logs o
 
 ## 2.12.4 > 2.12.5
 
-The `initiate` API now has a IAdvizeSDK.Callback as an optional argument to inform the host app if it fails.
-Before calling that callback failure method, the API will first retry once, so if the callback failure is called it means the 
+The `initiate` API now has a IAdvizeSDK.Callback as an optional argument to inform the host app if
+it fails.
+Before calling that callback failure method, the API will first retry once, so if the callback
+failure is called it means the
 API has failed twice to initiate the SDK.
 
 ## 2.12.3 > 2.12.4
 
-In this release the Push Notification APIs has been enhanced so that you can now clear the iAdvize Push Notifications on demand.
+In this release the Push Notification APIs has been enhanced so that you can now clear the iAdvize
+Push Notifications on demand.
 
-The SDK now provides a specific Notification Channel, where all iAdvize push notifications may be placed. That way, the SDK will automatically clear this notification channel when Chatbox is opened, and you can clear it manually by calling one of the SDK APIs.
+The SDK now provides a specific Notification Channel, where all iAdvize push notifications may be
+placed. That way, the SDK will automatically clear this notification channel when Chatbox is opened,
+and you can clear it manually by calling one of the SDK APIs.
 
 First of all you need to create this noticfication channel:
 
@@ -266,7 +297,8 @@ First of all you need to create this noticfication channel:
 IAdvizeSDK.notificationController.createNotificationChannel(context)
 ```
 
-Like before, when receiving a notification, you can check if it's an iAdvize push notifications. If so specify the iAdvize SDK channel id when displaying it :
+Like before, when receiving a notification, you can check if it's an iAdvize push notifications. If
+so specify the iAdvize SDK channel id when displaying it :
 
 ```
 if (IAdvizeSDK.notificationController.isIAdvizePushNotification(remoteMessage.data)) {
@@ -279,7 +311,8 @@ if (IAdvizeSDK.notificationController.isIAdvizePushNotification(remoteMessage.da
 }
 ```
 
-This Notification Channel is automatically cleared when opening the Chatbox, if you want to clear it manually at another time you can call this API:
+This Notification Channel is automatically cleared when opening the Chatbox, if you want to clear it
+manually at another time you can call this API:
 
 ```
 IAdvizeSDK.notificationController.clearIAdvizePushNotifications()
@@ -303,9 +336,13 @@ IAdvizeSDK.notificationController.clearIAdvizePushNotifications()
 
 ## 2.10.1 > 2.11.0
 
-This release deprecates the ChatboxConfiguration.mainColor setting and adds new ways to customize the look and feel of the messages, both the ones from the visitor and the ones from the agent. Please review the new parameters to customize them to your liking.
+This release deprecates the ChatboxConfiguration.mainColor setting and adds new ways to customize
+the look and feel of the messages, both the ones from the visitor and the ones from the agent.
+Please review the new parameters to customize them to your liking.
 
-This release adds a new LogLevel.NONE to disable all console logs and all logging capture. Please note that this disables iAdvize functional logs aggregation as well so debugging issues will be made harder if this mode is chosen.
+This release adds a new LogLevel.NONE to disable all console logs and all logging capture. Please
+note that this disables iAdvize functional logs aggregation as well so debugging issues will be made
+harder if this mode is chosen.
 
 ## 2.10.0 > 2.10.1
 
@@ -313,9 +350,12 @@ This release adds a new LogLevel.NONE to disable all console logs and all loggin
 
 ## 2.9.2 > 2.10.0
 
-From this release and onward, the possibility to upload files in the conversation is based on the option
-available in the Admin Chatbox Builder. To enable/disable it go to your iAdvize Administration Panel then :
-> Engagement > Notifications & Chatbox > Chatbox (Customize) > Composition box (tab) > Allow the visitor to upload images and pdf
+From this release and onward, the possibility to upload files in the conversation is based on the
+option
+available in the Admin Chatbox Builder. To enable/disable it go to your iAdvize Administration Panel
+then :
+> Engagement > Notifications & Chatbox > Chatbox (Customize) > Composition box (tab) > Allow the
+> visitor to upload images and pdf
 
 ## 2.9.1 > 2.9.2
 
@@ -331,7 +371,8 @@ available in the Admin Chatbox Builder. To enable/disable it go to your iAdvize 
 
 ## 2.8.2 > 2.8.3
 
-The Kotlin version used in the SDK was updated from `1.7.20` to `1.8.10`. You will need to update your
+The Kotlin version used in the SDK was updated from `1.7.20` to `1.8.10`. You will need to update
+your
 Kotlin version accordingly in order for your project to compile.
 
 ## 2.8.1 > 2.8.2
