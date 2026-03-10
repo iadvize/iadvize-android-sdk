@@ -10,9 +10,9 @@ and will receive answers directly on their devices.
 
 ## Compatibility
 
-| SDK    | Android  | Kotlin |
-|--------|----------|--------|
-| 2.16.7 | 24 -> 36 | 2.2.20 |
+| SDK         | Android  | Kotlin |
+|-------------|----------|--------|
+| 3.0.0-beta1 | 24 -> 36 | 2.3.10 |
 
 ## Integration
 

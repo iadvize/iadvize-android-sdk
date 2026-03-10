@@ -1,1 +1,1 @@
-sourceset_dependencies='{":sdk:dokkaHtml/client":[],":sdk:dokkaHtml/clientDebug":[],":sdk:dokkaHtml/clientRelease":[],":sdk:dokkaHtml/debug":[],":sdk:dokkaHtml/iadvize":[],":sdk:dokkaHtml/iadvizeDebug":[],":sdk:dokkaHtml/iadvizeRelease":[],":sdk:dokkaHtml/main":[],":sdk:dokkaHtml/release":[]}'
+sourceset_dependencies='{":sdk/clientRelease":[]}'

@@ -1,45 +1,45 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html class="no-js" lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
-    <title>iAdvize Android SDK</title>
+    <title>iAdvize Mobile SDK</title>
     <link href="images/logo-icon.svg" rel="icon" type="image/svg">
-    <script>var pathToRoot = "";</script>
-    <script>document.documentElement.classList.replace("no-js","js");</script>
+        <script>var pathToRoot = "";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
-    if (storage == null) {
+      if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    } else {
+      } else {
         const savedDarkMode = JSON.parse(storage)
-        if(savedDarkMode === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    }
+      }
     </script>
-<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
 <script type="text/javascript" src="scripts/sourceset_dependencies.js" async="async"></script>
 <link href="styles/style.css" rel="Stylesheet">
 <link href="styles/main.css" rel="Stylesheet">
 <link href="styles/prism.css" rel="Stylesheet">
 <link href="styles/logo-styles.css" rel="Stylesheet">
-<link href="styles/font-jb-sans-auto.css" rel="Stylesheet">
 <link href="ui-kit/ui-kit.min.css" rel="Stylesheet">
-<script type="text/javascript" src="scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="scripts/safe-local-storage_blocking.js"></script>
 <script type="text/javascript" src="scripts/navigation-loader.js" async="async"></script>
 <script type="text/javascript" src="scripts/platform-content-handler.js" async="async"></script>
 <script type="text/javascript" src="scripts/main.js" defer="defer"></script>
 <script type="text/javascript" src="scripts/prism.js" async="async"></script>
 <script type="text/javascript" src="ui-kit/ui-kit.min.js" defer="defer"></script>
-<script type="text/javascript" src="scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+<link href="images/logo-banner.svg">
+<link href="images/logo-icon.svg">
+<link href="styles/style.css" rel="Stylesheet">
 </head>
 <body>
-    <div class="root">
-    <nav class="navigation theme-dark" id="navigation-wrapper">
-            <a class="library-name--link" href="index.html">
-                    iAdvize Android SDK
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="index.html" tabindex="1">
+                    iAdvize Mobile SDK
             </a>
         <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
                 type="button">Toggle table of contents
@@ -48,9 +48,9 @@
         <div class="library-version" id="library-version">
         </div>
         <div class="navigation-controls">
-        <div class="filter-section filter-section_loading" id="filter-section">
-                <button class="platform-tag platform-selector jvm-like" data-active=""
-                        data-filter=":sdk:dokkaHtml/release">androidJvm</button>
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":sdk/clientRelease">clientRelease</button>
             <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
                 <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
                         data-role="dropdown-toggle"
@@ -59,24 +59,24 @@
                         aria-expanded="false"
                         aria-label="Toggle source sets"
                 ></button>
-                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
-                    <div class="dropdown--header"><span>Platform filter</span>
-                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
                             <i class="ui-kit-icon ui-kit-icon_cross"></i>
                         </button>
                     </div>
                         <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
                             <label class="checkbox">
-                                <input type="checkbox" class="checkbox--input" id=":sdk:dokkaHtml/release"
-                                       data-filter=":sdk:dokkaHtml/release"/>
+                                <input type="checkbox" class="checkbox--input" id=":sdk/clientRelease"
+                                       data-filter=":sdk/clientRelease"/>
                                 <span class="checkbox--icon"></span>
-                                androidJvm
+                                clientRelease
                             </label>
                         </li>
                 </ul>
                 <div class="dropdown--overlay"></div>
             </div>
-        </div>
+        </ul>
             <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
                     type="button">Switch theme
             </button>
@@ -84,300 +84,272 @@
                 API
             </div>
         </div>
-    </nav>
-        <div id="container">
-            <div class="sidebar" id="leftColumn">
-                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
-                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
-                        data-role="dropdown-listbox">
-                        <div class="dropdown--header">
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
                             <span>
-                                    iAdvize Android SDK
+                                    iAdvize Mobile SDK
                             </span>
-                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
-                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
-                            </button>
-                        </div>
-                        <div class="sidebar--inner" id="sideMenu"></div>
-                    </ul>
-                    <div class="dropdown--overlay"></div>
-                </div>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
             </div>
-            <div id="main">
-<div class="main-content" id="content" pageIds="iAdvize Android SDK::////PointingToDeclaration//165651098">
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" id="content" pageIds="iAdvize Mobile SDK::////PointingToDeclaration//1191697382">
   <div class="breadcrumbs"></div>
   <div class="cover ">
-    <h1 class="cover"><span>i</span><wbr></wbr><span><span>Advize</span></span> <span><span>Android</span></span> <span><span>SDK</span></span></h1>
+    <h1 class="cover"><span>i</span><wbr></wbr><span><span>Advize</span></span> <span><span>Mobile</span></span> <span><span>SDK</span></span></h1>
   </div>
   <h2 class="">Packages</h2>
-  <div class="table"><a data-name="1543497986%2FPackages%2F165651098" anchor-label="com.iadvize.conversation.sdk" id="1543497986%2FPackages%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
-    <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+  <div class="table"><a data-name="1543497986%2FPackages%2F1191697382" anchor-label="com.iadvize.conversation.sdk" id="1543497986%2FPackages%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":sdk/clientRelease" data-filterable-set=":sdk/clientRelease">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
-              <div><a href="i-advize -android -s-d-k/com.iadvize.conversation.sdk/index.html">com.iadvize.conversation.sdk</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1543497986%2FPackages%2F165651098"></span>
+              <div><a href="i-advize -mobile -s-d-k/com.iadvize.conversation.sdk/index.html">com.iadvize.conversation.sdk</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1543497986%2FPackages%2F1191697382"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right">
+          <div class="pull-right platform-tags--wrapper">
             <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">androidJvm</div>
+              <div class="platform-tag jvm-like">clientRelease</div>
             </div>
           </div>
         </div>
-        <div><span class="brief-comment"><a data-name="1543497986%2FPackages%2F165651098" anchor-label="com.iadvize.conversation.sdk" id="1543497986%2FPackages%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
+        <div><span class="brief-comment"><a data-name="1543497986%2FPackages%2F1191697382" anchor-label="com.iadvize.conversation.sdk" id="1543497986%2FPackages%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
             <p class="paragraph">iAdvize SDK main entry point.</p>
           </span></div>
       </div>
     </div>
-<a data-name="-1040475808%2FPackages%2F165651098" anchor-label="com.iadvize.conversation.sdk.feature.authentication" id="-1040475808%2FPackages%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
-    <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+<a data-name="-1040475808%2FPackages%2F1191697382" anchor-label="com.iadvize.conversation.sdk.feature.authentication" id="-1040475808%2FPackages%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":sdk/clientRelease" data-filterable-set=":sdk/clientRelease">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
-              <div><a href="i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.authentication/index.html">com.iadvize.conversation.sdk.feature.authentication</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1040475808%2FPackages%2F165651098"></span>
+              <div><a href="i-advize -mobile -s-d-k/com.iadvize.conversation.sdk.feature.authentication/index.html">com.iadvize.conversation.sdk.feature.authentication</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1040475808%2FPackages%2F1191697382"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right">
+          <div class="pull-right platform-tags--wrapper">
             <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">androidJvm</div>
+              <div class="platform-tag jvm-like">clientRelease</div>
             </div>
           </div>
         </div>
-        <div></div>
+        <div><span class="brief-comment"><a data-name="-1040475808%2FPackages%2F1191697382" anchor-label="com.iadvize.conversation.sdk.feature.authentication" id="-1040475808%2FPackages%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
+            <p class="paragraph">Authentication configuration.</p>
+          </span></div>
       </div>
     </div>
-<a data-name="-419593905%2FPackages%2F165651098" anchor-label="com.iadvize.conversation.sdk.feature.chatbox" id="-419593905%2FPackages%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
-    <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+<a data-name="-419593905%2FPackages%2F1191697382" anchor-label="com.iadvize.conversation.sdk.feature.chatbox" id="-419593905%2FPackages%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":sdk/clientRelease" data-filterable-set=":sdk/clientRelease">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
-              <div><a href="i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.chatbox/index.html">com.iadvize.conversation.sdk.feature.chatbox</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-419593905%2FPackages%2F165651098"></span>
+              <div><a href="i-advize -mobile -s-d-k/com.iadvize.conversation.sdk.feature.chatbox/index.html">com.iadvize.conversation.sdk.feature.chatbox</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-419593905%2FPackages%2F1191697382"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right">
+          <div class="pull-right platform-tags--wrapper">
             <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">androidJvm</div>
+              <div class="platform-tag jvm-like">clientRelease</div>
             </div>
           </div>
         </div>
-        <div></div>
+        <div><span class="brief-comment"><a data-name="-419593905%2FPackages%2F1191697382" anchor-label="com.iadvize.conversation.sdk.feature.chatbox" id="-419593905%2FPackages%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
+            <p class="paragraph">Chatbox management (configuration, display...).</p>
+          </span></div>
       </div>
     </div>
-<a data-name="-1030351573%2FPackages%2F165651098" anchor-label="com.iadvize.conversation.sdk.feature.conversation" id="-1030351573%2FPackages%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
-    <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+<a data-name="-1030351573%2FPackages%2F1191697382" anchor-label="com.iadvize.conversation.sdk.feature.conversation" id="-1030351573%2FPackages%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":sdk/clientRelease" data-filterable-set=":sdk/clientRelease">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
-              <div><a href="i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.conversation/index.html">com.iadvize.conversation.sdk.feature.conversation</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1030351573%2FPackages%2F165651098"></span>
+              <div><a href="i-advize -mobile -s-d-k/com.iadvize.conversation.sdk.feature.conversation/index.html">com.iadvize.conversation.sdk.feature.conversation</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1030351573%2FPackages%2F1191697382"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right">
+          <div class="pull-right platform-tags--wrapper">
             <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">androidJvm</div>
+              <div class="platform-tag jvm-like">clientRelease</div>
             </div>
           </div>
         </div>
-        <div></div>
+        <div><span class="brief-comment"><a data-name="-1030351573%2FPackages%2F1191697382" anchor-label="com.iadvize.conversation.sdk.feature.conversation" id="-1030351573%2FPackages%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
+            <p class="paragraph">Conversation workflow.</p>
+          </span></div>
       </div>
     </div>
-<a data-name="1673566895%2FPackages%2F165651098" anchor-label="com.iadvize.conversation.sdk.feature.debug" id="1673566895%2FPackages%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
-    <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+<a data-name="34422805%2FPackages%2F1191697382" anchor-label="com.iadvize.conversation.sdk.feature.defaultfloatingbutton" id="34422805%2FPackages%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":sdk/clientRelease" data-filterable-set=":sdk/clientRelease">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
-              <div><a href="i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.debug/index.html">com.iadvize.conversation.sdk.feature.debug</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1673566895%2FPackages%2F165651098"></span>
+              <div><a href="i-advize -mobile -s-d-k/com.iadvize.conversation.sdk.feature.defaultfloatingbutton/index.html">com.iadvize.conversation.sdk.feature.defaultfloatingbutton</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="34422805%2FPackages%2F1191697382"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right">
+          <div class="pull-right platform-tags--wrapper">
             <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">androidJvm</div>
+              <div class="platform-tag jvm-like">clientRelease</div>
             </div>
           </div>
         </div>
-        <div></div>
+        <div><span class="brief-comment"><a data-name="34422805%2FPackages%2F1191697382" anchor-label="com.iadvize.conversation.sdk.feature.defaultfloatingbutton" id="34422805%2FPackages%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
+            <p class="paragraph">Default floating button management (configuration, enablement...).</p>
+          </span></div>
       </div>
     </div>
-<a data-name="34422805%2FPackages%2F165651098" anchor-label="com.iadvize.conversation.sdk.feature.defaultfloatingbutton" id="34422805%2FPackages%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
-    <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+<a data-name="836995911%2FPackages%2F1191697382" anchor-label="com.iadvize.conversation.sdk.feature.gdpr" id="836995911%2FPackages%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":sdk/clientRelease" data-filterable-set=":sdk/clientRelease">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
-              <div><a href="i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.defaultfloatingbutton/index.html">com.iadvize.conversation.sdk.feature.defaultfloatingbutton</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="34422805%2FPackages%2F165651098"></span>
+              <div><a href="i-advize -mobile -s-d-k/com.iadvize.conversation.sdk.feature.gdpr/index.html">com.iadvize.conversation.sdk.feature.gdpr</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="836995911%2FPackages%2F1191697382"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right">
+          <div class="pull-right platform-tags--wrapper">
             <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">androidJvm</div>
+              <div class="platform-tag jvm-like">clientRelease</div>
             </div>
           </div>
         </div>
-        <div></div>
+        <div><span class="brief-comment"><a data-name="836995911%2FPackages%2F1191697382" anchor-label="com.iadvize.conversation.sdk.feature.gdpr" id="836995911%2FPackages%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
+            <p class="paragraph">GDPR configuration.</p>
+          </span></div>
       </div>
     </div>
-<a data-name="836995911%2FPackages%2F165651098" anchor-label="com.iadvize.conversation.sdk.feature.gdpr" id="836995911%2FPackages%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
-    <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+<a data-name="-2081233800%2FPackages%2F1191697382" anchor-label="com.iadvize.conversation.sdk.feature.logger" id="-2081233800%2FPackages%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":sdk/clientRelease" data-filterable-set=":sdk/clientRelease">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
-              <div><a href="i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.gdpr/index.html">com.iadvize.conversation.sdk.feature.gdpr</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="836995911%2FPackages%2F165651098"></span>
+              <div><a href="i-advize -mobile -s-d-k/com.iadvize.conversation.sdk.feature.logger/index.html">com.iadvize.conversation.sdk.feature.logger</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2081233800%2FPackages%2F1191697382"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right">
+          <div class="pull-right platform-tags--wrapper">
             <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">androidJvm</div>
+              <div class="platform-tag jvm-like">clientRelease</div>
             </div>
           </div>
         </div>
-        <div></div>
+        <div><span class="brief-comment"><a data-name="-2081233800%2FPackages%2F1191697382" anchor-label="com.iadvize.conversation.sdk.feature.logger" id="-2081233800%2FPackages%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
+            <p class="paragraph">SDK logger.</p>
+          </span></div>
       </div>
     </div>
-<a data-name="-2081233800%2FPackages%2F165651098" anchor-label="com.iadvize.conversation.sdk.feature.logger" id="-2081233800%2FPackages%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
-    <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+<a data-name="-1088254061%2FPackages%2F1191697382" anchor-label="com.iadvize.conversation.sdk.feature.notification" id="-1088254061%2FPackages%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":sdk/clientRelease" data-filterable-set=":sdk/clientRelease">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
-              <div><a href="i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.logger/index.html">com.iadvize.conversation.sdk.feature.logger</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2081233800%2FPackages%2F165651098"></span>
+              <div><a href="i-advize -mobile -s-d-k/com.iadvize.conversation.sdk.feature.notification/index.html">com.iadvize.conversation.sdk.feature.notification</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1088254061%2FPackages%2F1191697382"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right">
+          <div class="pull-right platform-tags--wrapper">
             <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">androidJvm</div>
+              <div class="platform-tag jvm-like">clientRelease</div>
             </div>
           </div>
         </div>
-        <div></div>
+        <div><span class="brief-comment"><a data-name="-1088254061%2FPackages%2F1191697382" anchor-label="com.iadvize.conversation.sdk.feature.notification" id="-1088254061%2FPackages%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
+            <p class="paragraph">Handling and displaying of notifications.</p>
+          </span></div>
       </div>
     </div>
-<a data-name="1214417994%2FPackages%2F165651098" anchor-label="com.iadvize.conversation.sdk.feature.network" id="1214417994%2FPackages%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
-    <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+<a data-name="145092237%2FPackages%2F1191697382" anchor-label="com.iadvize.conversation.sdk.feature.targeting" id="145092237%2FPackages%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":sdk/clientRelease" data-filterable-set=":sdk/clientRelease">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
-              <div><a href="i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.network/index.html">com.iadvize.conversation.sdk.feature.network</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1214417994%2FPackages%2F165651098"></span>
+              <div><a href="i-advize -mobile -s-d-k/com.iadvize.conversation.sdk.feature.targeting/index.html">com.iadvize.conversation.sdk.feature.targeting</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="145092237%2FPackages%2F1191697382"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right">
+          <div class="pull-right platform-tags--wrapper">
             <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">androidJvm</div>
+              <div class="platform-tag jvm-like">clientRelease</div>
             </div>
           </div>
         </div>
-        <div></div>
+        <div><span class="brief-comment"><a data-name="145092237%2FPackages%2F1191697382" anchor-label="com.iadvize.conversation.sdk.feature.targeting" id="145092237%2FPackages%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
+            <p class="paragraph">Engagement process (targeting, user navigation...).</p>
+          </span></div>
       </div>
     </div>
-<a data-name="-1088254061%2FPackages%2F165651098" anchor-label="com.iadvize.conversation.sdk.feature.notification" id="-1088254061%2FPackages%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
-    <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+<a data-name="-1556505606%2FPackages%2F1191697382" anchor-label="com.iadvize.conversation.sdk.feature.transaction" id="-1556505606%2FPackages%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":sdk/clientRelease" data-filterable-set=":sdk/clientRelease">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
-              <div><a href="i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.notification/index.html">com.iadvize.conversation.sdk.feature.notification</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1088254061%2FPackages%2F165651098"></span>
+              <div><a href="i-advize -mobile -s-d-k/com.iadvize.conversation.sdk.feature.transaction/index.html">com.iadvize.conversation.sdk.feature.transaction</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1556505606%2FPackages%2F1191697382"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right">
+          <div class="pull-right platform-tags--wrapper">
             <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">androidJvm</div>
+              <div class="platform-tag jvm-like">clientRelease</div>
             </div>
           </div>
         </div>
-        <div></div>
+        <div><span class="brief-comment"><a data-name="-1556505606%2FPackages%2F1191697382" anchor-label="com.iadvize.conversation.sdk.feature.transaction" id="-1556505606%2FPackages%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
+            <p class="paragraph">Registering transactions.</p>
+          </span></div>
       </div>
     </div>
-<a data-name="145092237%2FPackages%2F165651098" anchor-label="com.iadvize.conversation.sdk.feature.targeting" id="145092237%2FPackages%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
-    <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
+<a data-name="-958720374%2FPackages%2F1191697382" anchor-label="com.iadvize.conversation.sdk.feature.visitor" id="-958720374%2FPackages%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":sdk/clientRelease" data-filterable-set=":sdk/clientRelease">
       <div>
         <div class="main-subrow ">
           <div class=""><span class="inline-flex">
-              <div><a href="i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.targeting/index.html">com.iadvize.conversation.sdk.feature.targeting</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="145092237%2FPackages%2F165651098"></span>
+              <div><a href="i-advize -mobile -s-d-k/com.iadvize.conversation.sdk.feature.visitor/index.html">com.iadvize.conversation.sdk.feature.visitor</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-958720374%2FPackages%2F1191697382"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right">
+          <div class="pull-right platform-tags--wrapper">
             <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">androidJvm</div>
+              <div class="platform-tag jvm-like">clientRelease</div>
             </div>
           </div>
         </div>
-        <div></div>
-      </div>
-    </div>
-<a data-name="-1556505606%2FPackages%2F165651098" anchor-label="com.iadvize.conversation.sdk.feature.transaction" id="-1556505606%2FPackages%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
-    <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
-      <div>
-        <div class="main-subrow ">
-          <div class=""><span class="inline-flex">
-              <div><a href="i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.transaction/index.html">com.iadvize.conversation.sdk.feature.transaction</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1556505606%2FPackages%2F165651098"></span>
-                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-              </span></span></div>
-          <div class="pull-right">
-            <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">androidJvm</div>
-            </div>
-          </div>
-        </div>
-        <div></div>
-      </div>
-    </div>
-<a data-name="-958720374%2FPackages%2F165651098" anchor-label="com.iadvize.conversation.sdk.feature.visitor" id="-958720374%2FPackages%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
-    <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
-      <div>
-        <div class="main-subrow ">
-          <div class=""><span class="inline-flex">
-              <div><a href="i-advize -android -s-d-k/com.iadvize.conversation.sdk.feature.visitor/index.html">com.iadvize.conversation.sdk.feature.visitor</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-958720374%2FPackages%2F165651098"></span>
-                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-              </span></span></div>
-          <div class="pull-right">
-            <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">androidJvm</div>
-            </div>
-          </div>
-        </div>
-        <div></div>
-      </div>
-    </div>
-<a data-name="-511153920%2FPackages%2F165651098" anchor-label="com.iadvize.conversation.sdk.utility" id="-511153920%2FPackages%2F165651098" data-filterable-set=":sdk:dokkaHtml/release"></a>
-    <div class="table-row" data-filterable-current=":sdk:dokkaHtml/release" data-filterable-set=":sdk:dokkaHtml/release">
-      <div>
-        <div class="main-subrow ">
-          <div class=""><span class="inline-flex">
-              <div><a href="i-advize -android -s-d-k/com.iadvize.conversation.sdk.utility/index.html">com.iadvize.conversation.sdk.utility</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-511153920%2FPackages%2F165651098"></span>
-                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-              </span></span></div>
-          <div class="pull-right">
-            <div class="platform-tags no-gutters">
-              <div class="platform-tag jvm-like">androidJvm</div>
-            </div>
-          </div>
-        </div>
-        <div></div>
+        <div><span class="brief-comment"><a data-name="-958720374%2FPackages%2F1191697382" anchor-label="com.iadvize.conversation.sdk.feature.visitor" id="-958720374%2FPackages%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
+            <p class="paragraph">Saving visitor data.</p>
+          </span></div>
       </div>
     </div>
   </div>
 </div>
     <div class="footer">
-        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
-        <span>© 2026 Copyright</span>
-        <span class="pull-right">
-            <span>Generated by </span>
-            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
-                <span>dokka</span>
-            </a>
-        </span>
-    </div>
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div><a class="brand-name--link" href="https://www.iadvize.com/"></a></div>
+                </div>
             </div>
         </div>
     </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

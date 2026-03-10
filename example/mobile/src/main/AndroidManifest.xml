@@ -22,7 +22,7 @@
             android:resource="@drawable/ic_notification" />
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/iadvize_malachite" />
+            android:resource="@color/malachite" />
 
         <activity
             android:name=".feature.root.RootActivity"

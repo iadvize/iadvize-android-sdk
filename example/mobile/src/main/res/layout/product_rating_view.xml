@@ -15,7 +15,7 @@
         android:textColor="@color/storm_gray"
         android:textSize="13sp"
         android:textStyle="italic"
-        app:fontFamily="@font/montserrat_italic"
+        app:fontFamily="@font/opensans_italic"
         tools:text="1234 reviews" />
 
 </LinearLayout>

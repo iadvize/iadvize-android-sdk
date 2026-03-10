@@ -1,11 +1,11 @@
 package com.iadvize.conversation.sdk.demo.feature
 
+import android.app.Application
 import android.widget.Toast
-import androidx.multidex.MultiDexApplication
 import com.iadvize.conversation.sdk.IAdvizeSDK
 import com.iadvize.conversation.sdk.demo.feature.notifications.NotificationService
 
-class App : MultiDexApplication() {
+class App : Application() {
     override fun onCreate() {
         super.onCreate()
 

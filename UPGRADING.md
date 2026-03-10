@@ -1,3 +1,59 @@
+## 2.16.7 > 3.0.0-beta1
+
+### New `ChatboxConfiguration` APIs
+
+This major new version includes a completely new chat interface, offering a cleaner, more intuitive
+interface to your visitors. Consequently, the APIs of `ChatboxConfiguration` have evolved.
+
+- `toolbarBackgroundColor` is removed. The navigation bar of the Chatbox now uses the background
+  color set by the system/app.
+- `toolbarMainColor` is removed. The elements in the navigation bar of the Chatbox now use the color
+  set by the system/app.
+- `toolbarTitle` is renamed to `headerTitle`.
+- `incomingMessageAvatar` is replaced by `headerAvatar`. The `headerAvatar` you define is displayed
+  in the navigation bar of the Chatbox, above the `headerTitle`. There is no avatar displayed next
+  to incoming messages anymore.
+- `incomingMessageBackgroundColor` is removed. Incoming messages now always have the same background
+  color. It is not customizable.
+- `incomingMessageTextColor` is removed. Incoming messages now always the same text color. It is not
+  customizable.
+- `incomingMessageBorderColor` is removed. Incoming messages cannot have borders anymore.
+- `outgoingMessageBackgroundColor` is removed. Use the new `primaryColor` to customize the outgoing
+  messages background color.
+- `outgoingMessageTextColor` is removed. Use the new `primaryTextColor` to customize the outgoing
+  messages text color.
+- `outgoingMessageBorderColor` is removed. Outgoing messages cannot have borders anymore.
+- `accentColor` is removed. Use the new `secondaryColor` and `secondaryTextColor` to customize the
+  colors of some elements such as the Send button and other buttons displayed in the Chatbox.
+- `smallerChatboxEnabled` is removed.
+- `fontPath` is updated to use a `android.graphics.Typeface` instead of a String font path from
+  assets.
+
+### Removal of video conversations
+
+This version removes support for video conversations. Only chat conversations are supported. As a
+consequence, you do not need to specify the `ConversationChannel` anymore when creating a targeting
+rule.
+
+- `TargetingRule(id=, conversationChannel=)` is replaced by `TargetingRule(id=)`.
+- `ConversationChannel` is removed.
+- `OngoingConversation.conversationChannel` is removed.
+
+### Removal of deprecated targeting APIs
+
+The following APIs were deprecated in previous versions. This version completely removes them.
+
+- `TargetingController.registerUserNavigation(navigationOption=)` is removed.
+- `NavigationOption` is removed.
+
+Check [2.15.3 > 2.16.0](#2.15.3->-2.16.0) below for guidance on how to replace these APIs.
+
+### Other API updates
+
+- `GDPRListener.didTapMoreInformation` is renamed to `GDPRListener.onMoreInfoClicked`.
+- `GDPREnabledOption.LegalUrl` signature is updated to use an `android.net.Uri` instead of a
+  `java.net.URI`.
+
 ## 2.16.6 > 2.16.7
 
 *Nothing to report*
