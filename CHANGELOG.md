@@ -2,12 +2,6 @@
 
 ### Release date 2026/03/12
 
-This is a fix release upon 3.0.0-beta1 to resolve build issues in integration projects.
-
-# 3.0.0-beta1 (Herbillette)
-
-### Release date 2026/03/10
-
 **Features**
 
 - This major new version includes a completely new chat interface, offering a cleaner, more
