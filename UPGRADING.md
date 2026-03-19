@@ -1,4 +1,4 @@
-## 2.16.7 > 3.0.0-beta2
+## 2.16.7 > 3.0.0-beta3
 
 ### New `ChatboxConfiguration` APIs
 
@@ -9,9 +9,9 @@ interface to your visitors. Consequently, the APIs of `ChatboxConfiguration` hav
   color set by the system/app.
 - `toolbarMainColor` is removed. The elements in the navigation bar of the Chatbox now use the color
   set by the system/app.
-- `toolbarTitle` is renamed to `headerTitle`.
-- `incomingMessageAvatar` is replaced by `headerAvatar`. The `headerAvatar` you define is displayed
-  in the navigation bar of the Chatbox, above the `headerTitle`. There is no avatar displayed next
+- `toolbarTitle` is renamed to `title`.
+- `incomingMessageAvatar` is replaced by `avatar`. The `avatar` you define is displayed
+  in the navigation bar of the Chatbox, above the `title`. There is no avatar displayed next
   to incoming messages anymore.
 - `incomingMessageBackgroundColor` is removed. Incoming messages now always have the same background
   color. It is not customizable.

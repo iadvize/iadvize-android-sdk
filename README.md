@@ -1,18 +1,17 @@
-<img src="https://user-images.githubusercontent.com/17723986/47799626-f3982700-dd2a-11e8-983c-77d1a3ed7f53.png" width="280" height="96" alt="iAdvize">
+![banner](https://github.com/user-attachments/assets/3ad099d9-90bc-4e21-82ba-45d48a31f129)
 
 # iAdvize Android SDK
 
 Take your app to the next level and provide a **unique conversational experience** to your users!
 
-Embed the iAdvize Android SDK into your app and connect your visitors with your professional
-agents or ibbü experts through a **fully customized chat experience**. Visitors can ask a question
-and will receive answers directly on their devices.
+
+Embed the iAdvize Mobile SDK into your app to give your visitors instant access to our **AI Shopping Assistant** and professional agents. Assist shoppers throughout their buying journey - answering product questions, finding relevant products, and helping them make buying decisions with more confidence - all through a **fully customized chat experience**, directly on their devices.
 
 ## Compatibility
 
 | SDK         | Android  | Kotlin |
 |-------------|----------|--------|
-| 3.0.0-beta2 | 24 -> 36 | 2.3.10 |
+| 3.0.0-beta3 | 24 -> 36 | 2.2.21 |
 
 ## Integration
 

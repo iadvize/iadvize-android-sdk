@@ -63,8 +63,8 @@ object IAdvizeSDKConfig {
         secondaryColor = context.resources.getColor(R.color.malachite),
         secondaryTextColor = context.resources.getColor(R.color.whisper),
         font = ResourcesCompat.getFont(context, R.font.opensans),
-        headerTitle = "Smart Livechat",
-        headerAvatar = ResourcesCompat.getDrawable(context.resources, R.mipmap.ic_launcher, null),
+        title = "Smart Livechat",
+        avatar = ResourcesCompat.getDrawable(context.resources, R.mipmap.ic_launcher, null),
         automaticMessage = "Welcome to Smart Livechat! What can we do for you?",
         gdprMessage = "For a better support, we need to save the history of the exchanges and view your activity on the mobile app during the conversation."
     )
