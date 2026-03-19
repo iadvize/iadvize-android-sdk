@@ -1,1 +1,1 @@
-sourceset_dependencies='{":sdk/clientRelease":[]}'
+sourceset_dependencies='{":sdk/main":[]}'

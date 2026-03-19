@@ -50,7 +50,7 @@
         <div class="navigation-controls">
         <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
                 <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
-                        data-filter=":sdk/clientRelease">clientRelease</button>
+                        data-filter=":sdk/main">androidJvm</button>
             <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
                 <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
                         data-role="dropdown-toggle"
@@ -67,10 +67,10 @@
                     </div>
                         <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
                             <label class="checkbox">
-                                <input type="checkbox" class="checkbox--input" id=":sdk/clientRelease"
-                                       data-filter=":sdk/clientRelease"/>
+                                <input type="checkbox" class="checkbox--input" id=":sdk/main"
+                                       data-filter=":sdk/main"/>
                                 <span class="checkbox--icon"></span>
-                                clientRelease
+                                androidJvm
                             </label>
                         </li>
                 </ul>
@@ -106,28 +106,28 @@
         </nav>
         <div id="resizer" class="resizer" data-item-type="BAR"></div>
         <div id="main" data-item-type="SECTION" role="main">
-<div class="main-content" data-page-type="classlike" id="content" pageIds="iAdvize Mobile SDK::com.iadvize.conversation.sdk.feature.chatbox/ChatboxConfiguration///PointingToDeclaration//1191697382">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="iAdvize Mobile SDK::com.iadvize.conversation.sdk.feature.chatbox/ChatboxConfiguration///PointingToDeclaration//-1715042111">
   <div class="breadcrumbs"><a href="../../../index.html">iAdvize Mobile SDK</a><span class="delimiter">/</span><a href="../index.html">com.iadvize.conversation.sdk.feature.chatbox</a><span class="delimiter">/</span><span class="current">ChatboxConfiguration</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Chatbox</span><wbr></wbr><span><span>Configuration</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk/clientRelease"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">ChatboxConfiguration</a> <span><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a> </span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>primaryColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>primaryTextColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>secondaryColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>secondaryTextColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>font<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Typeface.html">Typeface</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>headerTitle<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">&quot;&quot;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>headerAvatar<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/drawable/Drawable.html">Drawable</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>automaticMessage<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>gdprMessage<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><p class="paragraph">Encapsulate all the configuration options that can be applied to the chatbox.</p><p class="paragraph">Usage: instantiate a default configuration, set the properties you want, and apply them to the chatbox:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">var configuration = ChatboxConfiguration()<br>configuration.primaryColor = Color.RED<br>IAdvizeSDK.chatboxController.setupChatbox(configuration)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">ChatboxConfiguration</a> <span><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a> </span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>primaryColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>primaryTextColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>secondaryColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>secondaryTextColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>font<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Typeface.html">Typeface</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>title<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">&quot;&quot;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>avatar<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/drawable/Drawable.html">Drawable</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>automaticMessage<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>gdprMessage<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><p class="paragraph">Encapsulate all the configuration options that can be applied to the chatbox.</p><p class="paragraph">Usage: instantiate a default configuration, set the properties you want, and apply them to the chatbox:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">var configuration = ChatboxConfiguration()<br>configuration.primaryColor = Color.RED<br>IAdvizeSDK.chatboxController.setupChatbox(configuration)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
     <div class="tabs-section-body">
       <div data-togglable="CONSTRUCTOR">
         <h2 class="tableheader">Constructors</h2>
-        <div class="table"><a data-name="-1028330329%2FConstructors%2F1191697382" anchor-label="ChatboxConfiguration" id="-1028330329%2FConstructors%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
-          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":sdk/clientRelease" data-filterable-set=":sdk/clientRelease">
+        <div class="table"><a data-name="-1028330329%2FConstructors%2F-1715042111" anchor-label="ChatboxConfiguration" id="-1028330329%2FConstructors%2F-1715042111" data-filterable-set=":sdk/main"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":sdk/main" data-filterable-set=":sdk/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-chatbox-configuration.html"><span>Chatbox</span><wbr></wbr><span><span>Configuration</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1028330329%2FConstructors%2F1191697382"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1028330329%2FConstructors%2F-1715042111"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk/clientRelease"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">primaryColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">primaryTextColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">secondaryColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">secondaryTextColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">font<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Typeface.html">Typeface</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">headerTitle<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">&quot;&quot;</span><span class="token punctuation">, </span></span><span class="parameter ">headerAvatar<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/drawable/Drawable.html">Drawable</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">automaticMessage<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">gdprMessage<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">primaryColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">primaryTextColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">secondaryColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">secondaryTextColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">font<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Typeface.html">Typeface</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">title<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">&quot;&quot;</span><span class="token punctuation">, </span></span><span class="parameter ">avatar<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/drawable/Drawable.html">Drawable</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">automaticMessage<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">gdprMessage<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -136,137 +136,137 @@
       </div>
       <div data-togglable="PROPERTY">
         <h2 class="tableheader">Properties</h2>
-        <div class="table"><a data-name="262052055%2FProperties%2F1191697382" anchor-label="automaticMessage" id="262052055%2FProperties%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
-          <div class="table-row table-row_content" data-filterable-current=":sdk/clientRelease" data-filterable-set=":sdk/clientRelease">
+        <div class="table"><a data-name="262052055%2FProperties%2F-1715042111" anchor-label="automaticMessage" id="262052055%2FProperties%2F-1715042111" data-filterable-set=":sdk/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk/main" data-filterable-set=":sdk/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="automatic-message.html"><span>automatic</span><wbr></wbr><span><span>Message</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="262052055%2FProperties%2F1191697382"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="262052055%2FProperties%2F-1715042111"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk/clientRelease"><div class="symbol monospace"><span class="token keyword">var </span><a href="automatic-message.html">automaticMessage</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Content of the first automatic message that invites your visitor to start asking a question. Should be localized.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="automatic-message.html">automaticMessage</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Content of the first automatic message that invites your visitor to start asking a question. Should be localized.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1157030980%2FProperties%2F1191697382" anchor-label="font" id="1157030980%2FProperties%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
-          <div class="table-row table-row_content" data-filterable-current=":sdk/clientRelease" data-filterable-set=":sdk/clientRelease">
+<a data-name="130377978%2FProperties%2F-1715042111" anchor-label="avatar" id="130377978%2FProperties%2F-1715042111" data-filterable-set=":sdk/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk/main" data-filterable-set=":sdk/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="avatar.html"><span><span>avatar</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="130377978%2FProperties%2F-1715042111"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="avatar.html">avatar</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/drawable/Drawable.html">Drawable</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Avatar displayed in the Chatbox header (above the <code class="lang-kotlin">title</code>).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1157030980%2FProperties%2F-1715042111" anchor-label="font" id="1157030980%2FProperties%2F-1715042111" data-filterable-set=":sdk/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk/main" data-filterable-set=":sdk/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="font.html"><span><span>font</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1157030980%2FProperties%2F1191697382"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1157030980%2FProperties%2F-1715042111"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk/clientRelease"><div class="symbol monospace"><span class="token keyword">var </span><a href="font.html">font</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Typeface.html">Typeface</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Font that will be used to display text in all UI elements of the iAdvize SDK. Default value is <code class="lang-kotlin">#FFFFFF</code> in Light Mode and<code class="lang-kotlin">#0A0A09</code> in Dark Mode.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="font.html">font</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Typeface.html">Typeface</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Font that will be used to display text in all UI elements of the iAdvize SDK. Default value is <code class="lang-kotlin">#FFFFFF</code> in Light Mode and<code class="lang-kotlin">#0A0A09</code> in Dark Mode.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1152148127%2FProperties%2F1191697382" anchor-label="gdprMessage" id="1152148127%2FProperties%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
-          <div class="table-row table-row_content" data-filterable-current=":sdk/clientRelease" data-filterable-set=":sdk/clientRelease">
+<a data-name="1152148127%2FProperties%2F-1715042111" anchor-label="gdprMessage" id="1152148127%2FProperties%2F-1715042111" data-filterable-set=":sdk/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk/main" data-filterable-set=":sdk/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="gdpr-message.html"><span>gdpr</span><wbr></wbr><span><span>Message</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1152148127%2FProperties%2F1191697382"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1152148127%2FProperties%2F-1715042111"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk/clientRelease"><div class="symbol monospace"><span class="token keyword">var </span><a href="gdpr-message.html">gdprMessage</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Content of the first GDPR message which invites your visitor to accept or decline the GDPR consent. Should be localized.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="gdpr-message.html">gdprMessage</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Content of the first GDPR message which invites your visitor to accept or decline the GDPR consent. Should be localized.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-831669203%2FProperties%2F1191697382" anchor-label="headerAvatar" id="-831669203%2FProperties%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
-          <div class="table-row table-row_content" data-filterable-current=":sdk/clientRelease" data-filterable-set=":sdk/clientRelease">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="header-avatar.html"><span>header</span><wbr></wbr><span><span>Avatar</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-831669203%2FProperties%2F1191697382"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk/clientRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="header-avatar.html">headerAvatar</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/drawable/Drawable.html">Drawable</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Avatar displayed in the Chatbox header (above the <code class="lang-kotlin">title</code>).</p></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-<a data-name="-914036836%2FProperties%2F1191697382" anchor-label="headerTitle" id="-914036836%2FProperties%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
-          <div class="table-row table-row_content" data-filterable-current=":sdk/clientRelease" data-filterable-set=":sdk/clientRelease">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="header-title.html"><span>header</span><wbr></wbr><span><span>Title</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-914036836%2FProperties%2F1191697382"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk/clientRelease"><div class="symbol monospace"><span class="token keyword">val </span><a href="header-title.html">headerTitle</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Title displayed in the Chatbox header (below the <code class="lang-kotlin">avatar</code>).</p></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-<a data-name="120714322%2FProperties%2F1191697382" anchor-label="primaryColor" id="120714322%2FProperties%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
-          <div class="table-row table-row_content" data-filterable-current=":sdk/clientRelease" data-filterable-set=":sdk/clientRelease">
+<a data-name="120714322%2FProperties%2F-1715042111" anchor-label="primaryColor" id="120714322%2FProperties%2F-1715042111" data-filterable-set=":sdk/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk/main" data-filterable-set=":sdk/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="primary-color.html"><span>primary</span><wbr></wbr><span><span>Color</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="120714322%2FProperties%2F1191697382"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="120714322%2FProperties%2F-1715042111"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk/clientRelease"><div class="symbol monospace"><span class="token keyword">var </span><a href="primary-color.html">primaryColor</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Primary color used in the Chatbox. This color is mainly used for visitor messages background.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="primary-color.html">primaryColor</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Primary color used in the Chatbox. This color is mainly used for visitor messages background.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="944254175%2FProperties%2F1191697382" anchor-label="primaryTextColor" id="944254175%2FProperties%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
-          <div class="table-row table-row_content" data-filterable-current=":sdk/clientRelease" data-filterable-set=":sdk/clientRelease">
+<a data-name="944254175%2FProperties%2F-1715042111" anchor-label="primaryTextColor" id="944254175%2FProperties%2F-1715042111" data-filterable-set=":sdk/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk/main" data-filterable-set=":sdk/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="primary-text-color.html"><span>primary</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Color</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="944254175%2FProperties%2F1191697382"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="944254175%2FProperties%2F-1715042111"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk/clientRelease"><div class="symbol monospace"><span class="token keyword">var </span><a href="primary-text-color.html">primaryTextColor</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Primary text color used in the Chatbox. This color is mainly used for texts displayed above the <code class="lang-kotlin">primaryColor</code>, including in visitor messages.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="primary-text-color.html">primaryTextColor</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Primary text color used in the Chatbox. This color is mainly used for texts displayed above the <code class="lang-kotlin">primaryColor</code>, including in visitor messages.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-912318780%2FProperties%2F1191697382" anchor-label="secondaryColor" id="-912318780%2FProperties%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
-          <div class="table-row table-row_content" data-filterable-current=":sdk/clientRelease" data-filterable-set=":sdk/clientRelease">
+<a data-name="-912318780%2FProperties%2F-1715042111" anchor-label="secondaryColor" id="-912318780%2FProperties%2F-1715042111" data-filterable-set=":sdk/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk/main" data-filterable-set=":sdk/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="secondary-color.html"><span>secondary</span><wbr></wbr><span><span>Color</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-912318780%2FProperties%2F1191697382"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-912318780%2FProperties%2F-1715042111"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk/clientRelease"><div class="symbol monospace"><span class="token keyword">var </span><a href="secondary-color.html">secondaryColor</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Secondary color used in the Chatbox. This color is mainly used for the Send button and other controls displayed in the Chatbox.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="secondary-color.html">secondaryColor</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Secondary color used in the Chatbox. This color is mainly used for the Send button and other controls displayed in the Chatbox.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="1381420625%2FProperties%2F1191697382" anchor-label="secondaryTextColor" id="1381420625%2FProperties%2F1191697382" data-filterable-set=":sdk/clientRelease"></a>
-          <div class="table-row table-row_content" data-filterable-current=":sdk/clientRelease" data-filterable-set=":sdk/clientRelease">
+<a data-name="1381420625%2FProperties%2F-1715042111" anchor-label="secondaryTextColor" id="1381420625%2FProperties%2F-1715042111" data-filterable-set=":sdk/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk/main" data-filterable-set=":sdk/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="secondary-text-color.html"><span>secondary</span><wbr></wbr><span>Text</span><wbr></wbr><span><span>Color</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1381420625%2FProperties%2F1191697382"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1381420625%2FProperties%2F-1715042111"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk/clientRelease"><div class="symbol monospace"><span class="token keyword">var </span><a href="secondary-text-color.html">secondaryTextColor</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Secondary text color used in the Chatbox. This color is mainly used for texts displayed above the <code class="lang-kotlin">secondaryColor</code>, including in buttons.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="secondary-text-color.html">secondaryTextColor</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Secondary text color used in the Chatbox. This color is mainly used for texts displayed above the <code class="lang-kotlin">secondaryColor</code>, including in buttons.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1991381713%2FProperties%2F-1715042111" anchor-label="title" id="-1991381713%2FProperties%2F-1715042111" data-filterable-set=":sdk/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":sdk/main" data-filterable-set=":sdk/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="title.html"><span><span>title</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1991381713%2FProperties%2F-1715042111"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":sdk/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="title.html">title</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Title displayed in the Chatbox header (below the <code class="lang-kotlin">avatar</code>).</p></div></div></div>
                 </div>
               </div>
             </div>
