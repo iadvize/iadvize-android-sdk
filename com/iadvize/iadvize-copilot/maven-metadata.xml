@@ -2,13 +2,14 @@
 <metadata>
   <groupId>com.iadvize</groupId>
   <artifactId>iadvize-copilot</artifactId>
-  <version>3.0.0-beta3</version>
+  <version>3.0.0</version>
   <versioning>
-    <latest>3.0.0-beta3</latest>
-    <release>3.0.0-beta3</release>
+    <latest>3.0.0</latest>
+    <release>3.0.0</release>
     <versions>
       <version>3.0.0-beta3</version>
+      <version>3.0.0</version>
     </versions>
-    <lastUpdated>2026031909260000</lastUpdated>
+    <lastUpdated>2026032310560000</lastUpdated>
   </versioning>
 </metadata>

@@ -1,3 +1,20 @@
+# 3.0.0 (Herbillette)
+
+### Release date 2026/03/23
+
+**Features**
+
+- This major new version includes a completely new chat interface, offering a cleaner, more
+  intuitive interface for your visitors. Consequently, the API of `ChatboxConfiguration` has
+  evolved. Check [UPGRADING.md](./UPGRADING.md) for more information.
+
+**Dependencies**
+
+- This version removes support for video conversations, thereby eliminating the dependency on the
+  Twilio Video library, which reduces the size of the SDK included in your app. This also removes
+  the need to specify the `ConversationChannel`. Check [UPGRADING.md](./UPGRADING.md) for more
+  information.
+
 # 3.0.0-beta3 (Herbillette)
 
 ### Release date 2026/03/17
