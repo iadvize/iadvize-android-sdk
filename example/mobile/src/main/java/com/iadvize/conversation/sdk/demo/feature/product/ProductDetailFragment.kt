@@ -43,13 +43,13 @@ class ProductDetailFragment : Fragment() {
         loadView()
 
         product?.productId?.let {
-            // Set custom data
+            // Set custom data if product has one
             val customData = CustomData.fromString("productId", it)
             IAdvizeSDK.visitorController.registerCustomData(listOf(customData))
-
-            // Trigger targeting rule only on products with product id
-            IAdvizeSDK.targetingController.activateTargetingRule(IAdvizeSDKConfig.targetingRule)
         }
+
+        // Trigger targeting rule
+        IAdvizeSDK.targetingController.activateTargetingRule(IAdvizeSDKConfig.targetingRule)
     }
 
     override fun onDestroyView() {

@@ -29,7 +29,6 @@ class App : Application() {
             IAdvizeSDKConfig.chatboxConfiguration(this)
         )
 
-
         // Activate the iAdvize SDK (start a user session)
         IAdvizeSDK.activate(
             IAdvizeSDKConfig.projectId,

@@ -18,6 +18,7 @@ import com.google.firebase.messaging.RemoteMessage
 import com.iadvize.conversation.sdk.IAdvizeSDK
 import com.iadvize.conversation.sdk.demo.R
 import com.iadvize.conversation.sdk.demo.feature.root.RootActivity
+import com.iadvize.copilot.R as IdzCopilotRes
 
 class NotificationService : FirebaseMessagingService() {
     companion object {
@@ -75,7 +76,7 @@ class NotificationService : FirebaseMessagingService() {
 
         // Display notification in iAdvize specific channel
         val text = remoteMessage.data["content"]
-            ?: baseContext.resources.getString(R.string.iadvize_conversation_attachment_operator)
+            ?: baseContext.resources.getString(IdzCopilotRes.string.iadvize_conversation_attachment_operator)
         showNotification(text, IAdvizeSDK.notificationController.channelId)
     }
 

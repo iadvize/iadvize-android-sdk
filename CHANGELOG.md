@@ -1,3 +1,26 @@
+# 3.1.0 (Immanente)
+
+### Release date 2026/06/04
+
+**Features**
+
+- Added response streaming. Messages from the Shopping Assistant are now streamed progressively, allowing visitors to start reading the response before it is fully generated.
+- Added thinking indicators. A thinking indicator is now displayed immediately after a visitor sends a message, providing instant visual feedback that the Shopping Assistant has received the request and is processing it. The indicator shows contextual labels depending on the action being performed (e.g. *"Searching for products…*", *"Checking your order details…"*).
+- Improved the experience for sending images and files. Visitors can now send images or files along with text. When chatting with an operator, a visitor can send up to 5 images or PDFs in a single message; when chatting with a bot, a visitor can send a single image or PDF.
+
+**Bug fixes**
+
+- Fixed Quick Replies UI when they spread multiple on lines
+
+**Dependencies**
+
+The iAdvize SDK now use non-transitive R class.
+
+- Gradle `8.13` > `9.5.1`
+- Android Gradle Plugin `8.13.2` > `9.2.1`
+- Kotlin `2.3.20` > `2.3.21`
+- Firebase `34.10.0` > `34.14.0`
+
 # 3.0.0 (Herbillette)
 
 ### Release date 2026/03/23

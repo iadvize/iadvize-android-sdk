@@ -1,21 +1,21 @@
 [versions]
-android-gradle-plugin = "8.13.2"
+android-gradle-plugin = "9.2.1"
 androidx-appcompat = "1.7.1"
 androidx-cardview = "1.0.0"
 androidx-constraintlayout = "2.2.1"
 androidx-core-ktx = "1.18.0"
 androidx-fragment-ktx = "1.8.9"
-androidx-navigation = "2.9.7"
+androidx-navigation = "2.9.8"
 androidx-recyclerview = "1.4.0"
 desugaring = "2.1.5"
-firebase = "34.10.0"
+firebase = "34.14.0"
 gms = "4.4.4"
-gradle-versions-plugin = "0.53.0"
-iadvize-sdk = "3.0.0"
+gradle-versions-plugin = "0.54.0"
+iadvize-sdk = "3.1.0"
 insetter = "0.6.1"
-kotlin = "2.2.21"
-kotlin-coroutines = "1.10.2"
-material = "1.13.0"
+kotlin = "2.3.21"
+kotlin-coroutines = "1.11.0"
+material = "1.14.0"
 
 [libraries]
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
@@ -41,7 +41,6 @@ android-application = { id = "com.android.application", version.ref = "android-g
 androidx-navigation-safeargs-kotlin = { id = "androidx.navigation.safeargs.kotlin", version.ref = "androidx-navigation" }
 gms = { id = "com.google.gms.google-services", version.ref = "gms" }
 gradle-versions-plugin = { id = "com.github.ben-manes.versions", version.ref = "gradle-versions-plugin" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 
 [bundles]
