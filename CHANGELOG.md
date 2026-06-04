@@ -1,3 +1,11 @@
+# 3.1.1 (Immanente)
+
+### Release date 2026/06/04
+
+**Bug fixes**
+
+- Fixed wrong text content being sent via XMPP
+
 # 3.1.0 (Immanente)
 
 ### Release date 2026/06/04
