@@ -1,8 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.gms)
-    alias(libs.plugins.kotlin.parcelize)
-    alias(libs.plugins.androidx.navigation.safeargs.kotlin)
+    alias(libs.plugins.kotlin.compose)
 }
 
 android {
@@ -43,8 +42,7 @@ android {
     }
 
     buildFeatures {
-        viewBinding = true
-        dataBinding = true
+        compose = true
     }
 }
 
@@ -58,18 +56,16 @@ configurations {
 dependencies {
     coreLibraryDesugaring(libs.desugaring)
 
-    implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.cardview)
-    implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.fragment.ktx)
-    implementation(libs.bundles.androidx.navigation)
-    implementation(libs.androidx.recyclerview)
+    implementation(libs.androidx.activity.compose)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.ui.tooling.preview)
+    implementation(libs.androidx.compose.material3)
+    debugImplementation(libs.androidx.compose.ui.tooling)
     implementation(platform(libs.firebase.bom))
     implementation(libs.bundles.firebase.tools)
     implementation(libs.iadvize.sdk)
-    implementation(libs.insetter)
     implementation(libs.kotlin.stdlib)
-    implementation(libs.kotlinx.coroutines)
     implementation(libs.material)
 }

@@ -1,48 +1,37 @@
 [versions]
-android-gradle-plugin = "9.2.1"
-androidx-appcompat = "1.7.1"
-androidx-cardview = "1.0.0"
-androidx-constraintlayout = "2.2.1"
+android-gradle-plugin = "9.3.2"
+androidx-activity-compose = "1.13.0"
+androidx-compose-bom = "2026.06.01"
 androidx-core-ktx = "1.18.0"
-androidx-fragment-ktx = "1.8.9"
-androidx-navigation = "2.9.8"
-androidx-recyclerview = "1.4.0"
 desugaring = "2.1.5"
-firebase = "34.14.0"
-gms = "4.4.4"
-gradle-versions-plugin = "0.54.0"
-iadvize-sdk = "3.1.1"
-insetter = "0.6.1"
+firebase = "34.18.0"
+gms = "4.5.0"
+gradle-versions-plugin = "0.61.0"
+iadvize-sdk = "3.2.0"
 kotlin = "2.3.21"
-kotlin-coroutines = "1.11.0"
 material = "1.14.0"
 
 [libraries]
-androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
-androidx-cardview = { group = "androidx.cardview", name = "cardview", version.ref = "androidx-cardview" }
-androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidx-constraintlayout" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidx-activity-compose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidx-compose-bom" }
+androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidx-core-ktx" }
-androidx-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "androidx-fragment-ktx" }
-androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "androidx-navigation" }
-androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "androidx-navigation" }
-androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "androidx-recyclerview" }
 desugaring = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "desugaring" }
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase" }
 firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging" }
 iadvize-sdk = { group = "com.iadvize", name = "iadvize-sdk", version.ref = "iadvize-sdk" }
-insetter = { group = "dev.chrisbanes.insetter", name = "insetter", version.ref = "insetter" }
 kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlin" }
-kotlinx-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlin-coroutines" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "android-gradle-plugin" }
-androidx-navigation-safeargs-kotlin = { id = "androidx.navigation.safeargs.kotlin", version.ref = "androidx-navigation" }
 gms = { id = "com.google.gms.google-services", version.ref = "gms" }
-gradle-versions-plugin = { id = "com.github.ben-manes.versions", version.ref = "gradle-versions-plugin" }
-kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+gradle-versions-plugin = { id = "io.github.ben-manes.versions", version.ref = "gradle-versions-plugin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 
 [bundles]
-androidx-navigation = ["androidx-navigation-fragment-ktx", "androidx-navigation-ui-ktx"]
 firebase-tools = ["firebase-analytics", "firebase-messaging"]

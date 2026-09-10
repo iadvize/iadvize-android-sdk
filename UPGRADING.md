@@ -1,3 +1,11 @@
+## 3.1.1 > 3.2.0
+
+- Optional: add support for the **Add to cart** button in conversation. Check the documentation for guidance.
+- Optional: migrate to the **new coroutine APIs**.
+  - Every asynchronous callback API now has a **suspend** counterpart suffixed with Async (`IAdvizeSDK.activateAsync` `NotificationController.enablePushNotificationsAsync`...). They throw an `IAdvizeSDK.Error` on failure instead of reporting it through a callback. The existing callback APIs are unchanged and now delegate to these coroutine APIs internally.
+  - Added **Flow** APIs alongside the existing listeners (`ConversationController.ongoingConversationFlow`, `TargetingController.activeTargetingRuleAvailabilityFlow`...). The listener APIs are unchanged.
+  - The integrator-implemented handlers now accept a **suspend** implementation: `AuthenticationOption.JWEProvider.onJWERequested()` and `AddToCartHandler.onAddToCartRequested(productId)`. You can implement either the coroutine variant or the existing callback variant; the callback variants (including the AddToCartHandler lambda form) are unchanged.
+
 ## 3.1.0 > 3.1.1
 
 *Nothing to report*

@@ -1,15 +1,9 @@
 <resources>
 
-    <style name="Theme.Demo" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.Demo" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/outer_space</item>
-        <item name="colorOnPrimary">@android:color/white</item>
-        <item name="colorAccent">@color/malachite</item>
-        <item name="android:fontFamily">@font/opensans</item>
-    </style>
-
-    <style name="Theme.Demo.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+        <item name="colorOnPrimary">@color/whisper</item>
+        <item name="colorSecondary">@color/turquoise</item>
     </style>
 
 </resources>

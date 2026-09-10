@@ -4,6 +4,8 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.NotificationManager.IMPORTANCE_HIGH
 import android.app.PendingIntent
+import android.app.PendingIntent.FLAG_IMMUTABLE
+import android.app.PendingIntent.FLAG_UPDATE_CURRENT
 import android.content.Context
 import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP
@@ -12,7 +14,6 @@ import android.media.RingtoneManager.TYPE_NOTIFICATION
 import android.os.Build.VERSION.SDK_INT
 import android.os.Build.VERSION_CODES.O
 import androidx.core.app.NotificationCompat
-import androidx.navigation.NavDeepLinkBuilder
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import com.iadvize.conversation.sdk.IAdvizeSDK
@@ -91,15 +92,17 @@ class NotificationService : FirebaseMessagingService() {
     private fun showNotification(text: String, channelId: String) {
         val intent = Intent(this, RootActivity::class.java)
         intent.addFlags(FLAG_ACTIVITY_CLEAR_TOP)
-        val pendingIntent: PendingIntent = NavDeepLinkBuilder(this)
-            .setGraph(R.navigation.nav_graph)
-            .setDestination(R.id.ProductListFragment)
-            .createPendingIntent()
+        val pendingIntent: PendingIntent = PendingIntent.getActivity(
+            this,
+            0,
+            intent,
+            FLAG_UPDATE_CURRENT or FLAG_IMMUTABLE
+        )
 
         val defaultSoundUri = RingtoneManager.getDefaultUri(TYPE_NOTIFICATION)
         val notificationBuilder = NotificationCompat.Builder(this, channelId)
-            .setSmallIcon(R.drawable.ic_notification)
-            .setColor(resources.getColor(R.color.outer_space))
+            .setSmallIcon(R.drawable.ic_logo)
+            .setColor(resources.getColor(R.color.outer_space, null))
             .setContentTitle(getString(R.string.app_name))
             .setContentText(text)
             .setAutoCancel(true)

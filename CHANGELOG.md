@@ -1,3 +1,28 @@
+# 3.2.0 (Jonchée)
+
+### Release date 2026/09/08
+
+**Features**
+
+- **Add-To-Cart**. The Add-To-Cart feature allows visitors to add a product directly to their cart from a conversation with the Assistant. Its goal: to simplify the shopping experience without leaving the chat, by reducing frictions linked to traditional navigation.
+  - The Assistant recommends products to the visitor.
+  - The visitor clicks on "Add to cart" without leaving the conversation.
+  - The product is immediately added to the cart on your e-commerce website.
+  - A confirmation message is displayed in the conversation.
+- **Scroll-to-bottom button**. When the conversation is not scrolled to bottom, a button appears to quickly reach the bottom of the conversation.
+- **Async APIs**. This version adds modern asynchronous APIs: existing methods that relies on a completion closure now have `async` counterparts. All existing APIs are still available so there is no breaking change.
+
+**Bug fixes**
+
+- Fixed conversation history loss after consecutive logouts
+
+**Dependencies**
+
+*Update to Android 37*
+- Android SDK `36.0.0` > `37.0.0`
+- Gradle `9.5.1` > `9.6.1`
+- Android Gradle Plugin `9.2.1` > `9.3.2`
+
 # 3.1.1 (Immanente)
 
 ### Release date 2026/06/04
