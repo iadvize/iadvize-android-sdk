@@ -1,3 +1,7 @@
+## 3.2.0 > 3.2.1
+
+*Nothing to report*
+
 ## 3.1.1 > 3.2.0
 
 - Optional: add support for the **Add to cart** button in conversation. Check the documentation for guidance.

@@ -7,7 +7,7 @@ desugaring = "2.1.5"
 firebase = "34.18.0"
 gms = "4.5.0"
 gradle-versions-plugin = "0.61.0"
-iadvize-sdk = "3.2.0"
+iadvize-sdk = "3.2.1"
 kotlin = "2.3.21"
 material = "1.14.0"
 

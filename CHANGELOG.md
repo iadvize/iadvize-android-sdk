@@ -1,3 +1,11 @@
+# 3.2.1 (Jonchée)
+
+### Release date 2026/09/10
+
+**Bug fixes**
+
+- Fix obfuscation issue for annotations
+
 # 3.2.0 (Jonchée)
 
 ### Release date 2026/09/08
